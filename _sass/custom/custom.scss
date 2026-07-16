@@ -1,199 +1,273 @@
-// Global Apple Typography & Tracking
-body {
+// ============================================
+// APPLE DESIGN SYSTEM: CSS VARIABLE ARCHITECTURE
+// ============================================
+
+:root {
+  // Apple Light Mode Palette
+  --apple-bg: #ffffff;
+  --apple-sidebar-bg: rgba(245, 245, 247, 0.85);
+  --apple-sidebar-solid: #f5f5f7;
+  --apple-text-main: #1d1d1f;
+  --apple-text-muted: #86868b;
+  --apple-heading: #000000;
+  --apple-border: #d2d2d7;
+  --apple-link: #0066cc;
+  --apple-search-bg: rgba(0, 0, 0, 0.05);
+  --apple-code-bg: #f5f5f7;
+  --apple-btn-bg: #0071e3;
+  --apple-btn-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Apple True Dark Mode Palette
+    --apple-bg: #000000;
+    --apple-sidebar-bg: rgba(28, 28, 30, 0.85);
+    --apple-sidebar-solid: #1c1c1e;
+    --apple-text-main: #f5f5f7;
+    --apple-text-muted: #86868b;
+    --apple-heading: #ffffff;
+    --apple-border: #38383a;
+    --apple-link: #2997ff;
+    --apple-search-bg: rgba(255, 255, 255, 0.1);
+    --apple-code-bg: #1c1c1e;
+    --apple-btn-bg: #2997ff;
+    --apple-btn-text: #ffffff;
+  }
+}
+
+// ============================================
+// AGGRESSIVE THEME RESETS & GLOBAL STYLES
+// ============================================
+
+// Force the main background and text colors globally
+body, 
+.main-content-wrap, 
+html {
+  background-color: var(--apple-bg) !important;
+  color: var(--apple-text-main) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
   font-size: 17px;
   line-height: 1.47059;
   letter-spacing: -0.022em;
 }
 
-h1, h2, h3, h4, h5, h6, .site-title {
-  font-weight: 600;
-  letter-spacing: -0.04em;
+// Typography Resets
+h1, h2, h3, h4, h5, h6, 
+.site-title, 
+.text-delta, 
+.main-content h1, 
+.main-content h2, 
+.main-content h3 {
+  color: var(--apple-heading) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.04em !important;
 }
 
-// Glassmorphism Sidebar
-.side-bar {
+h1 { font-size: 40px !important; }
+h2 { font-size: 32px !important; }
+h3 { font-size: 24px !important; }
+
+p, li {
+  color: var(--apple-text-main) !important;
+}
+
+// ============================================
+// HEADER & SIDEBAR (Glassmorphism & Finder)
+// ============================================
+
+// Nuke the default theme gradients and weird white backgrounds
+.site-header, 
+.side-bar, 
+.site-header {
+  background: var(--apple-sidebar-bg) !important;
+  background-color: var(--apple-sidebar-bg) !important;
+  border-right: 1px solid var(--apple-border) !important;
+  border-bottom: 1px solid var(--apple-border) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-right: 1px solid #d2d2d7;
 }
 
-// macOS Finder-style Navigation
+// Site Title (Logo Area)
+.site-title {
+  background: transparent !important; // Nuke default gradient
+  color: var(--apple-heading) !important;
+  -webkit-text-fill-color: var(--apple-heading) !important; // Nuke gradient text
+}
+
+// Sidebar Navigation Links
 .nav-list-item {
-  margin-bottom: 2px;
+  margin-bottom: 2px !important;
 }
 
 .nav-list-link {
-  border-radius: 8px;
-  padding: 8px 12px;
-  transition: background-color 0.15s ease, color 0.15s ease;
-  
-  &:hover, &.active {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #000000;
-  }
+  color: var(--apple-text-main) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  transition: all 0.15s ease;
+  background: transparent !important;
+  border: none !important;
 }
 
-// Search Bar (Pill Shape)
+.nav-list-link:hover, 
+.nav-list-link.active {
+  background-color: var(--apple-search-bg) !important;
+  color: var(--apple-heading) !important;
+}
+
+// ============================================
+// SEARCH BAR (Pill Shape)
+// ============================================
+
 .search-input {
   border-radius: 980px !important;
   border: 1px solid transparent !important;
-  background-color: rgba(0, 0, 0, 0.05) !important;
-  padding: 10px 16px !important;
-  transition: all 0.2s ease;
-  
-  &:focus {
-    background-color: #ffffff !important;
-    border-color: #0066cc !important;
-    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1) !important;
-  }
+  background-color: var(--apple-search-bg) !important;
+  color: var(--apple-text-main) !important;
+  padding: 10px 20px !important;
+  transition: all 0.2s ease !important;
 }
 
-// Code Blocks & Tables (Rounded, clean)
-div.highlighter-rouge, figure.highlight, .table-wrapper {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #d2d2d7;
-  background-color: #f5f5f7;
+.search-input:focus {
+  background-color: var(--apple-bg) !important;
+  border-color: var(--apple-link) !important;
+  box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.2) !important;
+  color: var(--apple-text-main) !important;
 }
 
-code {
-  font-size: 0.85em;
-  border-radius: 6px;
-  padding: 0.2em 0.4em;
+// Search Results Dropdown
+.search-results {
+  background-color: var(--apple-sidebar-solid) !important;
+  border: 1px solid var(--apple-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+}
+.search-result-item {
+  color: var(--apple-text-main) !important;
+  border-bottom: 1px solid var(--apple-border) !important;
 }
 
+// ============================================
+// TABLES (Fixing the ugly white rows)
+// ============================================
+
+.table-wrapper {
+  background: transparent !important;
+  border: none !important;
+}
+
+.main-content table, 
 table {
-  border-collapse: collapse;
-  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+  border: 1px solid var(--apple-border) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background-color: transparent !important;
+}
+
+// Nuke the default alternating white background on table rows
+.main-content table tbody tr:nth-child(even), 
+.main-content table tbody tr:nth-child(odd),
+table tbody tr {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+.main-content table th, 
+.main-content table td,
+table th, 
+table td {
+  border: 1px solid var(--apple-border) !important;
+  color: var(--apple-text-main) !important;
+  padding: 12px 16px !important;
+}
+
+.main-content table th,
+table th {
+  background-color: var(--apple-sidebar-solid) !important;
+  font-weight: 600 !important;
+  color: var(--apple-heading) !important;
+}
+
+// ============================================
+// CODE BLOCKS (Apple Rounded Cards)
+// ============================================
+
+// Target all possible highlighter containers
+div.highlighter-rouge, 
+div.highlighter-rouge pre,
+figure.highlight, 
+figure.highlight pre,
+pre, 
+.highlight {
+  background-color: var(--apple-code-bg) !important;
+  border: 1px solid var(--apple-border) !important;
+  border-radius: 12px !important;
+  color: var(--apple-text-main) !important;
+}
+
+// Fix inner code text colors
+div.highlighter-rouge pre.highlight,
+div.highlighter-rouge pre code,
+.highlight code {
+  background: transparent !important;
+  border: none !important;
+  color: var(--apple-text-main) !important;
+  font-family: "SFMono-Regular", Menlo, Consolas, monospace !important;
+  font-size: 14px !important;
+}
+
+// Inline code snippets (e.g., `pip install clean-charts`)
+p code, 
+li code, 
+a code {
+  background-color: var(--apple-code-bg) !important;
+  border: 1px solid var(--apple-border) !important;
+  color: #ff9f0a !important; // Apple Orange for inline code
+  border-radius: 6px !important;
+  padding: 0.2em 0.4em !important;
+  font-size: 0.85em !important;
+}
+
+// ============================================
+// LINKS & BUTTONS
+// ============================================
+
+.main-content a {
+  color: var(--apple-link) !important;
+  text-decoration: none !important;
   
-  th, td {
-    border: 1px solid #d2d2d7;
-    padding: 12px 16px;
-  }
-  th {
-    background-color: #f5f5f7;
-    font-weight: 600;
+  &:hover {
+    text-decoration: underline !important;
   }
 }
 
-// CTA Buttons (Apple Pill)
+// Apple Pill Buttons
 .btn {
   border-radius: 980px !important;
-  font-weight: 500;
-  padding: 8px 20px;
-  background-color: #0071e3 !important;
-  color: #ffffff !important;
+  font-weight: 500 !important;
+  padding: 10px 20px !important;
+  background-color: var(--apple-btn-bg) !important;
+  color: var(--apple-btn-text) !important;
   border: none !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1), opacity 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), opacity 0.2s ease !important;
+  text-decoration: none !important;
   
   &:hover {
-    transform: scale(0.97);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0.95;
-    text-decoration: none;
+    transform: scale(0.97) !important;
+    opacity: 0.95 !important;
   }
 }
 
-// Inline Links
-.main-content a:not(.btn) {
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
-  text-decoration-color: transparent;
-  
-  &:hover {
-    text-decoration: underline;
-    text-decoration-color: currentColor;
-  }
+// Misc Elements
+hr {
+  border-bottom: 1px solid var(--apple-border) !important;
 }
 
-// ============================================
-// COMPREHENSIVE DARK MODE OVERRIDE
-// ============================================
-@media (prefers-color-scheme: dark) {
-  :root {
-    --apple-dark-bg: #000000;
-    --apple-dark-sidebar: rgba(29, 29, 31, 0.8);
-    --apple-dark-text: #f5f5f7;
-    --apple-dark-heading: #ffffff;
-    --apple-dark-border: #424245;
-    --apple-dark-link: #2997ff;
-    --apple-dark-search: rgba(255, 255, 255, 0.1);
-    --apple-dark-code: #1d1d1f;
-  }
-
-  body, .main-content-wrap, .main-content {
-    background-color: var(--apple-dark-bg) !important;
-    color: var(--apple-dark-text) !important;
-  }
-
-  h1, h2, h3, h4, h5, h6, .site-title, .text-delta {
-    color: var(--apple-dark-heading) !important;
-  }
-
-  .side-bar, .site-header {
-    background-color: var(--apple-dark-sidebar) !important;
-    border-right-color: var(--apple-dark-border) !important;
-    border-bottom-color: var(--apple-dark-border) !important;
-  }
-
-  .nav-list-link, .nav-list-item {
-    color: #a1a1a6 !important;
-  }
-
-  .nav-list-link:hover, .nav-list-link.active {
-    background-color: var(--apple-dark-search) !important;
-    color: var(--apple-dark-heading) !important;
-  }
-
-  .search-input {
-    background-color: var(--apple-dark-search) !important;
-    color: var(--apple-dark-text) !important;
-    border-color: transparent !important;
-  }
-  
-  .search-input:focus {
-    background-color: var(--apple-dark-sidebar) !important;
-    border-color: var(--apple-dark-link) !important;
-    box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.2) !important;
-  }
-
-  .search-results {
-    background-color: var(--apple-dark-sidebar) !important;
-    border-color: var(--apple-dark-border) !important;
-  }
-
-  .search-result-item {
-    color: var(--apple-dark-text) !important;
-    border-bottom-color: var(--apple-dark-border) !important;
-  }
-
-  .main-content a:not(.btn) {
-    color: var(--apple-dark-link) !important;
-  }
-
-  div.highlighter-rouge, figure.highlight, .table-wrapper, code {
-    background-color: var(--apple-dark-code) !important;
-    border-color: var(--apple-dark-border) !important;
-  }
-  
-  code {
-    color: #ff9f0a !important; // Apple accent for inline code
-  }
-
-  table, th, td, hr, blockquote {
-    border-color: var(--apple-dark-border) !important;
-  }
-  
-  th {
-    background-color: var(--apple-dark-code) !important;
-    color: var(--apple-dark-heading) !important;
-  }
-
-  blockquote {
-    color: #a1a1a6 !important;
-  }
-  
-  .btn {
-    background-color: var(--apple-dark-link) !important;
-  }
+blockquote {
+  color: var(--apple-text-muted) !important;
+  border-left-color: var(--apple-border) !important;
 }
