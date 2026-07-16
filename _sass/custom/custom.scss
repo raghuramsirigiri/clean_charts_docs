@@ -40,7 +40,6 @@
 // AGGRESSIVE THEME RESETS & GLOBAL STYLES
 // ============================================
 
-// Force the main background and text colors globally
 body, 
 .main-content-wrap, 
 html {
@@ -52,9 +51,8 @@ html {
   letter-spacing: -0.022em;
 }
 
-// Typography Resets
 h1, h2, h3, h4, h5, h6, 
-.site-title, 
+body .site-title, 
 .text-delta, 
 .main-content h1, 
 .main-content h2, 
@@ -76,10 +74,10 @@ p, li {
 // HEADER & SIDEBAR (Glassmorphism & Finder)
 // ============================================
 
-// Nuke the default theme gradients and weird white backgrounds
-.site-header, 
-.side-bar, 
-.site-header {
+// Nuke the default theme gradients and weird white backgrounds (Desktop specifically)
+body .site-header, 
+body .side-bar, 
+.site-header.nav-open {
   background: var(--apple-sidebar-bg) !important;
   background-color: var(--apple-sidebar-bg) !important;
   border-right: 1px solid var(--apple-border) !important;
@@ -89,9 +87,8 @@ p, li {
 }
 
 // Site Title (Logo Area)
-.site-title {
+body .site-title {
   background: transparent !important; // Nuke default gradient
-  color: var(--apple-heading) !important;
   -webkit-text-fill-color: var(--apple-heading) !important; // Nuke gradient text
 }
 
@@ -116,7 +113,7 @@ p, li {
 }
 
 // ============================================
-// SEARCH BAR (Pill Shape)
+// SEARCH BAR (Pill Shape & Icon Fix)
 // ============================================
 
 .search-input {
@@ -124,7 +121,7 @@ p, li {
   border: 1px solid transparent !important;
   background-color: var(--apple-search-bg) !important;
   color: var(--apple-text-main) !important;
-  padding: 10px 20px !important;
+  padding: 10px 20px 10px 40px !important; // 40px left padding prevents icon overlap
   transition: all 0.2s ease !important;
 }
 
@@ -140,7 +137,7 @@ p, li {
   background-color: var(--apple-sidebar-solid) !important;
   border: 1px solid var(--apple-border) !important;
   border-radius: 12px !important;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
 }
 .search-result-item {
   color: var(--apple-text-main) !important;
@@ -156,8 +153,8 @@ p, li {
   border: none !important;
 }
 
-.main-content table, 
-table {
+body .main-content table, 
+body table {
   border-collapse: separate !important;
   border-spacing: 0 !important;
   width: 100% !important;
@@ -167,24 +164,28 @@ table {
   background-color: transparent !important;
 }
 
-// Nuke the default alternating white background on table rows
-.main-content table tbody tr:nth-child(even), 
-.main-content table tbody tr:nth-child(odd),
-table tbody tr {
+// Nuke the default alternating white background on table rows globally
+body .main-content table tbody tr,
+body .main-content table tbody tr:nth-child(even), 
+body .main-content table tbody tr:nth-child(odd),
+body .main-content table tbody tr:nth-child(2n),
+table tbody tr,
+table tbody tr:nth-child(even) {
   background-color: transparent !important;
   background: transparent !important;
 }
 
-.main-content table th, 
-.main-content table td,
+body .main-content table th, 
+body .main-content table td,
 table th, 
 table td {
   border: 1px solid var(--apple-border) !important;
   color: var(--apple-text-main) !important;
   padding: 12px 16px !important;
+  background-color: transparent !important;
 }
 
-.main-content table th,
+body .main-content table th,
 table th {
   background-color: var(--apple-sidebar-solid) !important;
   font-weight: 600 !important;
@@ -195,13 +196,12 @@ table th {
 // CODE BLOCKS (Apple Rounded Cards)
 // ============================================
 
-// Target all possible highlighter containers
-div.highlighter-rouge, 
-div.highlighter-rouge pre,
-figure.highlight, 
-figure.highlight pre,
-pre, 
-.highlight {
+body div.highlighter-rouge, 
+body div.highlighter-rouge pre,
+body figure.highlight, 
+body figure.highlight pre,
+body pre, 
+body .highlight {
   background-color: var(--apple-code-bg) !important;
   border: 1px solid var(--apple-border) !important;
   border-radius: 12px !important;
@@ -209,20 +209,19 @@ pre,
 }
 
 // Fix inner code text colors
-div.highlighter-rouge pre.highlight,
-div.highlighter-rouge pre code,
-.highlight code {
+body div.highlighter-rouge pre.highlight,
+body div.highlighter-rouge pre code,
+body .highlight code {
   background: transparent !important;
   border: none !important;
-  color: var(--apple-text-main) !important;
   font-family: "SFMono-Regular", Menlo, Consolas, monospace !important;
   font-size: 14px !important;
 }
 
-// Inline code snippets (e.g., `pip install clean-charts`)
-p code, 
-li code, 
-a code {
+// Inline code snippets
+body p code, 
+body li code, 
+body a code {
   background-color: var(--apple-code-bg) !important;
   border: 1px solid var(--apple-border) !important;
   color: #ff9f0a !important; // Apple Orange for inline code
@@ -232,10 +231,41 @@ a code {
 }
 
 // ============================================
+// APPLE DARK MODE ROUGE SYNTAX HIGHLIGHTING
+// ============================================
+
+@media (prefers-color-scheme: dark) {
+  // Apple Xcode Dark Mode Colors for Syntax Highlighting
+  .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+    color: #7f8c98 !important; // Comments (Gray)
+    font-style: italic !important;
+  }
+  .highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .kv {
+    color: #ff7ab2 !important; // Keywords (Pink)
+    font-weight: 600 !important;
+  }
+  .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+    color: #ff8170 !important; // Strings (Orange/Red)
+  }
+  .highlight .n, .highlight .nx, .highlight .py {
+    color: #f5f5f7 !important; // Variables/Names (White)
+  }
+  .highlight .nf, .highlight .na, .highlight .nd {
+    color: #b281eb !important; // Functions/Decorators (Purple)
+  }
+  .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo {
+    color: #d9c97c !important; // Numbers (Yellow)
+  }
+  .highlight .o, .highlight .ow, .highlight .p {
+    color: #f5f5f7 !important; // Operators/Punctuation (White)
+  }
+}
+
+// ============================================
 // LINKS & BUTTONS
 // ============================================
 
-.main-content a {
+body .main-content a {
   color: var(--apple-link) !important;
   text-decoration: none !important;
   
@@ -245,7 +275,7 @@ a code {
 }
 
 // Apple Pill Buttons
-.btn {
+body .btn {
   border-radius: 980px !important;
   font-weight: 500 !important;
   padding: 10px 20px !important;
@@ -262,7 +292,6 @@ a code {
   }
 }
 
-// Misc Elements
 hr {
   border-bottom: 1px solid var(--apple-border) !important;
 }
