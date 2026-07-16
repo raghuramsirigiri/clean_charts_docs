@@ -6,11 +6,11 @@ remote_theme: just-the-docs/just-the-docs
 url: "" # e.g. "https://your-username.github.io"
 baseurl: "" # e.g. "/clean-charts-docs"
 
-color_scheme: dark
+color_scheme: auto
 
 # Aux links for the upper right navigation
 aux_links:
-  "clean-charts GitHub": "https://github.com/your-username/clean-charts"
+  "clean-charts pypi": "https://pypi.org/project/clean-charts/"
 
 # Footer
-footer_content: "Copyright &copy; 2026. Distributed by an MIT license."
+footer_content: "clean-charts &copy; 2026. Distributed under the MIT License."
