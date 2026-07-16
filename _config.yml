@@ -1,5 +1,6 @@
 title: Clean Charts
 description: Minimalist, publication-quality charting library for Python.
 theme: just-the-docs
+color_scheme: auto
 url: "https://raghuramsirigiri.github.io"
 baseurl: "/clean_chart_docs"
