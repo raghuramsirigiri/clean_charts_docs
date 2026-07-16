@@ -1,0 +1,33 @@
+:root {
+  // Light Mode
+  --apple-bg: #ffffff;
+  --apple-sidebar-bg: rgba(245, 245, 247, 0.7);
+  --apple-sidebar-solid: #f5f5f7;
+  --apple-text-main: #1d1d1f;
+  --apple-text-muted: #86868b;
+  --apple-heading: #000000;
+  --apple-border: #d2d2d7;
+  --apple-link: #0066cc;
+  --apple-search-bg: rgba(0, 0, 0, 0.05);
+  --apple-code-bg: #f5f5f7;
+  --apple-btn-bg: #0071e3;
+  --apple-btn-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Dark Mode
+    --apple-bg: #000000;
+    --apple-sidebar-bg: rgba(28, 28, 30, 0.7);
+    --apple-sidebar-solid: #1c1c1e;
+    --apple-text-main: #f5f5f7;
+    --apple-text-muted: #86868b;
+    --apple-heading: #ffffff;
+    --apple-border: #38383a;
+    --apple-link: #2997ff;
+    --apple-search-bg: rgba(255, 255, 255, 0.1);
+    --apple-code-bg: #1c1c1e;
+    --apple-btn-bg: #2997ff;
+    --apple-btn-text: #ffffff;
+  }
+}
