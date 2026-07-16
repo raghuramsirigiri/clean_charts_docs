@@ -1,3 +1,25 @@
 // Apple Typography Overrides
 $font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $code-font-family: "SFMono-Regular", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+
+// Apple Light Mode Colors
+$body-background-color: #ffffff;
+$sidebar-color: #f5f5f7;
+$body-text-color: #1d1d1f;
+$body-heading-color: #000000;
+$border-color: #e5e5ea;
+$link-color: #0066cc;
+$search-background-color: #e5e5ea;
+$nav-child-link-color: #515154;
+
+// Spacing tweaks for a more airy feel
+$sp-1: 8px;
+$sp-2: 12px;
+$sp-3: 16px;
+$sp-4: 24px;
+$sp-5: 32px;
+$sp-6: 48px;
+$sp-7: 64px;
+
+// Native border radius for support
+$border-radius: 8px;

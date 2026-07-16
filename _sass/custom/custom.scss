@@ -1,12 +1,8 @@
-// General Layout & Typography Tweaks
+// Typography Refinements
 .site-title {
   font-weight: 600;
   letter-spacing: -0.01em;
-}
-
-.main-content {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  font-size: 1.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,65 +15,168 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
 }
 
-// Solid Sidebar (Apple Light/Dark minimal style handled by theme automatically with color_scheme: auto)
+// Sidebar Navigation (macOS Finder style)
 .side-bar {
-  border-right-width: 1px;
-  border-right-style: solid;
+  border-right: 1px solid #e5e5ea;
 }
 
-// CTA Buttons (Apple Pill-shape style)
+.nav-list-item {
+  margin-bottom: 2px;
+}
+
+.nav-list-link {
+  border-radius: 6px;
+  padding: 6px 12px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  
+  &:hover, &.active {
+    background-color: #e5e5ea;
+    color: #1d1d1f;
+  }
+}
+
+// Search Bar
+.search-input {
+  border-radius: 12px !important; // Pill shape
+  border: 1px solid transparent !important;
+  background-color: #e5e5ea !important;
+  padding: 10px 16px !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  
+  &:focus {
+    background-color: #ffffff !important;
+    border-color: #0066cc !important;
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1) !important;
+  }
+}
+
+// Code Blocks
+div.highlighter-rouge, figure.highlight {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e5ea;
+  background-color: #f5f5f7;
+}
+
+code {
+  font-size: 0.9em;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+}
+
+// CTA Buttons (Apple Pill-shape)
 .btn {
   border-radius: 980px !important;
   font-weight: 500;
   padding: 8px 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  background-color: #0071e3 !important;
+  color: #ffffff !important;
   border: none !important;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  
+  &:hover {
+    transform: scale(0.98);
+    opacity: 0.9;
+    text-decoration: none;
+  }
 }
 
-.btn:hover {
-  transform: scale(0.98);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  opacity: 0.9;
+// Tables
+.table-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e5ea;
+}
+
+table {
+  border-collapse: collapse;
+  th, td {
+    border: 1px solid #e5e5ea;
+    padding: 12px 16px;
+  }
+  th {
+    background-color: #f5f5f7;
+    font-weight: 600;
+  }
 }
 
 // Smooth Inline Links
-a {
+.main-content a:not(.btn) {
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
   text-decoration-color: transparent;
-}
-
-a:hover {
-  text-decoration: underline;
-  text-decoration-color: currentColor;
-}
-
-@media (prefers-color-scheme: dark) {
-  body, .main-content-wrap, .main-content {
-    background-color: #000000 !important;
-    color: #f5f5f7 !important;
-  }
   
-  h1, h2, h3, h4, h5, h6, .site-title, .nav-list-link, .text-delta {
-    color: #ffffff !important;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+  }
+}
+
+// Dynamic Dark Mode
+@media (prefers-color-scheme: dark) {
+  $dark-bg: #000000;
+  $dark-sidebar: #1d1d1f;
+  $dark-text: #f5f5f7;
+  $dark-heading: #ffffff;
+  $dark-border: #333336;
+  $dark-search: #2c2c2e;
+  $dark-link: #2997ff;
+  
+  body, .main-content-wrap, .main-content {
+    background-color: $dark-bg !important;
+    color: $dark-text !important;
   }
   
   .side-bar {
-    background-color: #1d1d1f !important;
-    border-right-color: #424245 !important;
+    background-color: $dark-sidebar !important;
+    border-right-color: $dark-border !important;
   }
   
-  code {
-    background-color: #1d1d1f !important;
-    color: #ff9f0a !important;
+  h1, h2, h3, h4, h5, h6, .site-title, .text-delta {
+    color: $dark-heading !important;
   }
-
+  
+  .main-content a:not(.btn) {
+    color: $dark-link !important;
+  }
+  
+  .search-input {
+    background-color: $dark-search !important;
+    color: $dark-text !important;
+    
+    &:focus {
+      background-color: $dark-sidebar !important;
+      border-color: $dark-link !important;
+      box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.2) !important;
+    }
+  }
+  
+  .nav-list-link {
+    color: #a1a1a6 !important;
+    &:hover, &.active {
+      background-color: #2c2c2e !important;
+      color: $dark-text !important;
+    }
+  }
+  
+  div.highlighter-rouge, figure.highlight, .table-wrapper {
+    border-color: $dark-border !important;
+    background-color: $dark-sidebar !important;
+  }
+  
+  table th, table td {
+    border-color: $dark-border !important;
+  }
+  
+  table th {
+    background-color: $dark-sidebar !important;
+    color: $dark-text !important;
+  }
+  
   .btn {
-    background-color: #2997ff !important;
+    background-color: $dark-link !important;
   }
-
-  a {
-    color: #2997ff;
+  
+  hr {
+    border-top-color: $dark-border !important;
   }
 }
-
