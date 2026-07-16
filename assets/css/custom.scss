@@ -1,0 +1,64 @@
+---
+---
+
+// Apple Typography
+$font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$code-font-family: "SFMono-Regular", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+
+@import "just-the-docs/custom_setup";
+
+// General Layout & Typography Tweaks
+.site-title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.main-content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.text-delta {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+// Solid Sidebar (Apple Light/Dark minimal style handled by theme automatically with color_scheme: auto)
+.side-bar {
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+// CTA Buttons (Apple Pill-shape style)
+.btn {
+  border-radius: 980px !important;
+  font-weight: 500;
+  padding: 8px 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  border: none !important;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+}
+
+// Smooth Inline Links
+a {
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  text-decoration-color: transparent;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+}
+
+@import "just-the-docs";
