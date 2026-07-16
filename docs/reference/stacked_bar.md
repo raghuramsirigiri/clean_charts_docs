@@ -97,6 +97,27 @@ cc.plot_stacked_bar_chart(
 
 ![Stacked Bar — Percentage](../images/docs/stacked_bar_pct.png)
 
+### Use Case: Customer Retention by Cohort
+
+Demonstrates applying a suffix across all values.
+
+```python
+df_churn = pd.DataFrame({
+    'Cohort': ['Q1 2023', 'Q2 2023', 'Q3 2023'],
+    'Retained': [85, 88, 92],
+    'Churned': [15, 12, 8]
+})
+
+cc.plot_stacked_bar_chart(
+    data=df_churn,
+    title="Customer Retention by Cohort",
+    subtitle="Percentage of retained vs churned users after 6 months",
+    value_suffix="%",
+)
+```
+
+![Stacked Bar — Churn](../images/docs/stacked_churn.png)
+
 ---
 
 ## Visual Behavior
