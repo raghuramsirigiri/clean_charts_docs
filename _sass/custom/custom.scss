@@ -1,47 +1,45 @@
-// Typography Refinements
-.site-title {
+// Global Apple Typography & Tracking
+body {
+  font-size: 17px;
+  line-height: 1.47059;
+  letter-spacing: -0.022em;
+}
+
+h1, h2, h3, h4, h5, h6, .site-title {
   font-weight: 600;
-  letter-spacing: -0.01em;
-  font-size: 1.25rem;
+  letter-spacing: -0.04em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-.text-delta {
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-
-// Sidebar Navigation (macOS Finder style)
+// Glassmorphism Sidebar
 .side-bar {
-  border-right: 1px solid #e5e5ea;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid #d2d2d7;
 }
 
+// macOS Finder-style Navigation
 .nav-list-item {
   margin-bottom: 2px;
 }
 
 .nav-list-link {
-  border-radius: 6px;
-  padding: 6px 12px;
+  border-radius: 8px;
+  padding: 8px 12px;
   transition: background-color 0.15s ease, color 0.15s ease;
   
   &:hover, &.active {
-    background-color: #e5e5ea;
-    color: #1d1d1f;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #000000;
   }
 }
 
-// Search Bar
+// Search Bar (Pill Shape)
 .search-input {
-  border-radius: 12px !important; // Pill shape
+  border-radius: 980px !important;
   border: 1px solid transparent !important;
-  background-color: #e5e5ea !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
   padding: 10px 16px !important;
-  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
   
   &:focus {
     background-color: #ffffff !important;
@@ -50,48 +48,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Code Blocks
-div.highlighter-rouge, figure.highlight {
+// Code Blocks & Tables (Rounded, clean)
+div.highlighter-rouge, figure.highlight, .table-wrapper {
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #e5e5ea;
+  border: 1px solid #d2d2d7;
   background-color: #f5f5f7;
 }
 
 code {
-  font-size: 0.9em;
-  border-radius: 4px;
+  font-size: 0.85em;
+  border-radius: 6px;
   padding: 0.2em 0.4em;
-}
-
-// CTA Buttons (Apple Pill-shape)
-.btn {
-  border-radius: 980px !important;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #0071e3 !important;
-  color: #ffffff !important;
-  border: none !important;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-  
-  &:hover {
-    transform: scale(0.98);
-    opacity: 0.9;
-    text-decoration: none;
-  }
-}
-
-// Tables
-.table-wrapper {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #e5e5ea;
 }
 
 table {
   border-collapse: collapse;
+  width: 100%;
+  
   th, td {
-    border: 1px solid #e5e5ea;
+    border: 1px solid #d2d2d7;
     padding: 12px 16px;
   }
   th {
@@ -100,7 +76,26 @@ table {
   }
 }
 
-// Smooth Inline Links
+// CTA Buttons (Apple Pill)
+.btn {
+  border-radius: 980px !important;
+  font-weight: 500;
+  padding: 8px 20px;
+  background-color: #0071e3 !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1), opacity 0.2s ease;
+  
+  &:hover {
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0.95;
+    text-decoration: none;
+  }
+}
+
+// Inline Links
 .main-content a:not(.btn) {
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
   text-decoration-color: transparent;
@@ -111,72 +106,94 @@ table {
   }
 }
 
-// Dynamic Dark Mode
+// ============================================
+// COMPREHENSIVE DARK MODE OVERRIDE
+// ============================================
 @media (prefers-color-scheme: dark) {
-  $dark-bg: #000000;
-  $dark-sidebar: #1d1d1f;
-  $dark-text: #f5f5f7;
-  $dark-heading: #ffffff;
-  $dark-border: #333336;
-  $dark-search: #2c2c2e;
-  $dark-link: #2997ff;
-  
+  :root {
+    --apple-dark-bg: #000000;
+    --apple-dark-sidebar: rgba(29, 29, 31, 0.8);
+    --apple-dark-text: #f5f5f7;
+    --apple-dark-heading: #ffffff;
+    --apple-dark-border: #424245;
+    --apple-dark-link: #2997ff;
+    --apple-dark-search: rgba(255, 255, 255, 0.1);
+    --apple-dark-code: #1d1d1f;
+  }
+
   body, .main-content-wrap, .main-content {
-    background-color: $dark-bg !important;
-    color: $dark-text !important;
+    background-color: var(--apple-dark-bg) !important;
+    color: var(--apple-dark-text) !important;
   }
-  
-  .side-bar {
-    background-color: $dark-sidebar !important;
-    border-right-color: $dark-border !important;
-  }
-  
+
   h1, h2, h3, h4, h5, h6, .site-title, .text-delta {
-    color: $dark-heading !important;
+    color: var(--apple-dark-heading) !important;
   }
-  
-  .main-content a:not(.btn) {
-    color: $dark-link !important;
+
+  .side-bar, .site-header {
+    background-color: var(--apple-dark-sidebar) !important;
+    border-right-color: var(--apple-dark-border) !important;
+    border-bottom-color: var(--apple-dark-border) !important;
   }
-  
-  .search-input {
-    background-color: $dark-search !important;
-    color: $dark-text !important;
-    
-    &:focus {
-      background-color: $dark-sidebar !important;
-      border-color: $dark-link !important;
-      box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.2) !important;
-    }
-  }
-  
-  .nav-list-link {
+
+  .nav-list-link, .nav-list-item {
     color: #a1a1a6 !important;
-    &:hover, &.active {
-      background-color: #2c2c2e !important;
-      color: $dark-text !important;
-    }
+  }
+
+  .nav-list-link:hover, .nav-list-link.active {
+    background-color: var(--apple-dark-search) !important;
+    color: var(--apple-dark-heading) !important;
+  }
+
+  .search-input {
+    background-color: var(--apple-dark-search) !important;
+    color: var(--apple-dark-text) !important;
+    border-color: transparent !important;
   }
   
-  div.highlighter-rouge, figure.highlight, .table-wrapper {
-    border-color: $dark-border !important;
-    background-color: $dark-sidebar !important;
+  .search-input:focus {
+    background-color: var(--apple-dark-sidebar) !important;
+    border-color: var(--apple-dark-link) !important;
+    box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.2) !important;
+  }
+
+  .search-results {
+    background-color: var(--apple-dark-sidebar) !important;
+    border-color: var(--apple-dark-border) !important;
+  }
+
+  .search-result-item {
+    color: var(--apple-dark-text) !important;
+    border-bottom-color: var(--apple-dark-border) !important;
+  }
+
+  .main-content a:not(.btn) {
+    color: var(--apple-dark-link) !important;
+  }
+
+  div.highlighter-rouge, figure.highlight, .table-wrapper, code {
+    background-color: var(--apple-dark-code) !important;
+    border-color: var(--apple-dark-border) !important;
   }
   
-  table th, table td {
-    border-color: $dark-border !important;
+  code {
+    color: #ff9f0a !important; // Apple accent for inline code
+  }
+
+  table, th, td, hr, blockquote {
+    border-color: var(--apple-dark-border) !important;
   }
   
-  table th {
-    background-color: $dark-sidebar !important;
-    color: $dark-text !important;
+  th {
+    background-color: var(--apple-dark-code) !important;
+    color: var(--apple-dark-heading) !important;
+  }
+
+  blockquote {
+    color: #a1a1a6 !important;
   }
   
   .btn {
-    background-color: $dark-link !important;
-  }
-  
-  hr {
-    border-top-color: $dark-border !important;
+    background-color: var(--apple-dark-link) !important;
   }
 }
