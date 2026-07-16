@@ -216,6 +216,50 @@ cc.plot_time_series(
 
 ![Time Series — Callouts](../images/docs/time_series_callouts.png)
 
+### Use Case: SaaS Metrics
+
+Demonstrates how to add a `$` prefix to the y-axis values.
+
+```python
+import pandas as pd
+import clean_charts as cc
+
+dates = pd.date_range(start='2023-01-01', periods=12, freq='ME')
+df_saas = pd.DataFrame({
+    'date': dates,
+    'Enterprise': [120, 135, 142, 150, 165, 178, 190, 205, 215, 230, 245, 260],
+    'Mid-Market': [300, 310, 315, 325, 330, 345, 355, 360, 380, 395, 410, 420]
+})
+
+cc.plot_time_series(
+    data=df_saas,
+    title="ARR Growth by Segment",
+    subtitle="Monthly recurring revenue ($M)",
+)
+```
+
+![Time Series — SaaS](../images/docs/ts_saas.png)
+
+### Use Case: Macroeconomic Trends
+
+Demonstrates using a `%` suffix for the y-axis.
+
+```python
+df_macro = pd.DataFrame({
+    'date': dates,
+    'Inflation': [6.5, 6.0, 5.0, 4.9, 4.0, 3.0, 3.2, 3.7, 3.7, 3.2, 3.1, 3.4],
+    'Target Rate': [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0]
+})
+
+cc.plot_time_series(
+    data=df_macro,
+    title="US Inflation vs Target",
+    subtitle="CPI YoY % vs Federal Reserve Target",
+)
+```
+
+![Time Series — Macro](../images/docs/ts_macro.png)
+
 ---
 
 ## Notes

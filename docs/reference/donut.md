@@ -96,6 +96,50 @@ cc.plot_donut_chart(
 
 ![Donut — Percentages](../images/docs/donut_percentages.png)
 
+### Use Case: Energy Mix
+
+Demonstrates using custom text for the center label with `\n` line breaks.
+
+```python
+import pandas as pd
+import clean_charts as cc
+
+df_energy = pd.DataFrame({
+    'Source': ['Solar', 'Wind', 'Nuclear', 'Natural Gas', 'Coal'],
+    'TWh': [1200, 1500, 2500, 3000, 1800]
+})
+
+cc.plot_donut_chart(
+    data=df_energy,
+    title="Global Energy Mix",
+    subtitle="Projected generation in 2030 (TWh)",
+    center_label="10,000\nTWh",
+)
+```
+
+![Donut — Energy Mix](../images/docs/donut_energy.png)
+
+### Use Case: Portfolio Allocation
+
+Demonstrates using a percentage suffix for the legend items.
+
+```python
+df_portfolio = pd.DataFrame({
+    'Asset': ['Equities', 'Fixed Income', 'Real Estate', 'Cash'],
+    'Alloc': [60, 25, 10, 5]
+})
+
+cc.plot_donut_chart(
+    data=df_portfolio,
+    title="Portfolio Allocation",
+    subtitle="Balanced growth strategy",
+    center_label="100%",
+    value_suffix="%",
+)
+```
+
+![Donut — Portfolio Allocation](../images/docs/donut_portfolio.png)
+
 ---
 
 ## Visual Behavior

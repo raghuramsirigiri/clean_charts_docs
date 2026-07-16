@@ -145,6 +145,28 @@ cc.plot_grouped_barh_chart(
 
 ![Grouped Horizontal Bar — Comments](../images/docs/grouped_barh_comments.png)
 
+### Use Case: Quarterly Revenue by Region
+
+Demonstrates formatting axes with prefixes and suffixes.
+
+```python
+df_fin = pd.DataFrame({
+    'Region': ['North America', 'Europe', 'Asia Pacific'],
+    'Q1': [12.5, 8.2, 15.4],
+    'Q2': [14.0, 9.1, 16.8]
+})
+
+cc.plot_grouped_barh_chart(
+    data=df_fin,
+    title="Quarterly Revenue by Region",
+    subtitle="In millions of USD",
+    value_prefix="$",
+    value_suffix="M",
+)
+```
+
+![Grouped Bar — Finance](../images/docs/grouped_finance.png)
+
 ---
 
 ## Visual Behavior

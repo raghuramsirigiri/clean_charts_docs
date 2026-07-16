@@ -90,6 +90,51 @@ cc.plot_barh_chart(
 
 ![Horizontal Bar — Percentages](../images/docs/barh_percentages.png)
 
+### Use Case: Employee Satisfaction Survey (Custom Padding)
+
+Demonstrates how to increase `bar_padding` to make bars thinner and add a `%` suffix.
+
+```python
+import pandas as pd
+import clean_charts as cc
+
+df_survey = pd.DataFrame({
+    'Question': ['I am proud to work here', 'I would recommend this company', 'My manager supports me', 'I have opportunities to grow'],
+    'Score': [85, 82, 78, 65]
+}).sort_values('Score', ascending=True)
+
+cc.plot_barh_chart(
+    data=df_survey,
+    title="Employee Engagement Survey",
+    subtitle="% of employees agreeing with the statement",
+    value_suffix="%",
+    bar_padding=0.4,
+)
+```
+
+![Horizontal Bar — Survey](../images/docs/barh_survey.png)
+
+### Use Case: Compact Mode (1:1 Aspect Ratio)
+
+Demonstrates how to explicitly force a square 1:1 aspect ratio.
+
+```python
+df_health = pd.DataFrame({
+    'Country': ['Japan', 'Switzerland', 'South Korea', 'Singapore', 'Spain'],
+    'Life Expectancy': [84.6, 83.8, 83.6, 83.6, 83.3]
+})
+
+cc.plot_barh_chart(
+    data=df_health,
+    title="Global Longevity Leaders",
+    subtitle="Life expectancy at birth (years)",
+    value_suffix=" yrs",
+    aspect_ratio="1:1",
+)
+```
+
+![Horizontal Bar — Compact](../images/docs/barh_compact.png)
+
 ---
 
 ## Visual Behavior
