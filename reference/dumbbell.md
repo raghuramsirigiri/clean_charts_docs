@@ -27,6 +27,8 @@ clean_charts.plot_dumbbell_chart(
     start_color=None,
     end_color=None,
     connector_color=None,
+    positive_connector_color=None,
+    negative_connector_color=None,
     value_suffix="",
     show_values=True,
     scale_text=True,
@@ -49,7 +51,9 @@ clean_charts.plot_dumbbell_chart(
 | `bg_color`         | `str \| None`    | `"#f4f3f0"` | Background color. |
 | `start_color`      | `str \| None`    | `"#000000"` | Hex color for the **first** value column (Column 1) dots. |
 | `end_color`        | `str \| None`    | `"#2323FF"` | Hex color for the **second** value column (Column 2) dots. |
-| `connector_color`  | `str \| None`    | `"#94A3C0"` | Hex color for the horizontal line connecting the two dots. |
+| `connector_color`  | `str \| None`    | `None`      | Hex color for the horizontal line. If provided, overrides dynamic colors. |
+| `positive_connector_color` | `str \| None` | `end_color` | Hex color for the connecting line when the difference is positive (end >= start). |
+| `negative_connector_color` | `str \| None` | `start_color` | Hex color for the connecting line when the difference is negative (end < start). |
 | `value_suffix`     | `str`            | `""`        | String appended to value annotations. |
 | `show_values`      | `bool`           | `True`      | Display numeric values next to each dot. |
 | `scale_text`       | `bool`           | `True`      | Scale fonts proportionally. |
@@ -82,11 +86,41 @@ cc.plot_dumbbell_chart(
 
 ---
 
+## Example 2: Dynamic Connector Colors
+
+By default, `plot_dumbbell_chart` dynamically colors the connector lines based on whether the value increased or decreased. You can customize these colors using `positive_connector_color` and `negative_connector_color`.
+
+```python
+import pandas as pd
+import clean_charts as cc
+
+df = pd.DataFrame({
+    "Category": ["Product A", "Product B", "Product C", "Product D"],
+    "2022": [120, 95, 150, 80],
+    "2023": [160, 60, 140, 110],
+})
+
+cc.plot_dumbbell_chart(
+    data=df,
+    title="Year-over-Year Sales Volume",
+    subtitle="Increases and decreases from 2022 to 2023",
+    positive_connector_color="#4CAF50",  # Green for increase
+    negative_connector_color="#F44336",  # Red for decrease
+    start_color="#555555",
+    end_color="#000000",
+    show_values=True,
+)
+```
+
+![Dumbbell — Dynamic](../images/docs/dumbbell_dynamic.png)
+
+---
+
 ## Visual Behavior
 
 - A **color legend** is automatically drawn between the subtitle and the chart, showing the two series names with colored dot indicators.
 - Each category row displays:
-  - A horizontal **connector line** in `connector_color` spanning the range between the two values.
+  - A horizontal **connector line** spanning the range. Colored dynamically: `positive_connector_color` if the value increased, or `negative_connector_color` if decreased. Overridden by `connector_color` if provided.
   - Two **dots** (circles): one in `start_color` (Column 1) and one in `end_color` (Column 2).
   - When `show_values=True`, numeric values appear as small annotations near each dot.
 - The X-axis ticks appear along the **top** of the chart.
