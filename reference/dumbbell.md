@@ -29,10 +29,11 @@ clean_charts.plot_dumbbell_chart(
     connector_color=None,
     positive_connector_color=None,
     negative_connector_color=None,
+    dot_size=None,
     value_suffix="",
-    show_values=True,
-    show_labels=True,
     scale_text=True,
+    show_values=False,
+    show_labels=True,
 )
 ```
 
@@ -55,9 +56,10 @@ clean_charts.plot_dumbbell_chart(
 | `connector_color`  | `str \| None`    | `None`      | Hex color for the horizontal line. If provided, overrides dynamic colors. |
 | `positive_connector_color` | `str \| None` | `end_color` | Hex color for the connecting line when the difference is positive (end >= start). |
 | `negative_connector_color` | `str \| None` | `start_color` | Hex color for the connecting line when the difference is negative (end < start). |
+| `dot_size`         | `float \| None`  | `None`      | Marker size (area in points^2). If None, auto-scaled based on layout. |
 | `value_suffix`     | `str`            | `""`        | String appended to value annotations. |
-| `show_values`      | `bool`           | `True`      | Display numeric values next to each dot. |
-| `show_labels`      | `bool`           | `True`      | Display category labels on the left side of the chart. |
+| `show_values`      | `bool`           | `False`     | Display numeric values next to each dot. |
+| `show_labels`      | `bool`           | `True`      | Display category labels on the left. If `False`, labels are omitted and the chart spans to the left margin. |
 | `scale_text`       | `bool`           | `True`      | Scale fonts proportionally. |
 
 ---
@@ -120,7 +122,7 @@ cc.plot_dumbbell_chart(
 
 ## Example 3: No Category Labels
 
-You can hide the category labels on the Y-axis by setting `show_labels=False`. This is useful when the categories are self-evident or explained elsewhere.
+You can hide the category labels on the left by setting `show_labels=False`.
 
 ```python
 cc.plot_dumbbell_chart(
@@ -144,7 +146,7 @@ cc.plot_dumbbell_chart(
   - Two **dots** (circles): one in `start_color` (Column 1) and one in `end_color` (Column 2).
   - When `show_values=True`, numeric values appear as small annotations near each dot.
 - The X-axis ticks appear along the **top** of the chart.
-- **Category labels** are left-aligned flush with the title and subtitle (unless `show_labels=False`).
+- **Category labels** are left-aligned flush with the title and subtitle (only when `show_labels=True`). When `show_labels=False`, labels are omitted and the chart area extends to the left margin.
 - **Gridlines** run vertically through the chart area.
 - Data is displayed top-to-bottom in the order it appears in the DataFrame.
 
