@@ -1,0 +1,26 @@
+---
+layout: default
+title: "Use Case: Progress-to-Goal Tracker"
+parent: "Bar Charts"
+---
+# Use Case: Progress-to-Goal Tracker
+
+
+By using thick bars and enabling percentage display, you can mimic a software loading/progress bar for KPI tracking.
+
+```python
+import pandas as pd
+import clean_charts as cc
+
+df = pd.DataFrame({"Department": ["Sales", "Engineering"], "Progress": [0.85, 0.40]})
+
+cc.plot_barh_chart(
+    data=df,
+    title="Q3 Objectives",
+    subtitle="Progress towards quarterly goals",
+    show_percentages=True,
+    bar_padding=0.2,
+    aspect_ratio="landscape",
+    color="#2323FF"
+)
+```
