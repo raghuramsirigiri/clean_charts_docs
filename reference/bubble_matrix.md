@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Bubble Matrix
-parent: Chart Reference
+parent: Relationships
+has_children: true
 nav_order: 9
 ---
 # `plot_bubble_matrix_chart()`
@@ -14,7 +15,7 @@ This chart is ideal for skill matrices, cross-tabulation heatmaps, and any two-d
 
 ---
 
-## Signature
+## API Reference
 
 ```python
 clean_charts.plot_bubble_matrix_chart(

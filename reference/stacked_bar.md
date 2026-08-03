@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Stacked Bar Chart
-parent: Chart Reference
+parent: Distributions & Rankings
+has_children: true
 nav_order: 5
 ---
 # `plot_stacked_bar_chart()`
@@ -12,7 +13,7 @@ Renders a stacked horizontal bar chart where each row represents a category and 
 
 ---
 
-## Signature
+## API Reference
 
 ```python
 clean_charts.plot_stacked_bar_chart(

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Dumbbell Chart
-parent: Chart Reference
+parent: Distributions & Rankings
+has_children: true
 nav_order: 7
 ---
 # `plot_dumbbell_chart()`
@@ -12,7 +13,7 @@ Renders a dumbbell chart (also called a Cleveland dot plot or lollipop chart) th
 
 ---
 
-## Signature
+## API Reference
 
 ```python
 clean_charts.plot_dumbbell_chart(

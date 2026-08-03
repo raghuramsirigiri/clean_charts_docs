@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Donut Chart
-parent: Chart Reference
+parent: Part-to-Whole
+has_children: true
 nav_order: 4
 ---
 # `plot_donut_chart()`
@@ -12,7 +13,7 @@ Renders a donut (ring) chart with a hollow center for displaying summary text. D
 
 ---
 
-## Signature
+## API Reference
 
 ```python
 clean_charts.plot_donut_chart(

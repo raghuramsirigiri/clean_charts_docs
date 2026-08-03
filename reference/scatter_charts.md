@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Scatter Charts
-parent: Chart Reference
+parent: Relationships
+has_children: true
 nav_order: 14
 ---
 # Scatter Charts
@@ -14,7 +15,7 @@ The `clean-charts` library provides three variants of scatter plots for visualiz
 
 Plots a 2D scatter plot.
 
-### Signature
+### API Reference
 
 ```python
 clean_charts.plot_scatter_chart(
@@ -69,7 +70,7 @@ clean_charts.plot_scatter_chart(
 
 Plots a grouped or quadrant-mapped scatter plot.
 
-### Signature
+### API Reference
 
 ```python
 clean_charts.plot_grouped_scatter_chart(
@@ -122,7 +123,7 @@ clean_charts.plot_grouped_scatter_chart(
 
 Plots a 3-variable bubble scatter plot where dot size encodes the third dimension.
 
-### Signature
+### API Reference
 
 ```python
 clean_charts.plot_bubble_scatter_chart(

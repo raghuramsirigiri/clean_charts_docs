@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Insight Card
-parent: Chart Reference
+parent: Layouts & Components
+has_children: true
 nav_order: 8
 ---
 # `plot_insight_card()`
@@ -12,7 +13,7 @@ Renders a bold, solid-color card with large stylized text — designed for "key 
 
 ---
 
-## Signature
+## API Reference
 
 ```python
 clean_charts.plot_insight_card(

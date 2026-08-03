@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Waffle Chart
-parent: Chart Reference
+parent: Part-to-Whole
+has_children: true
 nav_order: 6
 ---
 # `plot_waffle_chart()`
@@ -14,7 +15,7 @@ This chart excels at communicating "X out of 100" or "X percent" in a visually i
 
 ---
 
-## Signature
+## API Reference
 
 ```python
 clean_charts.plot_waffle_chart(

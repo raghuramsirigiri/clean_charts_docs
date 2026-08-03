@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Table
-parent: Chart Reference
+parent: Layouts & Components
+has_children: true
 nav_order: 10
 ---
 # `plot_table()`
@@ -14,7 +15,7 @@ This is a powerful function for creating publication-quality data tables that ca
 
 ---
 
-## Signature
+## API Reference
 
 ```python
 clean_charts.plot_table(

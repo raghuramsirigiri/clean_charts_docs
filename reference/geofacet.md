@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Geofacet
-parent: Chart Reference
+parent: Layouts & Components
+has_children: true
 nav_order: 11
 ---
 # `plot_geofacet()`
@@ -14,7 +15,7 @@ Currently supports **US states** and **UK regions** layouts.
 
 ---
 
-## Signature
+## API Reference
 
 ```python
 clean_charts.plot_geofacet(

@@ -23,6 +23,16 @@
                     {%- for child in children -%}
                       <li>
                         <a href="{{ child.url | relative_url }}" class="nav-link {% if page.url == child.url %}active{% endif %}">{{ child.title }}</a>
+                        {%- if child.has_children -%}
+                          {%- assign grandchildren = site.html_pages | where: "parent", child.title | sort: "nav_order" -%}
+                          <ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;">
+                            {%- for grandchild in grandchildren -%}
+                              <li>
+                                <a href="{{ grandchild.url | relative_url }}" class="nav-link {% if page.url == grandchild.url %}active{% endif %}">{{ grandchild.title }}</a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
                       </li>
                     {%- endfor -%}
                   </ul>

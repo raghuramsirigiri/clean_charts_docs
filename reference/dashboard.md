@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Dashboard
-parent: Chart Reference
+parent: Layouts & Components
+has_children: true
 nav_order: 12
 ---
 # `plot_dashboard()`
@@ -14,7 +15,7 @@ This function enables the creation of executive-style dashboards from any combin
 
 ---
 
-## Signature
+## API Reference
 
 ```python
 clean_charts.plot_dashboard(
