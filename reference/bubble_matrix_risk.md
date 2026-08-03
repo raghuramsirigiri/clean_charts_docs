@@ -11,15 +11,13 @@ Enterprise risk management demands absolute clarity regarding both probability a
 import pandas as pd
 import clean_charts as cc
 
-df = pd.DataFrame({"Risk": ["Cyber", "Market"], "Likelihood": ["High", "Low"], "Impact": ["High", "High"], "Cost": [100, 50]})
+df = pd.DataFrame({"Risk": ["Cyber", "Market"], "Likelihood": [10, 2], "Impact": [10, 10], "Cost": [100, 50]})
 
 cc.plot_bubble_matrix_chart(
     data=df,
     title="Risk Assessment",
     subtitle="Size and color indicate financial exposure",
-    start_color="#fee0d2",
-    end_color="#de2d26"
-)
+    end_)
 ```
 
 ![Use Case Preview](../images/docs/bubble_matrix_basic.png)

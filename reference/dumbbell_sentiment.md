@@ -17,7 +17,7 @@ cc.plot_dumbbell_chart(
     data=df,
     title="Product Sentiment Shift",
     subtitle="Before vs After v2.0 Release (1-5 Scale)",
-    bar_padding=0.5
+    0.5
 )
 ```
 

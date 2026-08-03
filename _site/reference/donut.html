@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donut Chart | clean-charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="layout-wrapper">
+    <aside class="sidebar">
+      <a href="/" class="site-title">clean-charts</a>
+      <nav>
+        <ul class="nav-list"><li>
+                <a href="/" class="nav-link ">Home</a></li><li>
+                <a href="/reference/trends.html" class="nav-link ">Trends & Time</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/time_series.html" class="nav-link ">Time Series</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/time_series_recession.html" class="nav-link ">Use Case: Recession Highlighter</a>
+                              </li><li>
+                                <a href="/reference/time_series_milestone.html" class="nav-link ">Use Case: Annotated Milestones</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/distributions.html" class="nav-link ">Distributions & Rankings</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bar_charts.html" class="nav-link ">Bar Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/barh_progress_tracker.html" class="nav-link ">Use Case: Progress-to-Goal Tracker</a>
+                              </li><li>
+                                <a href="/reference/barv_square_tile.html" class="nav-link ">Use Case: Square Tile KPI</a>
+                              </li><li>
+                                <a href="/reference/barv_timeline_histogram.html" class="nav-link ">Use Case: Timeline Histogram</a>
+                              </li><li>
+                                <a href="/reference/barh_minimalist_ranking.html" class="nav-link ">Use Case: Minimalist Ranking</a>
+                              </li></ul></li><li>
+                        <a href="/reference/grouped_barh.html" class="nav-link ">Grouped Bar</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/grouped_barh_scorecard.html" class="nav-link ">Use Case: Strategic Scorecard</a>
+                              </li><li>
+                                <a href="/reference/grouped_barh_gradient_heat.html" class="nav-link ">Use Case: Gradient Heat Progression</a>
+                              </li></ul></li><li>
+                        <a href="/reference/stacked_bar.html" class="nav-link ">Stacked Bar Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/stacked_bar_layer_cake.html" class="nav-link ">Use Case: Revenue Layer Cake</a>
+                              </li><li>
+                                <a href="/reference/stacked_bar_consolidation.html" class="nav-link ">Use Case: 100% Market Consolidation</a>
+                              </li></ul></li><li>
+                        <a href="/reference/dumbbell.html" class="nav-link ">Dumbbell Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/dumbbell_target_actual.html" class="nav-link ">Use Case: Target vs Actual Tracker</a>
+                              </li><li>
+                                <a href="/reference/dumbbell_sentiment.html" class="nav-link ">Use Case: Sentiment Shift</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/relationships.html" class="nav-link ">Relationships</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bubble_matrix.html" class="nav-link ">Bubble Matrix</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/scatter_charts.html" class="nav-link ">Scatter Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/scatter_linear_trend.html" class="nav-link ">Use Case: Linear Trend Identifier</a>
+                              </li><li>
+                                <a href="/reference/scatter_quadrant.html" class="nav-link ">Use Case: Quadrant Strategy Matrix</a>
+                              </li><li>
+                                <a href="/reference/scatter_3d_market.html" class="nav-link ">Use Case: 3D Market Map</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/part_to_whole.html" class="nav-link ">Part-to-Whole</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/donut.html" class="nav-link active">Donut Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/donut_hero_metric.html" class="nav-link ">Use Case: Hero Metric Focus</a>
+                              </li></ul></li><li>
+                        <a href="/reference/waffle.html" class="nav-link ">Waffle Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/waffle_rare_event.html" class="nav-link ">Use Case: The 1-in-100 Storyteller</a>
+                              </li><li>
+                                <a href="/reference/waffle_budget.html" class="nav-link ">Use Case: Budget Allocation Block</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/layouts.html" class="nav-link ">Layouts & Components</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/insight_card.html" class="nav-link ">Insight Card</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/table.html" class="nav-link ">Table</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/geofacet.html" class="nav-link ">Geofacet</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/dashboard.html" class="nav-link ">Dashboard</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li></ul></li></ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <h1 id="plot_donut_chart"><code class="language-plaintext highlighter-rouge">plot_donut_chart()</code></h1>
+
+<p>Renders a donut (ring) chart with a hollow center for displaying summary text. Designed for part-of-whole compositions with up to ~8 segments. Each segment is rendered with a continuous color gradient from <code class="language-plaintext highlighter-rouge">start_color</code> to <code class="language-plaintext highlighter-rouge">end_color</code>.</p>
+
+<p><img src="/images/docs/donut_basic.png" alt="Donut — Basic" /></p>
+
+<hr />
+
+<h2 id="api-reference">API Reference</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clean_charts</span><span class="p">.</span><span class="n">plot_donut_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">output_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">aspect_ratio</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bg_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">end_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">center_label</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">show_percentages</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">scale_text</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="parameters">Parameters</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data</code></td>
+      <td><code class="language-plaintext highlighter-rouge">pd.DataFrame</code></td>
+      <td>Built-in</td>
+      <td>DataFrame with two columns: Column 0 (str) = segment labels, Column 1 (numeric) = values. Values are automatically normalized to percentages for display.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">output_path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>File path for the saved image.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">width</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">600</code></td>
+      <td>Image width in pixels.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">height</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int \| None</code></td>
+      <td>Auto</td>
+      <td>Auto-calculated based on width and segment count.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">aspect_ratio</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"square"</code>, <code class="language-plaintext highlighter-rouge">"landscape"</code>, <code class="language-plaintext highlighter-rouge">"vertical"</code>, <code class="language-plaintext highlighter-rouge">"1:1"</code>, <code class="language-plaintext highlighter-rouge">"2:1"</code>, <code class="language-plaintext highlighter-rouge">"1:2"</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Bold title (max 2 lines).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subtitle</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Lighter subtitle (max 3 lines).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bg_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#f4f3f0"</code></td>
+      <td>Background color.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">start_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#000000"</code></td>
+      <td>Gradient start color for the first (largest) segment.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">end_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#2323FF"</code></td>
+      <td>Gradient end color for the last (smallest) segment.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">center_label</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Text rendered inside the center of the donut ring. Supports <code class="language-plaintext highlighter-rouge">\n</code> for multiline. E.g., <code class="language-plaintext highlighter-rouge">"100%\nTotal"</code>, <code class="language-plaintext highlighter-rouge">"$42M"</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show_percentages</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">False</code></td>
+      <td>Append <code class="language-plaintext highlighter-rouge">" (XX.X%)"</code> to each legend label.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">value_suffix</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">""</code></td>
+      <td>String appended to numeric values in the legend.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scale_text</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">True</code></td>
+      <td>Scale fonts proportionally.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="basic-donut-chart">Basic Donut Chart</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">df_donut</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">'Source'</span><span class="p">:</span> <span class="p">[</span><span class="s">'Solar'</span><span class="p">,</span> <span class="s">'Wind'</span><span class="p">,</span> <span class="s">'Nuclear'</span><span class="p">,</span> <span class="s">'Natural Gas'</span><span class="p">,</span> <span class="s">'Coal'</span><span class="p">],</span>
+    <span class="s">'TWh'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">2500</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1800</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_donut_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_donut</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Global Energy Mix"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Projected generation in 2030 (TWh)"</span><span class="p">,</span>
+    <span class="n">center_label</span><span class="o">=</span><span class="s">"10,000</span><span class="se">\n</span><span class="s">TWh"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/images/docs/donut_basic.png" alt="Donut — Basic" /></p>
+
+<h3 id="with-percentage-labels">With Percentage Labels</h3>
+
+<p>Displays percentage values in the legend.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cc</span><span class="p">.</span><span class="n">plot_donut_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_donut</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Global Energy Mix"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Percentage distribution of projected generation in 2030"</span><span class="p">,</span>
+    <span class="n">center_label</span><span class="o">=</span><span class="s">"100%"</span><span class="p">,</span>
+    <span class="n">show_percentages</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/images/docs/donut_percentages.png" alt="Donut — Percentages" /></p>
+
+<hr />
+
+<h2 id="visual-behavior">Visual Behavior</h2>
+
+<ul>
+  <li>Data is <strong>sorted by value descending</strong> before rendering — the largest segment starts at the top (12 o’clock position).</li>
+  <li><strong>Segments with value ≤ 0</strong> are silently excluded.</li>
+  <li>Segments are drawn clockwise starting from 90° (top of the ring).</li>
+  <li>The <strong>legend</strong> is rendered as a structured list below the donut ring, with colored squares, category labels, and values.</li>
+  <li>When <code class="language-plaintext highlighter-rouge">show_percentages=True</code>, each legend entry shows <code class="language-plaintext highlighter-rouge">"Label (XX.X%)"</code>.</li>
+  <li>The <strong>center label</strong> is rendered in a medium-bold font at the exact center of the ring. Use <code class="language-plaintext highlighter-rouge">\n</code> for multi-line center labels (e.g., a number on top, a caption below).</li>
+  <li>The donut width (ring thickness) is automatically calibrated relative to the overall size.</li>
+</ul>
+
+    </main>
+  </div>
+</body>
+</html>

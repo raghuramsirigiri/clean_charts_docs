@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scatter Charts | clean-charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="layout-wrapper">
+    <aside class="sidebar">
+      <a href="/" class="site-title">clean-charts</a>
+      <nav>
+        <ul class="nav-list"><li>
+                <a href="/" class="nav-link ">Home</a></li><li>
+                <a href="/reference/trends.html" class="nav-link ">Trends & Time</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/time_series.html" class="nav-link ">Time Series</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/time_series_recession.html" class="nav-link ">Use Case: Recession Highlighter</a>
+                              </li><li>
+                                <a href="/reference/time_series_milestone.html" class="nav-link ">Use Case: Annotated Milestones</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/distributions.html" class="nav-link ">Distributions & Rankings</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bar_charts.html" class="nav-link ">Bar Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/barh_progress_tracker.html" class="nav-link ">Use Case: Progress-to-Goal Tracker</a>
+                              </li><li>
+                                <a href="/reference/barv_square_tile.html" class="nav-link ">Use Case: Square Tile KPI</a>
+                              </li><li>
+                                <a href="/reference/barv_timeline_histogram.html" class="nav-link ">Use Case: Timeline Histogram</a>
+                              </li><li>
+                                <a href="/reference/barh_minimalist_ranking.html" class="nav-link ">Use Case: Minimalist Ranking</a>
+                              </li></ul></li><li>
+                        <a href="/reference/grouped_barh.html" class="nav-link ">Grouped Bar</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/grouped_barh_scorecard.html" class="nav-link ">Use Case: Strategic Scorecard</a>
+                              </li><li>
+                                <a href="/reference/grouped_barh_gradient_heat.html" class="nav-link ">Use Case: Gradient Heat Progression</a>
+                              </li></ul></li><li>
+                        <a href="/reference/stacked_bar.html" class="nav-link ">Stacked Bar Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/stacked_bar_layer_cake.html" class="nav-link ">Use Case: Revenue Layer Cake</a>
+                              </li><li>
+                                <a href="/reference/stacked_bar_consolidation.html" class="nav-link ">Use Case: 100% Market Consolidation</a>
+                              </li></ul></li><li>
+                        <a href="/reference/dumbbell.html" class="nav-link ">Dumbbell Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/dumbbell_target_actual.html" class="nav-link ">Use Case: Target vs Actual Tracker</a>
+                              </li><li>
+                                <a href="/reference/dumbbell_sentiment.html" class="nav-link ">Use Case: Sentiment Shift</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/relationships.html" class="nav-link ">Relationships</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bubble_matrix.html" class="nav-link ">Bubble Matrix</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/scatter_charts.html" class="nav-link active">Scatter Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/scatter_linear_trend.html" class="nav-link ">Use Case: Linear Trend Identifier</a>
+                              </li><li>
+                                <a href="/reference/scatter_quadrant.html" class="nav-link ">Use Case: Quadrant Strategy Matrix</a>
+                              </li><li>
+                                <a href="/reference/scatter_3d_market.html" class="nav-link ">Use Case: 3D Market Map</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/part_to_whole.html" class="nav-link ">Part-to-Whole</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/donut.html" class="nav-link ">Donut Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/donut_hero_metric.html" class="nav-link ">Use Case: Hero Metric Focus</a>
+                              </li></ul></li><li>
+                        <a href="/reference/waffle.html" class="nav-link ">Waffle Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/waffle_rare_event.html" class="nav-link ">Use Case: The 1-in-100 Storyteller</a>
+                              </li><li>
+                                <a href="/reference/waffle_budget.html" class="nav-link ">Use Case: Budget Allocation Block</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/layouts.html" class="nav-link ">Layouts & Components</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/insight_card.html" class="nav-link ">Insight Card</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/table.html" class="nav-link ">Table</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/geofacet.html" class="nav-link ">Geofacet</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/dashboard.html" class="nav-link ">Dashboard</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li></ul></li></ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <h1 id="scatter-charts">Scatter Charts</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">clean-charts</code> library provides three variants of scatter plots for visualizing relationships between continuous variables, grouped variables, and multi-dimensional data, all styled cleanly in the Economist aesthetic.</p>
+
+<hr />
+
+<h2 id="plot_scatter_chart"><code class="language-plaintext highlighter-rouge">plot_scatter_chart()</code></h2>
+
+<p>Plots a 2D scatter plot.</p>
+
+<h3 id="api-reference">API Reference</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clean_charts</span><span class="p">.</span><span class="n">plot_scatter_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">output_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">aspect_ratio</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bg_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">dot_size</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+    <span class="n">x_label</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">y_label</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">x_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">y_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">show_labels</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">show_trendline</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">trendline_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">axes_origin</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">show_grid</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">scale_text</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="parameters">Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data</code></td>
+      <td><code class="language-plaintext highlighter-rouge">pd.DataFrame \| None</code></td>
+      <td>Built-in</td>
+      <td>DataFrame with 2 or 3 columns (Col 0: X, Col 1: Y or Col 0: Labels, Col 1: X, Col 2: Y).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">output_path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>File path for the saved image.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">width</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">700</code></td>
+      <td>Target image width in pixels.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">height</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">500</code></td>
+      <td>Target image height in pixels.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">aspect_ratio</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"square"</code>, <code class="language-plaintext highlighter-rouge">"landscape"</code>, <code class="language-plaintext highlighter-rouge">"vertical"</code>, <code class="language-plaintext highlighter-rouge">"1:1"</code>, <code class="language-plaintext highlighter-rouge">"2:1"</code>, <code class="language-plaintext highlighter-rouge">"1:2"</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Header title (bold).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subtitle</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Subtitle text.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bg_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Hex background color. Defaults to Economist cream.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Hex color for scatter dots.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dot_size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td><code class="language-plaintext highlighter-rouge">80</code></td>
+      <td>Marker size (area in points^2).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">alpha</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.75</code></td>
+      <td>Transparency of scatter points (0.0 to 1.0).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">x_label</code>, <code class="language-plaintext highlighter-rouge">y_label</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Labels for X and Y axes.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">x_suffix</code>, <code class="language-plaintext highlighter-rouge">y_suffix</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">""</code></td>
+      <td>Suffix strings for axis annotations (e.g., “$”, “%”).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show_labels</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">False</code></td>
+      <td>Annotate scatter points with label strings.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show_trendline</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">False</code></td>
+      <td>Plot a linear regression trend line.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">trendline_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Hex color for the trend line.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="plot_grouped_scatter_chart"><code class="language-plaintext highlighter-rouge">plot_grouped_scatter_chart()</code></h2>
+
+<p>Plots a grouped or quadrant-mapped scatter plot.</p>
+
+<h3 id="api-reference-1">API Reference</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clean_charts</span><span class="p">.</span><span class="n">plot_grouped_scatter_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">output_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">aspect_ratio</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bg_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">end_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">colors</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">dot_size</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+    <span class="n">x_label</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">y_label</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">x_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">y_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">group_by</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">x_threshold</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">y_threshold</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">quadrant_labels</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">show_labels</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">show_threshold_lines</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">axes_origin</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">show_grid</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">scale_text</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="parameters-1">Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data</code></td>
+      <td><code class="language-plaintext highlighter-rouge">pd.DataFrame \| None</code></td>
+      <td>Built-in</td>
+      <td>Categorical mode: 3-4 cols. Quadrant mode: 2-3 cols.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">group_by</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"category"</code> or <code class="language-plaintext highlighter-rouge">"quadrant"</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">x_threshold</code>, <code class="language-plaintext highlighter-rouge">y_threshold</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Threshold lines for quadrant division. Defaults to mean.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">quadrant_labels</code></td>
+      <td><code class="language-plaintext highlighter-rouge">list \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Labels for Q1 (top-right), Q2 (top-left), Q3 (bottom-left), Q4 (bottom-right).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">start_color</code>, <code class="language-plaintext highlighter-rouge">end_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Hex colors for group palette interpolation.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">colors</code></td>
+      <td><code class="language-plaintext highlighter-rouge">list \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Explicit list of hex colors for categories/quadrants.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show_threshold_lines</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">True</code></td>
+      <td>Plots x and y threshold lines in quadrant mode.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>(Also shares standard output, dimensions, title, axis, and styling parameters with <code class="language-plaintext highlighter-rouge">plot_scatter_chart</code>)</em></p>
+
+<hr />
+
+<h2 id="plot_bubble_scatter_chart"><code class="language-plaintext highlighter-rouge">plot_bubble_scatter_chart()</code></h2>
+
+<p>Plots a 3-variable bubble scatter plot where dot size encodes the third dimension.</p>
+
+<h3 id="api-reference-2">API Reference</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clean_charts</span><span class="p">.</span><span class="n">plot_bubble_scatter_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">output_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">aspect_ratio</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bg_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">end_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">min_bubble_size</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">max_bubble_size</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">x_label</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">y_label</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">x_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">y_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">size_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">show_values</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">show_labels</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">axes_origin</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">show_grid</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">scale_text</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="parameters-2">Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data</code></td>
+      <td><code class="language-plaintext highlighter-rouge">pd.DataFrame \| None</code></td>
+      <td>Built-in</td>
+      <td>3 columns: [X, Y, Size] or 4 columns: [Label, X, Y, Size].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">min_bubble_size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td><code class="language-plaintext highlighter-rouge">60</code></td>
+      <td>Minimum bubble marker area in points^2.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_bubble_size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td><code class="language-plaintext highlighter-rouge">600</code></td>
+      <td>Maximum bubble marker area in points^2.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">size_suffix</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">""</code></td>
+      <td>Suffix string for annotations (e.g., “M”).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show_values</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">False</code></td>
+      <td>Annotate bubbles with their size values.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">start_color</code>, <code class="language-plaintext highlighter-rouge">end_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Hex colors for bubble palette interpolation if <code class="language-plaintext highlighter-rouge">color</code> is None.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Single color for all bubbles.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>(Also shares standard output, dimensions, title, axis, and styling parameters with <code class="language-plaintext highlighter-rouge">plot_scatter_chart</code>)</em></p>
+
+    </main>
+  </div>
+</body>
+</html>

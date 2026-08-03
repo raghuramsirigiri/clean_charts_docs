@@ -25,7 +25,7 @@ clean_charts.plot_dumbbell_chart(
     title=None,
     subtitle=None,
     bg_color=None,
-    start_color=None,
+    color=None,
     end_color=None,
     connector_color=None,
     positive_connector_color=None,
@@ -111,7 +111,7 @@ cc.plot_dumbbell_chart(
     subtitle="Increases and decreases from 2022 to 2023",
     positive_connector_color="#4CAF50",  # Green for increase
     negative_connector_color="#F44336",  # Red for decrease
-    start_color="#555555",
+    color="#555555",
     end_color="#000000",
     show_values=True,
 )

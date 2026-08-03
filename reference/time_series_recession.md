@@ -11,10 +11,10 @@ When presenting macroeconomic data, distinguishing between structural shifts and
 import pandas as pd
 import clean_charts as cc
 
-df = cc.get_default_data()
+df = pd.DataFrame({'date': pd.date_range('2020-01-01', periods=5, freq='ME'), 'Enterprise': [100, 110, 90, 80, 150]})
 
 cc.plot_time_series(
-    data=df[["date", "Index_A"]],
+    data=df[["date", "Enterprise"]],
     title="Market Activity",
     subtitle="Impact of the 2020 and 2022 slowdowns",
     smooth=False,

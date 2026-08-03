@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | clean-charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="layout-wrapper">
+    <aside class="sidebar">
+      <a href="/" class="site-title">clean-charts</a>
+      <nav>
+        <ul class="nav-list"><li>
+                <a href="/" class="nav-link ">Home</a></li><li>
+                <a href="/reference/trends.html" class="nav-link ">Trends & Time</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/time_series.html" class="nav-link ">Time Series</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/time_series_recession.html" class="nav-link ">Use Case: Recession Highlighter</a>
+                              </li><li>
+                                <a href="/reference/time_series_milestone.html" class="nav-link ">Use Case: Annotated Milestones</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/distributions.html" class="nav-link ">Distributions & Rankings</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bar_charts.html" class="nav-link ">Bar Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/barh_progress_tracker.html" class="nav-link ">Use Case: Progress-to-Goal Tracker</a>
+                              </li><li>
+                                <a href="/reference/barv_square_tile.html" class="nav-link ">Use Case: Square Tile KPI</a>
+                              </li><li>
+                                <a href="/reference/barv_timeline_histogram.html" class="nav-link ">Use Case: Timeline Histogram</a>
+                              </li><li>
+                                <a href="/reference/barh_minimalist_ranking.html" class="nav-link ">Use Case: Minimalist Ranking</a>
+                              </li></ul></li><li>
+                        <a href="/reference/grouped_barh.html" class="nav-link ">Grouped Bar</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/grouped_barh_scorecard.html" class="nav-link ">Use Case: Strategic Scorecard</a>
+                              </li><li>
+                                <a href="/reference/grouped_barh_gradient_heat.html" class="nav-link ">Use Case: Gradient Heat Progression</a>
+                              </li></ul></li><li>
+                        <a href="/reference/stacked_bar.html" class="nav-link ">Stacked Bar Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/stacked_bar_layer_cake.html" class="nav-link ">Use Case: Revenue Layer Cake</a>
+                              </li><li>
+                                <a href="/reference/stacked_bar_consolidation.html" class="nav-link ">Use Case: 100% Market Consolidation</a>
+                              </li></ul></li><li>
+                        <a href="/reference/dumbbell.html" class="nav-link ">Dumbbell Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/dumbbell_target_actual.html" class="nav-link ">Use Case: Target vs Actual Tracker</a>
+                              </li><li>
+                                <a href="/reference/dumbbell_sentiment.html" class="nav-link ">Use Case: Sentiment Shift</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/relationships.html" class="nav-link ">Relationships</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bubble_matrix.html" class="nav-link ">Bubble Matrix</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/scatter_charts.html" class="nav-link ">Scatter Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/scatter_linear_trend.html" class="nav-link ">Use Case: Linear Trend Identifier</a>
+                              </li><li>
+                                <a href="/reference/scatter_quadrant.html" class="nav-link ">Use Case: Quadrant Strategy Matrix</a>
+                              </li><li>
+                                <a href="/reference/scatter_3d_market.html" class="nav-link ">Use Case: 3D Market Map</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/part_to_whole.html" class="nav-link ">Part-to-Whole</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/donut.html" class="nav-link ">Donut Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/donut_hero_metric.html" class="nav-link ">Use Case: Hero Metric Focus</a>
+                              </li></ul></li><li>
+                        <a href="/reference/waffle.html" class="nav-link ">Waffle Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/waffle_rare_event.html" class="nav-link ">Use Case: The 1-in-100 Storyteller</a>
+                              </li><li>
+                                <a href="/reference/waffle_budget.html" class="nav-link ">Use Case: Budget Allocation Block</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/layouts.html" class="nav-link ">Layouts & Components</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/insight_card.html" class="nav-link ">Insight Card</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/table.html" class="nav-link ">Table</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/geofacet.html" class="nav-link ">Geofacet</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/dashboard.html" class="nav-link active">Dashboard</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li></ul></li></ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <h1 id="plot_dashboard"><code class="language-plaintext highlighter-rouge">plot_dashboard()</code></h1>
+
+<p>Combines multiple clean-chart visualizations into a single composite mosaic image. Each sub-chart is rendered independently at its allocated pixel resolution and composited onto a shared canvas using <code class="language-plaintext highlighter-rouge">matplotlib.subplot_mosaic</code>.</p>
+
+<p>This function enables the creation of executive-style dashboards from any combination of chart types with a single function call.</p>
+
+<p><img src="/images/docs/dashboard_basic.png" alt="Dashboard — Basic" /></p>
+
+<hr />
+
+<h2 id="api-reference">API Reference</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clean_charts</span><span class="p">.</span><span class="n">plot_dashboard</span><span class="p">(</span>
+    <span class="n">charts</span><span class="p">,</span>
+    <span class="n">layout</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bg_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">output_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">1400</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">padding</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="parameters">Parameters</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">charts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">list[tuple]</code></td>
+      <td><strong>required</strong></td>
+      <td>List of <code class="language-plaintext highlighter-rouge">(plot_function, kwargs_dict)</code> tuples. Each tuple specifies a chart function and its keyword arguments. <code class="language-plaintext highlighter-rouge">output_path</code> is managed internally and should <strong>not</strong> be included in kwargs. <code class="language-plaintext highlighter-rouge">width</code> and <code class="language-plaintext highlighter-rouge">height</code> can optionally be overridden in kwargs.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">layout</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td>Auto</td>
+      <td>ASCII mosaic string defining the spatial arrangement. See <strong>Layout Syntax</strong> below.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Dashboard-level title text.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subtitle</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Dashboard-level subtitle.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bg_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#f4f3f0"</code></td>
+      <td>Canvas background color.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">output_path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>File path for the saved image.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">width</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">1400</code></td>
+      <td>Final image width in pixels.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">height</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int \| None</code></td>
+      <td>Auto</td>
+      <td>Final image height in pixels. Auto-derived from layout aspect ratio when <code class="language-plaintext highlighter-rouge">None</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">padding</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.02</code></td>
+      <td>Fractional space between sub-charts (0–0.5).</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="layout-syntax">Layout Syntax</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">layout</code> parameter uses an ASCII string where:</p>
+<ul>
+  <li>Each <strong>unique letter</strong> maps to one chart (in order of first appearance, left-to-right, top-to-bottom).</li>
+  <li><strong>Rows</strong> are separated by <code class="language-plaintext highlighter-rouge">\n</code>.</li>
+  <li>A letter <strong>repeated horizontally</strong> makes a chart span multiple columns.</li>
+  <li>A letter <strong>repeated vertically</strong> makes a chart span multiple rows.</li>
+  <li>A <strong>period</strong> (<code class="language-plaintext highlighter-rouge">.</code>) denotes an empty cell.</li>
+</ul>
+
+<h3 id="layout-examples">Layout Examples</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Layout String</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">"AB\nCD"</code></td>
+      <td>2×2 grid, 4 equal charts</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">"AA\nBC"</code></td>
+      <td>Chart A spans full top row; B and C split the bottom</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">"ABC"</code></td>
+      <td>Single row, 3 equal-width charts</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">"AB\nAC"</code></td>
+      <td>Chart A spans left column; B and C stack on the right</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">"AAB\nCCC"</code></td>
+      <td>A takes 2/3 of top, B takes 1/3; C spans full bottom</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">"AB.\nCDE"</code></td>
+      <td>A and B in top row (C empty); C, D, E in bottom row</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>When <code class="language-plaintext highlighter-rouge">layout=None</code>, an auto-generated roughly-square grid is created:</p>
+<ul>
+  <li>2 charts → <code class="language-plaintext highlighter-rouge">"AB"</code></li>
+  <li>3 charts → <code class="language-plaintext highlighter-rouge">"AB\nC."</code></li>
+  <li>4 charts → <code class="language-plaintext highlighter-rouge">"AB\nCD"</code></li>
+  <li>5 charts → <code class="language-plaintext highlighter-rouge">"ABC\nDE."</code></li>
+  <li>6 charts → <code class="language-plaintext highlighter-rouge">"ABC\nDEF"</code></li>
+</ul>
+
+<hr />
+
+<h2 id="example">Example</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="c1"># Prepare data for sub-charts
+</span><span class="n">df_ts</span> <span class="o">=</span> <span class="n">cc</span><span class="p">.</span><span class="n">get_default_data</span><span class="p">()</span>
+<span class="n">df_barh</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Response"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Strongly Agree"</span><span class="p">,</span> <span class="s">"Agree"</span><span class="p">,</span> <span class="s">"Neutral"</span><span class="p">,</span> <span class="s">"Disagree"</span><span class="p">,</span> <span class="s">"Strongly Disagree"</span><span class="p">],</span>
+    <span class="s">"Count"</span><span class="p">:</span> <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">df_donut</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Source"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Organic"</span><span class="p">,</span> <span class="s">"Direct"</span><span class="p">,</span> <span class="s">"Social"</span><span class="p">,</span> <span class="s">"Referral"</span><span class="p">,</span> <span class="s">"Email"</span><span class="p">,</span> <span class="s">"Paid"</span><span class="p">],</span>
+    <span class="s">"Share"</span><span class="p">:</span> <span class="p">[</span><span class="mf">38.2</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mf">15.8</span><span class="p">,</span> <span class="mf">10.3</span><span class="p">,</span> <span class="mf">7.1</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">df_dumbbell</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Country"</span><span class="p">:</span> <span class="p">[</span><span class="s">"US"</span><span class="p">,</span> <span class="s">"China"</span><span class="p">,</span> <span class="s">"Germany"</span><span class="p">,</span> <span class="s">"UK"</span><span class="p">,</span> <span class="s">"India"</span><span class="p">,</span> <span class="s">"France"</span><span class="p">],</span>
+    <span class="s">"2010"</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.99</span><span class="p">,</span> <span class="mf">6.09</span><span class="p">,</span> <span class="mf">3.42</span><span class="p">,</span> <span class="mf">2.48</span><span class="p">,</span> <span class="mf">1.68</span><span class="p">,</span> <span class="mf">2.65</span><span class="p">],</span>
+    <span class="s">"2023"</span><span class="p">:</span> <span class="p">[</span><span class="mf">25.46</span><span class="p">,</span> <span class="mf">17.79</span><span class="p">,</span> <span class="mf">4.46</span><span class="p">,</span> <span class="mf">3.33</span><span class="p">,</span> <span class="mf">3.73</span><span class="p">,</span> <span class="mf">3.05</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_dashboard</span><span class="p">(</span>
+    <span class="n">charts</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">(</span><span class="n">cc</span><span class="p">.</span><span class="n">plot_time_series</span><span class="p">,</span>    <span class="p">{</span><span class="s">"data"</span><span class="p">:</span> <span class="n">df_ts</span><span class="p">,</span>       <span class="s">"title"</span><span class="p">:</span> <span class="s">"Market Trends"</span><span class="p">}),</span>
+        <span class="p">(</span><span class="n">cc</span><span class="p">.</span><span class="n">plot_barh_chart</span><span class="p">,</span>     <span class="p">{</span><span class="s">"data"</span><span class="p">:</span> <span class="n">df_barh</span><span class="p">,</span>     <span class="s">"title"</span><span class="p">:</span> <span class="s">"Survey Results"</span><span class="p">}),</span>
+        <span class="p">(</span><span class="n">cc</span><span class="p">.</span><span class="n">plot_donut_chart</span><span class="p">,</span>    <span class="p">{</span><span class="s">"data"</span><span class="p">:</span> <span class="n">df_donut</span><span class="p">,</span>    <span class="s">"title"</span><span class="p">:</span> <span class="s">"Traffic Sources"</span><span class="p">,</span> <span class="s">"center_label"</span><span class="p">:</span> <span class="s">"100%"</span><span class="p">}),</span>
+        <span class="p">(</span><span class="n">cc</span><span class="p">.</span><span class="n">plot_dumbbell_chart</span><span class="p">,</span> <span class="p">{</span><span class="s">"data"</span><span class="p">:</span> <span class="n">df_dumbbell</span><span class="p">,</span> <span class="s">"title"</span><span class="p">:</span> <span class="s">"GDP Comparison"</span><span class="p">,</span> <span class="s">"value_suffix"</span><span class="p">:</span> <span class="s">"T"</span><span class="p">}),</span>
+    <span class="p">],</span>
+    <span class="n">layout</span><span class="o">=</span><span class="s">"AB</span><span class="se">\n</span><span class="s">CD"</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Executive Summary Dashboard"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Key metrics and trends at a glance"</span><span class="p">,</span>
+    <span class="n">output_path</span><span class="o">=</span><span class="s">"dashboard.png"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/images/docs/dashboard_basic.png" alt="Dashboard — Basic" /></p>
+
+<hr />
+
+<h2 id="visual-behavior">Visual Behavior</h2>
+
+<ul>
+  <li>Each sub-chart is rendered with <strong>consistent scaling</strong> — titles, subtitles, labels, and margins use a uniform scale factor derived from the 1×1 cell size. This prevents visual inconsistency between different-sized panels.</li>
+  <li>The <strong>dashboard title</strong> is left-aligned to match the left margin of the first sub-chart’s internal title.</li>
+  <li>Sub-chart dimensions are calculated from the layout geometry:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">chart_width = span_cols × cell_w + (span_cols - 1) × padding × cell_w</code></li>
+      <li><code class="language-plaintext highlighter-rouge">chart_height = span_rows × cell_h + (span_rows - 1) × padding × cell_h</code></li>
+    </ul>
+  </li>
+  <li>When <code class="language-plaintext highlighter-rouge">height=None</code>, the dashboard height is derived from the layout aspect ratio: <code class="language-plaintext highlighter-rouge">height = width × grid_rows / grid_cols</code>.</li>
+  <li><strong>Title and subtitle text</strong> is dynamically wrapped based on available width.</li>
+</ul>
+
+<hr />
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li><strong>Any chart function</strong> from the <code class="language-plaintext highlighter-rouge">clean_charts</code> library can be used in a dashboard panel — including <code class="language-plaintext highlighter-rouge">plot_insight_card</code>, <code class="language-plaintext highlighter-rouge">plot_table</code>, <code class="language-plaintext highlighter-rouge">plot_geofacet</code>, and even nested <code class="language-plaintext highlighter-rouge">plot_dashboard</code> calls (though nesting is not recommended).</li>
+  <li>The <code class="language-plaintext highlighter-rouge">output_path</code> key should <strong>not</strong> be included in individual chart kwargs — it is managed by the dashboard function internally.</li>
+  <li>For best visual quality, use <code class="language-plaintext highlighter-rouge">width=1400</code> or higher for dashboards with 4+ panels.</li>
+  <li>Sub-chart <code class="language-plaintext highlighter-rouge">width</code> and <code class="language-plaintext highlighter-rouge">height</code> can be explicitly set in kwargs to override the auto-calculated dimensions, but this is rarely needed.</li>
+  <li>The function uses an internal buffer protocol (<code class="language-plaintext highlighter-rouge">_RETURN_BUFFER</code>) to capture each sub-chart as a PNG in memory before compositing.</li>
+</ul>
+
+    </main>
+  </div>
+</body>
+</html>

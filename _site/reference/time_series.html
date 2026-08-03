@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Series | clean-charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="layout-wrapper">
+    <aside class="sidebar">
+      <a href="/" class="site-title">clean-charts</a>
+      <nav>
+        <ul class="nav-list"><li>
+                <a href="/" class="nav-link ">Home</a></li><li>
+                <a href="/reference/trends.html" class="nav-link ">Trends & Time</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/time_series.html" class="nav-link active">Time Series</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/time_series_recession.html" class="nav-link ">Use Case: Recession Highlighter</a>
+                              </li><li>
+                                <a href="/reference/time_series_milestone.html" class="nav-link ">Use Case: Annotated Milestones</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/distributions.html" class="nav-link ">Distributions & Rankings</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bar_charts.html" class="nav-link ">Bar Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/barh_progress_tracker.html" class="nav-link ">Use Case: Progress-to-Goal Tracker</a>
+                              </li><li>
+                                <a href="/reference/barv_square_tile.html" class="nav-link ">Use Case: Square Tile KPI</a>
+                              </li><li>
+                                <a href="/reference/barv_timeline_histogram.html" class="nav-link ">Use Case: Timeline Histogram</a>
+                              </li><li>
+                                <a href="/reference/barh_minimalist_ranking.html" class="nav-link ">Use Case: Minimalist Ranking</a>
+                              </li></ul></li><li>
+                        <a href="/reference/grouped_barh.html" class="nav-link ">Grouped Bar</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/grouped_barh_scorecard.html" class="nav-link ">Use Case: Strategic Scorecard</a>
+                              </li><li>
+                                <a href="/reference/grouped_barh_gradient_heat.html" class="nav-link ">Use Case: Gradient Heat Progression</a>
+                              </li></ul></li><li>
+                        <a href="/reference/stacked_bar.html" class="nav-link ">Stacked Bar Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/stacked_bar_layer_cake.html" class="nav-link ">Use Case: Revenue Layer Cake</a>
+                              </li><li>
+                                <a href="/reference/stacked_bar_consolidation.html" class="nav-link ">Use Case: 100% Market Consolidation</a>
+                              </li></ul></li><li>
+                        <a href="/reference/dumbbell.html" class="nav-link ">Dumbbell Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/dumbbell_target_actual.html" class="nav-link ">Use Case: Target vs Actual Tracker</a>
+                              </li><li>
+                                <a href="/reference/dumbbell_sentiment.html" class="nav-link ">Use Case: Sentiment Shift</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/relationships.html" class="nav-link ">Relationships</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bubble_matrix.html" class="nav-link ">Bubble Matrix</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/scatter_charts.html" class="nav-link ">Scatter Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/scatter_linear_trend.html" class="nav-link ">Use Case: Linear Trend Identifier</a>
+                              </li><li>
+                                <a href="/reference/scatter_quadrant.html" class="nav-link ">Use Case: Quadrant Strategy Matrix</a>
+                              </li><li>
+                                <a href="/reference/scatter_3d_market.html" class="nav-link ">Use Case: 3D Market Map</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/part_to_whole.html" class="nav-link ">Part-to-Whole</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/donut.html" class="nav-link ">Donut Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/donut_hero_metric.html" class="nav-link ">Use Case: Hero Metric Focus</a>
+                              </li></ul></li><li>
+                        <a href="/reference/waffle.html" class="nav-link ">Waffle Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/waffle_rare_event.html" class="nav-link ">Use Case: The 1-in-100 Storyteller</a>
+                              </li><li>
+                                <a href="/reference/waffle_budget.html" class="nav-link ">Use Case: Budget Allocation Block</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/layouts.html" class="nav-link ">Layouts & Components</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/insight_card.html" class="nav-link ">Insight Card</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/table.html" class="nav-link ">Table</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/geofacet.html" class="nav-link ">Geofacet</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/dashboard.html" class="nav-link ">Dashboard</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li></ul></li></ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <h1 id="plot_time_series"><code class="language-plaintext highlighter-rouge">plot_time_series()</code></h1>
+
+<p><strong>Overview</strong>
+Renders a multi-series line chart with smooth spline interpolation and inline series labels. This chart is optimized for visualizing continuous data over time, making it ideal for tracking financial metrics, user growth, or performance trends.</p>
+
+<p><img src="/images/docs/time_series_basic.png" alt="Time Series — Basic" /></p>
+
+<h2 id="basic-usage">Basic Usage</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">df_ts</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"date"</span><span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s">"2024-01-01"</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s">"ME"</span><span class="p">),</span>
+    <span class="s">"Revenue"</span><span class="p">:</span> <span class="p">[</span><span class="mi">120</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">162</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">205</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">230</span><span class="p">],</span>
+    <span class="s">"Costs"</span><span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">135</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_time_series</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_ts</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Quarterly Financials"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Revenue vs Costs in USD Thousands"</span><span class="p">,</span>
+    <span class="n">label_frequency</span><span class="o">=</span><span class="s">"quarter"</span><span class="p">,</span>
+    <span class="n">line_labels</span><span class="o">=</span><span class="s">"name"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"k"</span><span class="p">,</span>
+    <span class="n">vlines</span><span class="o">=</span><span class="p">{</span><span class="s">"date"</span><span class="p">:</span> <span class="s">"2024-06-30"</span><span class="p">,</span> <span class="s">"color"</span><span class="p">:</span> <span class="s">"#000000"</span><span class="p">,</span> <span class="s">"label"</span><span class="p">:</span> <span class="s">"Product Launch"</span><span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="data-requirements">Data Requirements</h2>
+
+<p>The input <code class="language-plaintext highlighter-rouge">data</code> (a <code class="language-plaintext highlighter-rouge">pandas.DataFrame</code>) must adhere to the following constraints:</p>
+<ul>
+  <li><strong>Time Column</strong>: Must contain exactly one column with dates or timestamps. This is auto-detected if named <code class="language-plaintext highlighter-rouge">"date"</code>, <code class="language-plaintext highlighter-rouge">"time"</code>, or <code class="language-plaintext highlighter-rouge">"timestamp"</code>, or if its dtype is datetime.</li>
+  <li><strong>Value Columns</strong>: All remaining numeric columns are treated as independent series to be plotted.</li>
+  <li><strong>Frequency</strong>: Data should ideally have a regular interval, though the spline interpolation can handle irregular spacing.</li>
+</ul>
+
+<h2 id="api-reference">API Reference</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clean_charts</span><span class="p">.</span><span class="n">plot_time_series</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">output_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">aspect_ratio</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">subtitle</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">bg_color</span><span class="o">=</span><span class="s">"#f4f3f0"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">"#000000"</span><span class="p">,</span> <span class="n">end_color</span><span class="o">=</span><span class="s">"#2323FF"</span><span class="p">,</span>
+    <span class="n">label_frequency</span><span class="o">=</span><span class="s">"year"</span><span class="p">,</span> <span class="n">markers</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">line_labels</span><span class="o">=</span><span class="s">"name"</span><span class="p">,</span> <span class="n">value_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span> <span class="n">smooth</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">scale_text</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">vlines</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">highlight_ranges</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">callouts</span><span class="o">=</span><span class="bp">None</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data</code></td>
+      <td><code class="language-plaintext highlighter-rouge">pd.DataFrame</code></td>
+      <td>Built-in</td>
+      <td>DataFrame containing a date column and one or more numeric series.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">aspect_ratio</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Options: <code class="language-plaintext highlighter-rouge">"square"</code>, <code class="language-plaintext highlighter-rouge">"landscape"</code>, <code class="language-plaintext highlighter-rouge">"vertical"</code>, <code class="language-plaintext highlighter-rouge">"1:1"</code>, <code class="language-plaintext highlighter-rouge">"2:1"</code>, <code class="language-plaintext highlighter-rouge">"1:2"</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">smooth</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">True</code></td>
+      <td>Uses PCHIP spline curves instead of straight line segments.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markers</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool \| str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Renders data-point markers (e.g., <code class="language-plaintext highlighter-rouge">"o"</code>, <code class="language-plaintext highlighter-rouge">"s"</code>, <code class="language-plaintext highlighter-rouge">True</code>).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">line_labels</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"name"</code></td>
+      <td>Inline text labels: <code class="language-plaintext highlighter-rouge">"name"</code>, <code class="language-plaintext highlighter-rouge">"value"</code>, <code class="language-plaintext highlighter-rouge">"both"</code>, or <code class="language-plaintext highlighter-rouge">"none"</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vlines</code></td>
+      <td><code class="language-plaintext highlighter-rouge">list \| dict</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Adds vertical reference lines with optional labels.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">highlight_ranges</code></td>
+      <td><code class="language-plaintext highlighter-rouge">list \| dict</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Shaded background regions between two dates.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">callouts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">list \| dict</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Text callout boxes pointing to specific (date, value) coordinates.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>(See the generic chart parameters like <code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">bg_color</code>, and <code class="language-plaintext highlighter-rouge">output_path</code> in the <a href="#">Configuration Guide</a>).</em></p>
+
+<h2 id="design-best-practices">Design Best Practices</h2>
+
+<ul>
+  <li><strong>Limit Series Count</strong>: Avoid plotting more than 4-5 series on a single chart to prevent “spaghetti” visuals. Consider small multiples (Geofacet) if you have many series.</li>
+  <li><strong>Label Placement</strong>: Rely on inline <code class="language-plaintext highlighter-rouge">line_labels</code> at the end of the curves rather than separate legends, as it drastically reduces cognitive load for the reader.</li>
+</ul>
+
+    </main>
+  </div>
+</body>
+</html>

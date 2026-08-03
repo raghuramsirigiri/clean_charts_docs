@@ -17,9 +17,8 @@ cc.plot_waffle_chart(
     data=df,
     title="Budget Allocation",
     subtitle="Percent of total funding",
-    start_color="#cccccc",
-    end_color="#2323FF"
-)
+    color="#cccccc",
+    )
 ```
 
 ![Use Case Preview](../images/docs/waffle_basic.png)

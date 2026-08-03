@@ -17,9 +17,7 @@ cc.plot_dumbbell_chart(
     data=df,
     title="Performance to Target",
     subtitle="Gray = Target, Black = Actual",
-    start_color="#d3d3d3",
-    end_color="#000000",
-    dot_size=120
+    end_dot_size=120
 )
 ```
 

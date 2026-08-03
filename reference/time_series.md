@@ -18,18 +18,20 @@ Renders a multi-series line chart with smooth spline interpolation and inline se
 import pandas as pd
 import clean_charts as cc
 
-# Prepare data
-df = pd.DataFrame({
-    "date": pd.date_range(start="2024-01-01", periods=5, freq="M"),
-    "Revenue": [120, 135, 142, 128, 155],
-    "Costs": [90, 95, 98, 105, 102]
+df_ts = pd.DataFrame({
+    "date": pd.date_range(start="2024-01-01", periods=12, freq="ME"),
+    "Revenue": [120, 135, 142, 128, 155, 162, 175, 190, 185, 205, 215, 230],
+    "Costs": [90, 95, 98, 105, 102, 110, 115, 120, 118, 125, 130, 135]
 })
 
-# Generate chart
 cc.plot_time_series(
-    data=df,
+    data=df_ts,
     title="Quarterly Financials",
-    subtitle="Revenue vs Costs in USD Thousands"
+    subtitle="Revenue vs Costs in USD Thousands",
+    label_frequency="quarter",
+    line_labels="name",
+    value_suffix="k",
+    vlines={"date": "2024-06-30", "color": "#000000", "label": "Product Launch"}
 )
 ```
 
@@ -45,7 +47,7 @@ The input `data` (a `pandas.DataFrame`) must adhere to the following constraints
 ```python
 clean_charts.plot_time_series(
     data=None, output_path=None, width=600, height=600, aspect_ratio=None,
-    title=None, subtitle=None, bg_color="#f4f3f0", start_color="#000000", end_color="#2323FF",
+    title=None, subtitle=None, bg_color="#f4f3f0", color="#000000", end_color="#2323FF",
     label_frequency="year", markers=None, line_labels="name", value_suffix="", smooth=True,
     scale_text=False, vlines=None, highlight_ranges=None, callouts=None
 )

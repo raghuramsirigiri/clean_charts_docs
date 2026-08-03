@@ -11,7 +11,7 @@ Traditional choropleth maps are fundamentally flawed because they size regions b
 import clean_charts as cc
 import pandas as pd
 
-df = pd.DataFrame(...) # State, Year, Value data
+df = pd.DataFrame({'State': ['CA', 'TX', 'NY', 'FL'], 'Value': [10, 20, 15, 25]})
 
 cc.plot_geofacet(
     data=df,

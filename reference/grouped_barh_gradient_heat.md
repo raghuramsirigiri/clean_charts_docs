@@ -17,9 +17,7 @@ cc.plot_grouped_barh_chart(
     data=df,
     title="5-Year Progression",
     subtitle="Consistent growth across categories",
-    start_color="#cccccc",
-    end_color="#cc0000",
-    bar_padding=0
+    end_bar_padding=0
 )
 ```
 

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geofacet | clean-charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="layout-wrapper">
+    <aside class="sidebar">
+      <a href="/" class="site-title">clean-charts</a>
+      <nav>
+        <ul class="nav-list"><li>
+                <a href="/" class="nav-link ">Home</a></li><li>
+                <a href="/reference/trends.html" class="nav-link ">Trends & Time</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/time_series.html" class="nav-link ">Time Series</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/time_series_recession.html" class="nav-link ">Use Case: Recession Highlighter</a>
+                              </li><li>
+                                <a href="/reference/time_series_milestone.html" class="nav-link ">Use Case: Annotated Milestones</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/distributions.html" class="nav-link ">Distributions & Rankings</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bar_charts.html" class="nav-link ">Bar Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/barh_progress_tracker.html" class="nav-link ">Use Case: Progress-to-Goal Tracker</a>
+                              </li><li>
+                                <a href="/reference/barv_square_tile.html" class="nav-link ">Use Case: Square Tile KPI</a>
+                              </li><li>
+                                <a href="/reference/barv_timeline_histogram.html" class="nav-link ">Use Case: Timeline Histogram</a>
+                              </li><li>
+                                <a href="/reference/barh_minimalist_ranking.html" class="nav-link ">Use Case: Minimalist Ranking</a>
+                              </li></ul></li><li>
+                        <a href="/reference/grouped_barh.html" class="nav-link ">Grouped Bar</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/grouped_barh_scorecard.html" class="nav-link ">Use Case: Strategic Scorecard</a>
+                              </li><li>
+                                <a href="/reference/grouped_barh_gradient_heat.html" class="nav-link ">Use Case: Gradient Heat Progression</a>
+                              </li></ul></li><li>
+                        <a href="/reference/stacked_bar.html" class="nav-link ">Stacked Bar Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/stacked_bar_layer_cake.html" class="nav-link ">Use Case: Revenue Layer Cake</a>
+                              </li><li>
+                                <a href="/reference/stacked_bar_consolidation.html" class="nav-link ">Use Case: 100% Market Consolidation</a>
+                              </li></ul></li><li>
+                        <a href="/reference/dumbbell.html" class="nav-link ">Dumbbell Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/dumbbell_target_actual.html" class="nav-link ">Use Case: Target vs Actual Tracker</a>
+                              </li><li>
+                                <a href="/reference/dumbbell_sentiment.html" class="nav-link ">Use Case: Sentiment Shift</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/relationships.html" class="nav-link ">Relationships</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bubble_matrix.html" class="nav-link ">Bubble Matrix</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/scatter_charts.html" class="nav-link ">Scatter Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/scatter_linear_trend.html" class="nav-link ">Use Case: Linear Trend Identifier</a>
+                              </li><li>
+                                <a href="/reference/scatter_quadrant.html" class="nav-link ">Use Case: Quadrant Strategy Matrix</a>
+                              </li><li>
+                                <a href="/reference/scatter_3d_market.html" class="nav-link ">Use Case: 3D Market Map</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/part_to_whole.html" class="nav-link ">Part-to-Whole</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/donut.html" class="nav-link ">Donut Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/donut_hero_metric.html" class="nav-link ">Use Case: Hero Metric Focus</a>
+                              </li></ul></li><li>
+                        <a href="/reference/waffle.html" class="nav-link ">Waffle Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/waffle_rare_event.html" class="nav-link ">Use Case: The 1-in-100 Storyteller</a>
+                              </li><li>
+                                <a href="/reference/waffle_budget.html" class="nav-link ">Use Case: Budget Allocation Block</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/layouts.html" class="nav-link ">Layouts & Components</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/insight_card.html" class="nav-link ">Insight Card</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/table.html" class="nav-link ">Table</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/geofacet.html" class="nav-link active">Geofacet</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/dashboard.html" class="nav-link ">Dashboard</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li></ul></li></ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <h1 id="plot_geofacet"><code class="language-plaintext highlighter-rouge">plot_geofacet()</code></h1>
+
+<p>Renders a geographic small-multiples chart where each cell in a grid approximates the physical position of a state or region on a map. Each cell can display data as a <strong>heatmap tile</strong> (text mode), a <strong>donut ring</strong>, or a <strong>progress bar</strong>.</p>
+
+<p>Currently supports <strong>US states</strong> and <strong>UK regions</strong> layouts.</p>
+
+<p><img src="/images/docs/geofacet_text.png" alt="Geofacet — Text Mode" /></p>
+
+<hr />
+
+<h2 id="api-reference">API Reference</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clean_charts</span><span class="p">.</span><span class="n">plot_geofacet</span><span class="p">(</span>
+    <span class="n">data</span><span class="p">,</span>
+    <span class="n">state_col</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">value_col</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">layout</span><span class="o">=</span><span class="s">"us"</span><span class="p">,</span>
+    <span class="n">display_type</span><span class="o">=</span><span class="s">"text"</span><span class="p">,</span>
+    <span class="n">max_value</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bg_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">end_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">missing_color</span><span class="o">=</span><span class="s">"#e0e0e0"</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">output_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">aspect_ratio</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">scale_text</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="parameters">Parameters</h2>
+
+<h3 id="data--layout">Data &amp; Layout</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data</code></td>
+      <td><code class="language-plaintext highlighter-rouge">pd.DataFrame</code></td>
+      <td><strong>required</strong></td>
+      <td>DataFrame with location abbreviations and numeric values.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">state_col</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td>Auto</td>
+      <td>Column name containing location abbreviations (e.g., <code class="language-plaintext highlighter-rouge">"CA"</code>, <code class="language-plaintext highlighter-rouge">"NY"</code> for US; <code class="language-plaintext highlighter-rouge">"LON"</code>, <code class="language-plaintext highlighter-rouge">"SCT"</code> for UK). Auto-detected as the first column.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">value_col</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td>Auto</td>
+      <td>Column name containing numeric values. Auto-detected as the second column.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">layout</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"us"</code></td>
+      <td>Grid layout to use. Options: <code class="language-plaintext highlighter-rouge">"us"</code> / <code class="language-plaintext highlighter-rouge">"usa"</code>, <code class="language-plaintext highlighter-rouge">"uk"</code> / <code class="language-plaintext highlighter-rouge">"united kingdom"</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="display">Display</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">display_type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"text"</code></td>
+      <td>Cell rendering style. Options: <code class="language-plaintext highlighter-rouge">"text"</code> (heatmap tiles with colored backgrounds), <code class="language-plaintext highlighter-rouge">"donut"</code> (progress ring around the cell), <code class="language-plaintext highlighter-rouge">"bar"</code> (horizontal progress bar inside the cell). <code class="language-plaintext highlighter-rouge">"pie"</code> is aliased to <code class="language-plaintext highlighter-rouge">"donut"</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_value</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td><code class="language-plaintext highlighter-rouge">100.0</code></td>
+      <td>Maximum value for scaling donut/bar progress. Values are clipped to <code class="language-plaintext highlighter-rouge">[0, max_value]</code> for donut and bar modes.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">value_suffix</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">""</code></td>
+      <td>String appended to value labels (e.g., <code class="language-plaintext highlighter-rouge">"%"</code>).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="colors">Colors</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#000000"</code></td>
+      <td>Base color for chart elements.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bg_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#f4f3f0"</code></td>
+      <td>Canvas background color.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">start_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#000000"</code></td>
+      <td>Gradient start for heatmap interpolation (lowest value).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">end_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#2323FF"</code></td>
+      <td>Gradient end for heatmap interpolation (highest value).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">missing_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#e0e0e0"</code></td>
+      <td>Color for states with no data (gray).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="layout--text">Layout &amp; Text</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Bold title text.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subtitle</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Lighter subtitle text.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">output_path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>File path for the saved image.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">width</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">800</code></td>
+      <td>Image width in pixels.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">height</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int \| None</code></td>
+      <td>Auto</td>
+      <td>Auto-calculated to produce square cells based on the grid dimensions.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">aspect_ratio</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"landscape"</code>, <code class="language-plaintext highlighter-rouge">"vertical"</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scale_text</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">True</code></td>
+      <td>Scale fonts proportionally.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="supported-layouts">Supported Layouts</h2>
+
+<h3 id="united-states-layoutus">United States (<code class="language-plaintext highlighter-rouge">layout="us"</code>)</h3>
+
+<p>An 8×11 grid approximating the US map with all 50 states + DC. State abbreviations use standard USPS codes (e.g., <code class="language-plaintext highlighter-rouge">"CA"</code>, <code class="language-plaintext highlighter-rouge">"NY"</code>, <code class="language-plaintext highlighter-rouge">"TX"</code>).</p>
+
+<h3 id="united-kingdom-layoutuk">United Kingdom (<code class="language-plaintext highlighter-rouge">layout="uk"</code>)</h3>
+
+<p>A 5×5 grid covering UK regions:
+<code class="language-plaintext highlighter-rouge">SCT</code>, <code class="language-plaintext highlighter-rouge">NIR</code>, <code class="language-plaintext highlighter-rouge">NE</code>, <code class="language-plaintext highlighter-rouge">NW</code>, <code class="language-plaintext highlighter-rouge">YOR</code>, <code class="language-plaintext highlighter-rouge">WAL</code>, <code class="language-plaintext highlighter-rouge">WM</code>, <code class="language-plaintext highlighter-rouge">EM</code>, <code class="language-plaintext highlighter-rouge">EE</code>, <code class="language-plaintext highlighter-rouge">SW</code>, <code class="language-plaintext highlighter-rouge">SE</code>, <code class="language-plaintext highlighter-rouge">LON</code></p>
+
+<hr />
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="text-mode-heatmap">Text Mode (Heatmap)</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">states</span> <span class="o">=</span> <span class="p">[</span><span class="s">"CA"</span><span class="p">,</span> <span class="s">"TX"</span><span class="p">,</span> <span class="s">"FL"</span><span class="p">,</span> <span class="s">"NY"</span><span class="p">,</span> <span class="s">"PA"</span><span class="p">,</span> <span class="s">"IL"</span><span class="p">,</span> <span class="s">"OH"</span><span class="p">,</span> <span class="s">"GA"</span><span class="p">,</span> <span class="s">"NC"</span><span class="p">,</span> <span class="s">"MI"</span><span class="p">,</span>
+          <span class="s">"NJ"</span><span class="p">,</span> <span class="s">"VA"</span><span class="p">,</span> <span class="s">"WA"</span><span class="p">,</span> <span class="s">"AZ"</span><span class="p">,</span> <span class="s">"MA"</span><span class="p">,</span> <span class="s">"TN"</span><span class="p">,</span> <span class="s">"IN"</span><span class="p">,</span> <span class="s">"MO"</span><span class="p">,</span> <span class="s">"MD"</span><span class="p">,</span> <span class="s">"WI"</span><span class="p">]</span>
+<span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">"State"</span><span class="p">:</span> <span class="n">states</span><span class="p">,</span> <span class="s">"Score"</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">states</span><span class="p">))})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_geofacet</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"State Performance Index"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Composite score by state, 2024"</span><span class="p">,</span>
+    <span class="n">display_type</span><span class="o">=</span><span class="s">"text"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"%"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/images/docs/geofacet_text.png" alt="Geofacet — Text" /></p>
+
+<h3 id="donut-mode">Donut Mode</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cc</span><span class="p">.</span><span class="n">plot_geofacet</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"State Performance Index"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Donut display mode"</span><span class="p">,</span>
+    <span class="n">display_type</span><span class="o">=</span><span class="s">"donut"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"%"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/images/docs/geofacet_donut.png" alt="Geofacet — Donut" /></p>
+
+<h3 id="bar-mode">Bar Mode</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cc</span><span class="p">.</span><span class="n">plot_geofacet</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"State Performance Index"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Bar display mode"</span><span class="p">,</span>
+    <span class="n">display_type</span><span class="o">=</span><span class="s">"bar"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"%"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/images/docs/geofacet_bar.png" alt="Geofacet — Bar" /></p>
+
+<hr />
+
+<h2 id="visual-behavior">Visual Behavior</h2>
+
+<h3 id="text-mode-display_typetext">Text Mode (<code class="language-plaintext highlighter-rouge">display_type="text"</code>)</h3>
+<ul>
+  <li>Each state cell is a <strong>rounded rectangle</strong> colored by the value using linear interpolation between <code class="language-plaintext highlighter-rouge">start_color</code> and <code class="language-plaintext highlighter-rouge">end_color</code>.</li>
+  <li><strong>Text color</strong> automatically adjusts for contrast: white text on dark backgrounds, dark text on light backgrounds (based on luminance).</li>
+  <li>The <strong>state abbreviation</strong> appears in the upper half; the <strong>value</strong> appears below it in larger, bolder text.</li>
+</ul>
+
+<h3 id="donut-mode-display_typedonut">Donut Mode (<code class="language-plaintext highlighter-rouge">display_type="donut"</code>)</h3>
+<ul>
+  <li>Cells have a neutral cream background (<code class="language-plaintext highlighter-rouge">#EAE8E3</code>).</li>
+  <li>A thin <strong>circular track</strong> (white) shows the full 100% range.</li>
+  <li>A colored <strong>arc</strong> fills clockwise from the top, proportional to <code class="language-plaintext highlighter-rouge">value / max_value</code>.</li>
+  <li>State abbreviation and value are centered inside the ring.</li>
+</ul>
+
+<h3 id="bar-mode-display_typebar">Bar Mode (<code class="language-plaintext highlighter-rouge">display_type="bar"</code>)</h3>
+<ul>
+  <li>Cells have a neutral cream background.</li>
+  <li>State abbreviation (left) and value (right) are displayed at the top of the cell.</li>
+  <li>A horizontal <strong>progress bar</strong> fills from left to right, proportional to <code class="language-plaintext highlighter-rouge">value / max_value</code>.</li>
+</ul>
+
+<h3 id="missing-data">Missing Data</h3>
+<ul>
+  <li>States without data display only the abbreviation in <code class="language-plaintext highlighter-rouge">missing_color</code> with a transparent background.</li>
+</ul>
+
+<hr />
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li><strong>Height is auto-calculated</strong> to produce perfectly square cells when <code class="language-plaintext highlighter-rouge">height</code> is not explicitly set.</li>
+  <li>The chart automatically handles states not present in the data — they appear as ghost cells.</li>
+  <li>For the US layout, Hawaii and Alaska are positioned in the bottom-left corner of the grid.</li>
+</ul>
+
+    </main>
+  </div>
+</body>
+</html>

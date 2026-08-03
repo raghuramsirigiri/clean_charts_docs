@@ -18,17 +18,17 @@ Renders a grouped horizontal bar chart where each category row contains multiple
 import pandas as pd
 import clean_charts as cc
 
-df = pd.DataFrame({
-    "Product": ["Software", "Hardware", "Services"],
-    "Q1 2023": [12, 18, 5],
-    "Q1 2024": [16, 17, 8],
+df_grouped = pd.DataFrame({
+    'Region': ['North America', 'Europe', 'Asia Pacific'],
+    '2023': [12.5, 8.2, 15.4],
+    '2024': [14.0, 9.1, 16.8]
 })
 
 cc.plot_grouped_barh_chart(
-    data=df,
-    title="Quarterly Revenue by Product Line",
-    subtitle="In millions USD",
-    value_suffix="M",
+    data=df_grouped,
+    title="Annual Revenue by Region",
+    subtitle="In millions of USD",
+    value_suffix="M"
 )
 ```
 
@@ -44,7 +44,7 @@ The input `data` (a `pandas.DataFrame`) must adhere to the following constraints
 ```python
 clean_charts.plot_grouped_barh_chart(
     data=None, output_path=None, width=None, height=None, aspect_ratio=None,
-    title=None, subtitle=None, bg_color="#f4f3f0", start_color="#000000", end_color="#2323FF",
+    title=None, subtitle=None, bg_color="#f4f3f0", color="#000000", end_color="#2323FF",
     bar_padding=0, group_padding=0.45, value_suffix="", bar_labels="none", scale_text=True,
     group_comments=None, group_separators=False
 )

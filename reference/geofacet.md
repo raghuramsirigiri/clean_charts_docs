@@ -27,7 +27,7 @@ clean_charts.plot_geofacet(
     max_value=100.0,
     color=None,
     bg_color=None,
-    start_color=None,
+    color=None,
     end_color=None,
     missing_color="#e0e0e0",
     title=None,

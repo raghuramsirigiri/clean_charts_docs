@@ -11,7 +11,7 @@ Executive attention spans are fleeting. The 'CEO Morning Brief' dashboard does n
 import clean_charts as cc
 
 cc.plot_dashboard(
-    charts=[...], # Provide generated chart objects
+    charts=[]
     layout="2x2",
     title="Executive Daily Brief"
 )

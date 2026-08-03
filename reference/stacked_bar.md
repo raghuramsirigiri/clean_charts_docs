@@ -25,7 +25,7 @@ clean_charts.plot_stacked_bar_chart(
     title=None,
     subtitle=None,
     bg_color=None,
-    start_color=None,
+    color=None,
     end_color=None,
     bar_labels="none",
     show_percentages=False,
@@ -65,18 +65,17 @@ clean_charts.plot_stacked_bar_chart(
 import pandas as pd
 import clean_charts as cc
 
-df = pd.DataFrame({
-    "Region": ["North America", "Europe", "Asia Pacific", "Latin America"],
-    "Hardware": [120, 95, 150, 45],
-    "Software": [200, 180, 210, 80],
-    "Services": [80, 110, 90, 35],
+df_stacked = pd.DataFrame({
+    'Cohort': ['Q1', 'Q2', 'Q3', 'Q4'],
+    'Enterprise': [120, 135, 142, 150],
+    'Mid-Market': [300, 310, 315, 325],
+    'SMB': [500, 480, 460, 490]
 })
 
 cc.plot_stacked_bar_chart(
-    data=df,
-    title="Revenue by Region & Segment",
-    subtitle="In millions USD",
-    bar_labels="value",
+    data=df_stacked,
+    title="Customer Distribution by Segment",
+    subtitle="Absolute number of active customers per cohort"
 )
 ```
 
@@ -86,38 +85,14 @@ cc.plot_stacked_bar_chart(
 
 ```python
 cc.plot_stacked_bar_chart(
-    data=df,
-    title="Revenue Distribution",
-    subtitle="As percentage of regional total",
-    show_percentages=True,
-    bar_labels="value",
-    start_color="#000000",
-    end_color="#2323FF",
+    data=df_stacked,
+    title="Customer Distribution by Segment",
+    subtitle="Percentage of active customers per cohort",
+    show_percentages=True
 )
 ```
 
 ![Stacked Bar — Percentage](../images/docs/stacked_bar_pct.png)
-
-### Use Case: Customer Retention by Cohort
-
-Demonstrates applying a suffix across all values.
-
-```python
-df_churn = pd.DataFrame({
-    'Cohort': ['Q1 2023', 'Q2 2023', 'Q3 2023'],
-    'Retained': [85, 88, 92],
-    'Churned': [15, 12, 8]
-})
-
-cc.plot_stacked_bar_chart(
-    data=df_churn,
-    title="Customer Retention by Cohort",
-    subtitle="Percentage of retained vs churned users after 6 months",
-    value_suffix="%",
-)
-```
-
-![Stacked Bar — Churn](../images/docs/stacked_churn.png)
 
 ---
 

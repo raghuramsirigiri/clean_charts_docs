@@ -18,23 +18,31 @@ Renders a bar chart with a single accent color, categorical labels, and numeric 
 import pandas as pd
 import clean_charts as cc
 
-df = pd.DataFrame({
+# Horizontal Bar
+df_h = pd.DataFrame({
     "Response": ["Strongly Agree", "Agree", "Neutral", "Disagree", "Strongly Disagree"],
-    "Count": [42, 31, 18, 6, 3],
+    "Count": [420, 310, 180, 60, 30],
 })
 
-# Horizontal Bar
 cc.plot_barh_chart(
-    data=df,
+    data=df_h,
     title="Customer Satisfaction Survey",
-    subtitle="Horizontal orientation is best for long category names"
+    subtitle="Horizontal orientation is best for long category names",
+    value_suffix=" resp",
+    bar_padding=0.3
 )
 
 # Vertical Bar
+df_v = pd.DataFrame({
+    "Quarter": ["Q1", "Q2", "Q3", "Q4"],
+    "Revenue": [12.5, 14.2, 11.8, 16.5]
+})
+
 cc.plot_barv_chart(
-    data=df,
-    title="Customer Satisfaction Survey",
-    subtitle="Vertical orientation is best for short labels or time series"
+    data=df_v,
+    title="Quarterly Revenue",
+    subtitle="Vertical orientation is best for short labels or time series",
+    value_suffix="M"
 )
 ```
 

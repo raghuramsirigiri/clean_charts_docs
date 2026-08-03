@@ -17,8 +17,7 @@ cc.plot_bubble_scatter_chart(
     data=df,
     title="Market Landscape",
     subtitle="Size = Market Cap",
-    dot_size=200
-)
+    )
 ```
 
 ![Use Case Preview](../images/docs/bubble_matrix_basic.png)

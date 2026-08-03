@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbbell Chart | clean-charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="layout-wrapper">
+    <aside class="sidebar">
+      <a href="/" class="site-title">clean-charts</a>
+      <nav>
+        <ul class="nav-list"><li>
+                <a href="/" class="nav-link ">Home</a></li><li>
+                <a href="/reference/trends.html" class="nav-link ">Trends & Time</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/time_series.html" class="nav-link ">Time Series</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/time_series_recession.html" class="nav-link ">Use Case: Recession Highlighter</a>
+                              </li><li>
+                                <a href="/reference/time_series_milestone.html" class="nav-link ">Use Case: Annotated Milestones</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/distributions.html" class="nav-link ">Distributions & Rankings</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bar_charts.html" class="nav-link ">Bar Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/barh_progress_tracker.html" class="nav-link ">Use Case: Progress-to-Goal Tracker</a>
+                              </li><li>
+                                <a href="/reference/barv_square_tile.html" class="nav-link ">Use Case: Square Tile KPI</a>
+                              </li><li>
+                                <a href="/reference/barv_timeline_histogram.html" class="nav-link ">Use Case: Timeline Histogram</a>
+                              </li><li>
+                                <a href="/reference/barh_minimalist_ranking.html" class="nav-link ">Use Case: Minimalist Ranking</a>
+                              </li></ul></li><li>
+                        <a href="/reference/grouped_barh.html" class="nav-link ">Grouped Bar</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/grouped_barh_scorecard.html" class="nav-link ">Use Case: Strategic Scorecard</a>
+                              </li><li>
+                                <a href="/reference/grouped_barh_gradient_heat.html" class="nav-link ">Use Case: Gradient Heat Progression</a>
+                              </li></ul></li><li>
+                        <a href="/reference/stacked_bar.html" class="nav-link ">Stacked Bar Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/stacked_bar_layer_cake.html" class="nav-link ">Use Case: Revenue Layer Cake</a>
+                              </li><li>
+                                <a href="/reference/stacked_bar_consolidation.html" class="nav-link ">Use Case: 100% Market Consolidation</a>
+                              </li></ul></li><li>
+                        <a href="/reference/dumbbell.html" class="nav-link active">Dumbbell Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/dumbbell_target_actual.html" class="nav-link ">Use Case: Target vs Actual Tracker</a>
+                              </li><li>
+                                <a href="/reference/dumbbell_sentiment.html" class="nav-link ">Use Case: Sentiment Shift</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/relationships.html" class="nav-link ">Relationships</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/bubble_matrix.html" class="nav-link ">Bubble Matrix</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/scatter_charts.html" class="nav-link ">Scatter Charts</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/scatter_linear_trend.html" class="nav-link ">Use Case: Linear Trend Identifier</a>
+                              </li><li>
+                                <a href="/reference/scatter_quadrant.html" class="nav-link ">Use Case: Quadrant Strategy Matrix</a>
+                              </li><li>
+                                <a href="/reference/scatter_3d_market.html" class="nav-link ">Use Case: 3D Market Map</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/part_to_whole.html" class="nav-link ">Part-to-Whole</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/donut.html" class="nav-link ">Donut Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/donut_hero_metric.html" class="nav-link ">Use Case: Hero Metric Focus</a>
+                              </li></ul></li><li>
+                        <a href="/reference/waffle.html" class="nav-link ">Waffle Chart</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                                <a href="/reference/waffle_rare_event.html" class="nav-link ">Use Case: The 1-in-100 Storyteller</a>
+                              </li><li>
+                                <a href="/reference/waffle_budget.html" class="nav-link ">Use Case: Budget Allocation Block</a>
+                              </li></ul></li></ul></li><li>
+                <a href="/reference/layouts.html" class="nav-link ">Layouts & Components</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"><li>
+                        <a href="/reference/insight_card.html" class="nav-link ">Insight Card</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/table.html" class="nav-link ">Table</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/geofacet.html" class="nav-link ">Geofacet</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li><li>
+                        <a href="/reference/dashboard.html" class="nav-link ">Dashboard</a><ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;"></ul></li></ul></li></ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <h1 id="plot_dumbbell_chart"><code class="language-plaintext highlighter-rouge">plot_dumbbell_chart()</code></h1>
+
+<p>Renders a dumbbell chart (also called a Cleveland dot plot or lollipop chart) that visually encodes the difference between two values per category using connected dots. Ideal for “before vs. after”, “actual vs. target”, or “Period A vs. Period B” comparisons.</p>
+
+<p><img src="/images/docs/dumbbell_basic.png" alt="Dumbbell — Basic" /></p>
+
+<hr />
+
+<h2 id="api-reference">API Reference</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clean_charts</span><span class="p">.</span><span class="n">plot_dumbbell_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">output_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">aspect_ratio</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bg_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">end_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">connector_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">positive_connector_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">negative_connector_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">dot_size</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">scale_text</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">show_values</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">show_labels</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="parameters">Parameters</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data</code></td>
+      <td><code class="language-plaintext highlighter-rouge">pd.DataFrame</code></td>
+      <td>Built-in</td>
+      <td>DataFrame with exactly <strong>three columns</strong>: Column 0 (str) = category labels. Column 1 (numeric) = left dot value (e.g., “before” or “2020”). Column 2 (numeric) = right dot value (e.g., “after” or “2023”).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">output_path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>File path for the saved image.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">width</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">600</code></td>
+      <td>Image width in pixels.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">height</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int \| None</code></td>
+      <td>Auto</td>
+      <td>Auto-sized: <code class="language-plaintext highlighter-rouge">max(300, 120 + n × 65)</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">aspect_ratio</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"square"</code>, <code class="language-plaintext highlighter-rouge">"landscape"</code>, <code class="language-plaintext highlighter-rouge">"vertical"</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Bold title text.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subtitle</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Lighter subtitle text.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bg_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#f4f3f0"</code></td>
+      <td>Background color.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">start_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#000000"</code></td>
+      <td>Hex color for the <strong>first</strong> value column (Column 1) dots.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">end_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"#2323FF"</code></td>
+      <td>Hex color for the <strong>second</strong> value column (Column 2) dots.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">connector_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Hex color for the horizontal line. If provided, overrides dynamic colors.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">positive_connector_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">end_color</code></td>
+      <td>Hex color for the connecting line when the difference is positive (end &gt;= start).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">negative_connector_color</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">start_color</code></td>
+      <td>Hex color for the connecting line when the difference is negative (end &lt; start).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dot_size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float \| None</code></td>
+      <td><code class="language-plaintext highlighter-rouge">None</code></td>
+      <td>Marker size (area in points^2). If None, auto-scaled based on layout.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">value_suffix</code></td>
+      <td><code class="language-plaintext highlighter-rouge">str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">""</code></td>
+      <td>String appended to value annotations.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show_values</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">False</code></td>
+      <td>Display numeric values next to each dot.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show_labels</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">True</code></td>
+      <td>Display category labels on the left. If <code class="language-plaintext highlighter-rouge">False</code>, labels are omitted and the chart spans to the left margin.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scale_text</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">True</code></td>
+      <td>Scale fonts proportionally.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="example">Example</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Country"</span><span class="p">:</span> <span class="p">[</span><span class="s">"United States"</span><span class="p">,</span> <span class="s">"China"</span><span class="p">,</span> <span class="s">"Germany"</span><span class="p">,</span>
+                <span class="s">"United Kingdom"</span><span class="p">,</span> <span class="s">"India"</span><span class="p">,</span> <span class="s">"France"</span><span class="p">],</span>
+    <span class="s">"2010"</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.99</span><span class="p">,</span> <span class="mf">6.09</span><span class="p">,</span> <span class="mf">3.42</span><span class="p">,</span> <span class="mf">2.48</span><span class="p">,</span> <span class="mf">1.68</span><span class="p">,</span> <span class="mf">2.65</span><span class="p">],</span>
+    <span class="s">"2023"</span><span class="p">:</span> <span class="p">[</span><span class="mf">25.46</span><span class="p">,</span> <span class="mf">17.79</span><span class="p">,</span> <span class="mf">4.46</span><span class="p">,</span> <span class="mf">3.33</span><span class="p">,</span> <span class="mf">3.73</span><span class="p">,</span> <span class="mf">3.05</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_dumbbell_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"GDP Growth by Country"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"GDP in trillions USD, 2010 vs. 2023"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"T"</span><span class="p">,</span>
+    <span class="n">show_values</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/images/docs/dumbbell_basic.png" alt="Dumbbell — Basic" /></p>
+
+<hr />
+
+<h2 id="example-2-dynamic-connector-colors">Example 2: Dynamic Connector Colors</h2>
+
+<p>By default, <code class="language-plaintext highlighter-rouge">plot_dumbbell_chart</code> dynamically colors the connector lines based on whether the value increased or decreased. You can customize these colors using <code class="language-plaintext highlighter-rouge">positive_connector_color</code> and <code class="language-plaintext highlighter-rouge">negative_connector_color</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Category"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Product A"</span><span class="p">,</span> <span class="s">"Product B"</span><span class="p">,</span> <span class="s">"Product C"</span><span class="p">,</span> <span class="s">"Product D"</span><span class="p">],</span>
+    <span class="s">"2022"</span><span class="p">:</span> <span class="p">[</span><span class="mi">120</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span>
+    <span class="s">"2023"</span><span class="p">:</span> <span class="p">[</span><span class="mi">160</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">110</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_dumbbell_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Year-over-Year Sales Volume"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Increases and decreases from 2022 to 2023"</span><span class="p">,</span>
+    <span class="n">positive_connector_color</span><span class="o">=</span><span class="s">"#4CAF50"</span><span class="p">,</span>  <span class="c1"># Green for increase
+</span>    <span class="n">negative_connector_color</span><span class="o">=</span><span class="s">"#F44336"</span><span class="p">,</span>  <span class="c1"># Red for decrease
+</span>    <span class="n">color</span><span class="o">=</span><span class="s">"#555555"</span><span class="p">,</span>
+    <span class="n">end_color</span><span class="o">=</span><span class="s">"#000000"</span><span class="p">,</span>
+    <span class="n">show_values</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/images/docs/dumbbell_dynamic.png" alt="Dumbbell — Dynamic" /></p>
+
+<hr />
+
+<h2 id="example-3-no-category-labels">Example 3: No Category Labels</h2>
+
+<p>You can hide the category labels on the left by setting <code class="language-plaintext highlighter-rouge">show_labels=False</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cc</span><span class="p">.</span><span class="n">plot_dumbbell_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Year-over-Year Sales Volume"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Increases and decreases from 2022 to 2023"</span><span class="p">,</span>
+    <span class="n">show_labels</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">show_values</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/images/docs/dumbbell_no_labels.png" alt="Dumbbell — No Labels" /></p>
+
+<hr />
+
+<h2 id="visual-behavior">Visual Behavior</h2>
+
+<ul>
+  <li>A <strong>color legend</strong> is automatically drawn between the subtitle and the chart, showing the two series names with colored dot indicators.</li>
+  <li>Each category row displays:
+    <ul>
+      <li>A horizontal <strong>connector line</strong> spanning the range. Colored dynamically: <code class="language-plaintext highlighter-rouge">positive_connector_color</code> if the value increased, or <code class="language-plaintext highlighter-rouge">negative_connector_color</code> if decreased. Overridden by <code class="language-plaintext highlighter-rouge">connector_color</code> if provided.</li>
+      <li>Two <strong>dots</strong> (circles): one in <code class="language-plaintext highlighter-rouge">start_color</code> (Column 1) and one in <code class="language-plaintext highlighter-rouge">end_color</code> (Column 2).</li>
+      <li>When <code class="language-plaintext highlighter-rouge">show_values=True</code>, numeric values appear as small annotations near each dot.</li>
+    </ul>
+  </li>
+  <li>The X-axis ticks appear along the <strong>top</strong> of the chart.</li>
+  <li><strong>Category labels</strong> are left-aligned flush with the title and subtitle (only when <code class="language-plaintext highlighter-rouge">show_labels=True</code>). When <code class="language-plaintext highlighter-rouge">show_labels=False</code>, labels are omitted and the chart area extends to the left margin.</li>
+  <li><strong>Gridlines</strong> run vertically through the chart area.</li>
+  <li>Data is displayed top-to-bottom in the order it appears in the DataFrame.</li>
+</ul>
+
+<hr />
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>The chart expects exactly <strong>three columns</strong>: one label column and two value columns. Additional columns are ignored.</li>
+  <li>The column names (e.g., <code class="language-plaintext highlighter-rouge">"2010"</code> and <code class="language-plaintext highlighter-rouge">"2023"</code>) automatically populate the legend.</li>
+  <li>Dot sizes are proportional to <code class="language-plaintext highlighter-rouge">scale</code> for visual consistency.</li>
+</ul>
+
+    </main>
+  </div>
+</body>
+</html>

@@ -25,7 +25,7 @@ clean_charts.plot_donut_chart(
     title=None,
     subtitle=None,
     bg_color=None,
-    start_color=None,
+    color=None,
     end_color=None,
     center_label=None,
     show_percentages=False,
@@ -65,81 +65,36 @@ clean_charts.plot_donut_chart(
 import pandas as pd
 import clean_charts as cc
 
-df = pd.DataFrame({
-    "Source": ["Organic Search", "Direct", "Social Media",
-               "Referral", "Email", "Paid Ads"],
-    "Share": [38.2, 24.5, 15.8, 10.3, 7.1, 4.1],
-})
-
-cc.plot_donut_chart(
-    data=df,
-    title="Website Traffic Sources",
-    subtitle="Share of total sessions, Q4 2024",
-    center_label="100%\nTotal",
-)
-```
-
-![Donut — Basic](../images/docs/donut_basic.png)
-
-### With Percentage Labels & Custom Colors
-
-```python
-cc.plot_donut_chart(
-    data=df,
-    title="Website Traffic Sources",
-    subtitle="With percentage labels",
-    center_label="Sessions",
-    show_percentages=True,
-    start_color="#e3120b",
-    end_color="#2323FF",
-)
-```
-
-![Donut — Percentages](../images/docs/donut_percentages.png)
-
-### Use Case: Energy Mix
-
-Demonstrates using custom text for the center label with `\n` line breaks.
-
-```python
-import pandas as pd
-import clean_charts as cc
-
-df_energy = pd.DataFrame({
+df_donut = pd.DataFrame({
     'Source': ['Solar', 'Wind', 'Nuclear', 'Natural Gas', 'Coal'],
     'TWh': [1200, 1500, 2500, 3000, 1800]
 })
 
 cc.plot_donut_chart(
-    data=df_energy,
+    data=df_donut,
     title="Global Energy Mix",
     subtitle="Projected generation in 2030 (TWh)",
-    center_label="10,000\nTWh",
+    center_label="10,000\nTWh"
 )
 ```
 
-![Donut — Energy Mix](../images/docs/donut_energy.png)
+![Donut — Basic](../images/docs/donut_basic.png)
 
-### Use Case: Portfolio Allocation
+### With Percentage Labels
 
-Demonstrates using a percentage suffix for the legend items.
+Displays percentage values in the legend.
 
 ```python
-df_portfolio = pd.DataFrame({
-    'Asset': ['Equities', 'Fixed Income', 'Real Estate', 'Cash'],
-    'Alloc': [60, 25, 10, 5]
-})
-
 cc.plot_donut_chart(
-    data=df_portfolio,
-    title="Portfolio Allocation",
-    subtitle="Balanced growth strategy",
+    data=df_donut,
+    title="Global Energy Mix",
+    subtitle="Percentage distribution of projected generation in 2030",
     center_label="100%",
-    value_suffix="%",
+    show_percentages=True
 )
 ```
 
-![Donut — Portfolio Allocation](../images/docs/donut_portfolio.png)
+![Donut — Percentages](../images/docs/donut_percentages.png)
 
 ---
 

@@ -27,7 +27,7 @@ clean_charts.plot_bubble_matrix_chart(
     title=None,
     subtitle=None,
     bg_color=None,
-    start_color=None,
+    color=None,
     end_color=None,
     show_values=True,
     value_suffix="",

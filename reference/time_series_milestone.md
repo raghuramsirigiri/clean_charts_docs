@@ -11,10 +11,10 @@ A standard line chart simply shows what happened. By deliberately incorporating 
 import pandas as pd
 import clean_charts as cc
 
-df = cc.get_default_data()
+df = pd.DataFrame({'date': pd.date_range('2023-01-01', periods=3, freq='ME'), 'Enterprise': [100, 200, 300]})
 
 cc.plot_time_series(
-    data=df[["date", "Users"]],
+    data=df[["date", "Enterprise"]],
     title="User Growth Over Time",
     subtitle="Key product milestones",
     scale_text=True,
@@ -27,7 +27,7 @@ cc.plot_time_series(
         }
     ],
     callouts=[
-        {"date": "2023-01-01", "value": 1M, "text": "1M Users Reached"}
+        {"date": "2023-01-01", "value": 1000000, "text": "1M Enterprise Reached"}
     ]
 )
 ```

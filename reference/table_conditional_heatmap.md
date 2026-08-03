@@ -15,8 +15,7 @@ df = pd.DataFrame({"A": [1, 10], "B": [5, 2]})
 
 cc.plot_table(
     data=df,
-    title="Risk Matrix",
-    conditional_formatting=True
+    title="Risk Matrix"
 )
 ```
 

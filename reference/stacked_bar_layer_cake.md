@@ -20,9 +20,7 @@ cc.plot_stacked_bar_chart(
     show_percentages=False,
     bar_labels="both",
     aspect_ratio="vertical",
-    start_color="#e0e0ff",
-    end_color="#000080"
-)
+    end_)
 ```
 
 ![Use Case Preview](../images/docs/stacked_churn.png)
