@@ -19,13 +19,30 @@
                 <a href="{{ p.url | relative_url }}" class="nav-link {% if page.url == p.url %}active{% endif %}">{{ p.title }}</a>
                 {%- if p.has_children -%}
                   {%- assign children = site.html_pages | where: "parent", p.title | sort: "nav_order" -%}
-                  <ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;">
+                  
+                  {%- assign p_active = false -%}
+                  {%- if page.url == p.url or page.parent == p.title -%}
+                    {%- assign p_active = true -%}
+                  {%- endif -%}
+                  {%- for c in children -%}
+                    {%- if page.url == c.url or page.parent == c.title -%}
+                      {%- assign p_active = true -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+
+                  <ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem; {% unless p_active %}display: none;{% endunless %}">
                     {%- for child in children -%}
                       <li>
                         <a href="{{ child.url | relative_url }}" class="nav-link {% if page.url == child.url %}active{% endif %}">{{ child.title }}</a>
                         {%- if child.has_children -%}
                           {%- assign grandchildren = site.html_pages | where: "parent", child.title | sort: "nav_order" -%}
-                          <ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem;">
+                          
+                          {%- assign child_active = false -%}
+                          {%- if page.url == child.url or page.parent == child.title -%}
+                            {%- assign child_active = true -%}
+                          {%- endif -%}
+
+                          <ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem; {% unless child_active %}display: none;{% endunless %}">
                             {%- for grandchild in grandchildren -%}
                               <li>
                                 <a href="{{ grandchild.url | relative_url }}" class="nav-link {% if page.url == grandchild.url %}active{% endif %}">{{ grandchild.title }}</a>
