@@ -5,8 +5,7 @@ parent: "Time Series"
 ---
 # Use Case: Recession Highlighter
 
-
-By manipulating `smooth`, `markers`, and `highlight_ranges`, you can emphasize periods of market downturns while maintaining strict step-changes in the data line.
+When presenting macroeconomic data, distinguishing between structural shifts and temporary market shocks is critical. The 'Recession Highlighter' configuration strips away the visual noise of granular data points by disabling markers and spline smoothing. Instead, it leverages heavy-alpha `highlight_ranges` to draw the reader's eye directly to historical macro events. This editorial technique grounds abstract time-series data in reality, allowing executive audiences to immediately contextualize performance dips without hunting for dates on the x-axis.
 
 ```python
 import pandas as pd
@@ -26,3 +25,5 @@ cc.plot_time_series(
     ]
 )
 ```
+
+![Use Case Preview](../images/docs/ts_macro.png)

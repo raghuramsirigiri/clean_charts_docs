@@ -5,8 +5,7 @@ parent: "Bar Charts"
 ---
 # Use Case: Timeline Histogram
 
-
-Map continuous-like time data (e.g. years) with `bar_padding=0.05` to mimic a continuous distribution or volume chart.
+Not all time-series data belongs on a line chart. When displaying distinct volumes over discrete periods (such as annual trading volume or distinct yearly sales), a continuous line can imply false continuity. By compressing the `bar_padding` to near-zero, the vertical bar chart morphs into a timeline histogram. This creates a solid, block-like distribution that accurately reflects discrete accumulation, grounding the viewer in the true weight of the metric over time.
 
 ```python
 import pandas as pd
@@ -23,3 +22,5 @@ cc.plot_barv_chart(
     value_suffix="M"
 )
 ```
+
+![Use Case Preview](../images/docs/barv_basic.png)

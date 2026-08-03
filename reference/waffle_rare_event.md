@@ -5,8 +5,7 @@ parent: "Waffle Chart"
 ---
 # Use Case: The 1-in-100 Storyteller
 
-
-A 10x10 grid with exactly one red square, illustrating how rare an event is.
+Humans struggle to conceptualize abstract probabilities, especially for rare events. The '1-in-100 Storyteller' bypasses this cognitive hurdle by plotting exactly one hundred distinct squares. By coloring 99 squares in a muted gray and highlighting a single square in alarming red, it provides a visceral, physical representation of a defect rate or rare occurrence. This technique is far more impactful than writing '1%', as it forces the brain to process the actual ratio visually.
 
 ```python
 import pandas as pd
@@ -21,3 +20,5 @@ cc.plot_waffle_chart(
     color="#ff0000"
 )
 ```
+
+![Use Case Preview](../images/docs/waffle_basic.png)

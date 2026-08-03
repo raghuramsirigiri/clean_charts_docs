@@ -5,8 +5,7 @@ parent: "Time Series"
 ---
 # Use Case: Annotated Milestones
 
-
-To create a large-format poster layout highlighting specific events, use `vlines` with paragraph dictionaries alongside `callouts`.
+A standard line chart simply shows what happened. By deliberately incorporating `vlines` and `callouts`, you transform the chart into a narrative that explains *why* it happened. This 'Annotated Milestone' approach is a staple of financial journalism. By explicitly pinning paragraphs of text to specific dates or peaks, you eliminate the cognitive burden on the reader. They no longer have to cross-reference the chart with an external paragraph; the visual and the insight are seamlessly integrated.
 
 ```python
 import pandas as pd
@@ -32,3 +31,5 @@ cc.plot_time_series(
     ]
 )
 ```
+
+![Use Case Preview](../images/docs/time_series_annotations.png)

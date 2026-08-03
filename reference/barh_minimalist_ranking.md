@@ -5,8 +5,7 @@ parent: "Bar Charts"
 ---
 # Use Case: Minimalist Ranking
 
-
-For pure rank orders (like 1st to 10th), reduce visual weight by using ultra-thin bars (`bar_padding=0.7`) and a black color.
+In dense reports, heavily colored or thickly padded bar charts can easily overwhelm the page with unnecessary visual weight. The 'Minimalist Ranking' variation deliberately starves the chart of ink. By employing ultra-thin padding and a stark monochrome palette, the focus shifts entirely to the textual rank order. This highly refined, understated approach is exceptionally effective when the goal is to present a clean hierarchy—such as a top 10 list—without dominating the surrounding narrative.
 
 ```python
 import pandas as pd
@@ -23,3 +22,5 @@ cc.plot_barh_chart(
     value_suffix=" pts"
 )
 ```
+
+![Use Case Preview](../images/docs/barh_basic.png)

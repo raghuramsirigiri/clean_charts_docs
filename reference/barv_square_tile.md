@@ -5,8 +5,7 @@ parent: "Bar Charts"
 ---
 # Use Case: Square Tile KPI
 
-
-A compact, chunky 3-bar chart designed to act as an inset card in a larger dashboard layout.
+Modern executive dashboards demand extreme spatial efficiency. The 'Square Tile' variation forces a strict 1:1 aspect ratio, condensing a standard vertical bar chart into a punchy, modular component. By scaling the text proportionally to fit the constrained bounding box, it ensures perfect legibility on high-resolution displays. This format is the gold standard for multi-metric 'cockpit' layouts, allowing you to tile multiple distributions side-by-side without visual friction.
 
 ```python
 import pandas as pd
@@ -23,3 +22,5 @@ cc.plot_barv_chart(
     scale_text=True
 )
 ```
+
+![Use Case Preview](../images/docs/barv_basic.png)

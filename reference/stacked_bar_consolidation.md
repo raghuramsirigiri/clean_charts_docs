@@ -5,8 +5,7 @@ parent: "Stacked Bar Chart"
 ---
 # Use Case: 100% Market Consolidation
 
-
-Normalize a time series so every bar is the same length, visually emphasizing market share shifts.
+Absolute values often mask the true story of market dynamics. When analyzing market share, the absolute size of the pie is less important than how it is divided. By forcing the stacked bar into a 100% normalized mode, every bar becomes identical in length. This strict uniformity isolates the internal shifts between competitors, making the gradual erosion of an incumbent by a challenger glaringly obvious. It is a ruthless, highly effective tool for competitive landscape analysis.
 
 ```python
 import pandas as pd
@@ -22,3 +21,5 @@ cc.plot_stacked_bar_chart(
     bar_labels="none"
 )
 ```
+
+![Use Case Preview](../images/docs/stacked_bar_pct.png)

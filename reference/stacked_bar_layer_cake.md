@@ -5,8 +5,7 @@ parent: "Stacked Bar Chart"
 ---
 # Use Case: Revenue Layer Cake
 
-
-A towering vertical stacked bar distinguishing multiple product tiers via a gradient.
+When decomposing revenue or demonstrating complex hierarchies, the 'Layer Cake' variation offers unparalleled clarity. By utilizing a vertical aspect ratio and retaining absolute values, the viewer can simultaneously grasp the total aggregate growth and the underlying structural composition. Applying a monochromatic gradient across the tiers ensures that the visual hierarchy matches the data hierarchy, presenting a cohesive, sophisticated breakdown that avoids the jarring clash of multi-colored segments.
 
 ```python
 import pandas as pd
@@ -25,3 +24,5 @@ cc.plot_stacked_bar_chart(
     end_color="#000080"
 )
 ```
+
+![Use Case Preview](../images/docs/stacked_churn.png)

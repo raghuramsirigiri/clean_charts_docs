@@ -5,8 +5,7 @@ parent: "Scatter Charts"
 ---
 # Use Case: 3D Market Map
 
-
-Use bubble sizing to add a third dimension of financial weight to a standard XY correlation.
+A standard two-dimensional scatter plot is often insufficient for holistic financial analysis, as it ignores scale. The '3D Market Map' solves this by mapping a third critical variable—such as market capitalization or total revenue—to the size of the scatter bubble. By dramatically increasing the dot size scalar, the chart visualizes the sheer gravity of different entities within the landscape. It vividly demonstrates that not all high-growth companies carry the same market weight.
 
 ```python
 import pandas as pd
@@ -21,3 +20,5 @@ cc.plot_bubble_scatter_chart(
     dot_size=200
 )
 ```
+
+![Use Case Preview](../images/docs/bubble_matrix_basic.png)

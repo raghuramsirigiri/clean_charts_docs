@@ -5,8 +5,7 @@ parent: "Dumbbell Chart"
 ---
 # Use Case: Sentiment Shift
 
-
-Map 'Before' and 'After' sentiment scores, separating the questions clearly.
+Visualizing attitudinal shifts or survey results over time requires a format that emphasizes movement. The dumbbell chart excels here by plotting 'Before' and 'After' states on the same horizontal plane. By widening the padding between categories, the chart isolates each question, allowing the reader to trace the trajectory of sentiment independently. This format is vastly superior to side-by-side bars because it explicitly draws the vector of change, turning static data into a narrative of progression.
 
 ```python
 import pandas as pd
@@ -21,3 +20,5 @@ cc.plot_dumbbell_chart(
     bar_padding=0.5
 )
 ```
+
+![Use Case Preview](../images/docs/dumbbell_dynamic.png)

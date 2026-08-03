@@ -5,8 +5,7 @@ parent: "Waffle Chart"
 ---
 # Use Case: Budget Allocation Block
 
-
-Mapping distinct budget pools with a continuous gradient across 100 cells.
+While donut charts are excellent for high-level part-to-whole relationships, they fail when comparing segments of similar size due to our poor ability to judge angles. The 'Budget Allocation Block' waffle chart converts percentages into a strict, countable 10x10 grid. Using a continuous, monochromatic gradient across the segments allows the reader to visually estimate area far more accurately than radial slices. It provides a structured, rigid, and highly professional breakdown of resource distribution.
 
 ```python
 import pandas as pd
@@ -22,3 +21,5 @@ cc.plot_waffle_chart(
     end_color="#2323FF"
 )
 ```
+
+![Use Case Preview](../images/docs/waffle_basic.png)

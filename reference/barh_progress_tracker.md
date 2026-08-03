@@ -5,8 +5,7 @@ parent: "Bar Charts"
 ---
 # Use Case: Progress-to-Goal Tracker
 
-
-By using thick bars and enabling percentage display, you can mimic a software loading/progress bar for KPI tracking.
+Visualizing progress toward a goal requires a design that feels weighty and absolute. By thickening the bars and shifting to a landscape aspect ratio, this configuration mimics the familiar visual language of a loading bar. When combined with percentage suffixes and a high-contrast primary color, it immediately communicates completion status. This structure is ideal for tracking quarterly KPIs or OKRs, providing an unambiguous, at-a-glance read on departmental performance.
 
 ```python
 import pandas as pd
@@ -24,3 +23,5 @@ cc.plot_barh_chart(
     color="#2323FF"
 )
 ```
+
+![Use Case Preview](../images/docs/barh_percentages.png)

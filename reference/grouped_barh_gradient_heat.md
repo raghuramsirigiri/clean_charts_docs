@@ -5,8 +5,7 @@ parent: "Grouped Bar"
 ---
 # Use Case: Gradient Heat Progression
 
-
-Map consecutive periods with `bar_padding=0` and a continuous gradient to create a localized heat map feeling per group.
+Traditional grouped bar charts often suffer from the 'rainbow effect', using disparate, chaotic colors for each category that confuse the eye. The 'Gradient Heat' progression solves this by mapping consecutive periods (like years or quarters) to a smooth, two-anchor color gradient. Stripping away the bar padding fuses the periods together. This elegant technique allows the viewer's eye to intuitively follow the 'heat' of the gradient, instantly recognizing trends and momentum within a category without repeatedly checking a legend.
 
 ```python
 import pandas as pd
@@ -23,3 +22,5 @@ cc.plot_grouped_barh_chart(
     bar_padding=0
 )
 ```
+
+![Use Case Preview](../images/docs/grouped_barh_basic.png)

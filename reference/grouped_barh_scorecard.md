@@ -5,8 +5,7 @@ parent: "Grouped Bar"
 ---
 # Use Case: Strategic Scorecard
 
-
-Spread groups far apart and use `group_comments` to append a massive delta metric to the right side of the visual.
+Executives do not want to hunt for the takeaway; they want the insight delivered upfront. The 'Strategic Scorecard' variation aggressively stretches the group padding and draws hard separator lines to isolate each business unit. Crucially, it leverages the `group_comments` parameter to append a massive, unmissable delta metric directly to the right of the visual. This transforms a standard chart into a self-contained strategic brief, dictating exactly what the reader should focus on.
 
 ```python
 import pandas as pd
@@ -27,3 +26,5 @@ cc.plot_grouped_barh_chart(
     ]
 )
 ```
+
+![Use Case Preview](../images/docs/grouped_barh_comments.png)
