@@ -72,6 +72,9 @@ clean_charts/
     ├── bubble_matrix.py # plot_bubble_matrix_chart()
     ├── table.py         # plot_table()
     ├── geofacet.py      # plot_geofacet()
+    ├── scatter.py       # plot_scatter_chart()
+    ├── grouped_scatter.py # plot_grouped_scatter_chart()
+    ├── bubble_scatter.py # plot_bubble_scatter_chart()
     └── dashboard.py     # plot_dashboard()
 ```
 
@@ -157,6 +160,9 @@ Most chart functions share these parameters. They are documented once here and r
 | [`plot_bubble_matrix_chart()`](reference/bubble_matrix.md) | Size+color encoded bubble grid for cross-tabulations | [→ Full docs](reference/bubble_matrix.md) |
 | [`plot_table()`](reference/table.md) | Styled data table with conditional highlighting, MultiIndex, and formatting | [→ Full docs](reference/table.md) |
 | [`plot_geofacet()`](reference/geofacet.md) | Geographic small-multiples grid (US states, UK regions) | [→ Full docs](reference/geofacet.md) |
+| [`plot_scatter_chart()`](reference/scatter_charts.md#plot_scatter_chart) | 2D scatter plot for relationship between two continuous variables | [→ Full docs](reference/scatter_charts.md#plot_scatter_chart) |
+| [`plot_grouped_scatter_chart()`](reference/scatter_charts.md#plot_grouped_scatter_chart) | Scatter plot with categorical grouping or quadrant thresholds | [→ Full docs](reference/scatter_charts.md#plot_grouped_scatter_chart) |
+| [`plot_bubble_scatter_chart()`](reference/scatter_charts.md#plot_bubble_scatter_chart) | 3-variable scatter where dot size encodes a third dimension | [→ Full docs](reference/scatter_charts.md#plot_bubble_scatter_chart) |
 | [`plot_dashboard()`](reference/dashboard.md) | Composite mosaic combining multiple chart types | [→ Full docs](reference/dashboard.md) |
 
 ---
