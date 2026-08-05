@@ -1,0 +1,61 @@
+- title: Start Here
+  items:
+    - title: Overview & Install
+      url: /
+    - title: Quick Start Guide
+      url: /docs/quick-start/
+    - title: Global Parameters
+      url: /docs/global-parameters/
+
+- title: Bar Charts
+  items:
+    - title: Horizontal Bar
+      url: /docs/charts/barh/
+    - title: Vertical Bar
+      url: /docs/charts/barv/
+    - title: Grouped Bar
+      url: /docs/charts/grouped-barh/
+    - title: Stacked Bar
+      url: /docs/charts/stacked-bar/
+
+- title: Time Series
+  items:
+    - title: Line Chart
+      url: /docs/charts/time-series/
+
+- title: Scatter Plots
+  items:
+    - title: Basic Scatter
+      url: /docs/charts/scatter/
+    - title: Grouped Scatter
+      url: /docs/charts/grouped-scatter/
+    - title: Bubble Scatter
+      url: /docs/charts/bubble-scatter/
+
+- title: Matrix & Grid
+  items:
+    - title: Bubble Matrix
+      url: /docs/charts/bubble-matrix/
+    - title: Geofacet Map
+      url: /docs/charts/geofacet/
+
+- title: Proportions
+  items:
+    - title: Donut Chart
+      url: /docs/charts/donut/
+    - title: Waffle Chart
+      url: /docs/charts/waffle/
+
+- title: Comparisons
+  items:
+    - title: Dumbbell Chart
+      url: /docs/charts/dumbbell/
+
+- title: Presentation
+  items:
+    - title: Insight Card
+      url: /docs/charts/insight-card/
+    - title: Data Table
+      url: /docs/charts/table/
+    - title: Dashboard
+      url: /docs/charts/dashboard/

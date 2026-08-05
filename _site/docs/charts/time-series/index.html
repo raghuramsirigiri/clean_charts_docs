@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Series Line Chart | clean_charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Time Series Line Chart | clean_charts</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Time Series Line Chart" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Multi-series line charts with annotations, splines, and trend overlays." />
+<meta property="og:description" content="Multi-series line charts with annotations, splines, and trend overlays." />
+<link rel="canonical" href="https://raghuramsirigiri.github.io/docs/charts/time-series/" />
+<meta property="og:url" content="https://raghuramsirigiri.github.io/docs/charts/time-series/" />
+<meta property="og:site_name" content="clean_charts" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Time Series Line Chart" />
+<script type="application/ld+json">
+{"headline":"Time Series Line Chart","@type":"WebPage","url":"https://raghuramsirigiri.github.io/docs/charts/time-series/","description":"Multi-series line charts with annotations, splines, and trend overlays.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="docs-shell">
+    <aside class="docs-sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="brand-link">
+      <span class="brand-logo">📊</span>
+      <span class="brand-name"><strong>clean_charts</strong> docs</span>
+    </a>
+  </div>
+
+  <nav class="nav-tree">
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Start Here</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/"
+                 class="nav-link ">
+                Overview & Install
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/quick-start/"
+                 class="nav-link ">
+                Quick Start Guide
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/global-parameters/"
+                 class="nav-link ">
+                Global Parameters
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Bar Charts</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/barh/"
+                 class="nav-link ">
+                Horizontal Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/barv/"
+                 class="nav-link ">
+                Vertical Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-barh/"
+                 class="nav-link ">
+                Grouped Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/stacked-bar/"
+                 class="nav-link ">
+                Stacked Bar
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Time Series</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/time-series/"
+                 class="nav-link active">
+                Line Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Scatter Plots</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/scatter/"
+                 class="nav-link ">
+                Basic Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-scatter/"
+                 class="nav-link ">
+                Grouped Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/bubble-scatter/"
+                 class="nav-link ">
+                Bubble Scatter
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Matrix & Grid</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/bubble-matrix/"
+                 class="nav-link ">
+                Bubble Matrix
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/geofacet/"
+                 class="nav-link ">
+                Geofacet Map
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Proportions</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/donut/"
+                 class="nav-link ">
+                Donut Chart
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/waffle/"
+                 class="nav-link ">
+                Waffle Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Comparisons</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/dumbbell/"
+                 class="nav-link ">
+                Dumbbell Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Presentation</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/insight-card/"
+                 class="nav-link ">
+                Insight Card
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/table/"
+                 class="nav-link ">
+                Data Table
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/dashboard/"
+                 class="nav-link ">
+                Dashboard
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+  </nav>
+</aside>
+
+
+    <div class="docs-main-container">
+      <main class="docs-content">
+        <article class="chart-page">
+  <h1 id="plot_time_series"><code class="language-plaintext highlighter-rouge">plot_time_series()</code></h1>
+
+<p>Plots a time-series line chart with smooth spline interpolation and inline series labels. Optimized for visualizing continuous data over time — financial metrics, user growth, performance trends.</p>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Date"</span><span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s">"2024-01-01"</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s">"MS"</span><span class="p">),</span>
+    <span class="s">"Revenue"</span><span class="p">:</span> <span class="p">[</span><span class="mi">120</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">162</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">188</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">230</span><span class="p">],</span>
+    <span class="s">"Costs"</span><span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">135</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_time_series</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Quarterly Financials"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Revenue vs Costs in USD Thousands"</span><span class="p">,</span>
+    <span class="n">label_frequency</span><span class="o">=</span><span class="s">"quarter"</span><span class="p">,</span> 
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"k"</span><span class="p">,</span>
+    <span class="n">vlines</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">"date"</span><span class="p">:</span> <span class="s">"2024-07-01"</span><span class="p">,</span>
+            <span class="s">"label"</span><span class="p">:</span> <span class="s">"Product Launch"</span><span class="p">,</span> 
+            <span class="s">"color"</span><span class="p">:</span> <span class="s">"#000000"</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/time_series_basic.png" alt="Time Series" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Time Series.</em>
+</div>
+
+<h2 id="data-requirements">Data Requirements</h2>
+
+<ul>
+  <li><strong>Time Column</strong> — must contain dates or timestamps. Auto-detected if named <code class="language-plaintext highlighter-rouge">"date"</code>, <code class="language-plaintext highlighter-rouge">"time"</code>, or <code class="language-plaintext highlighter-rouge">"timestamp"</code>, or if its dtype is datetime.</li>
+  <li><strong>Value Columns</strong> — all remaining numeric columns are plotted as independent series.</li>
+  <li><strong>Frequency</strong> — ideally regular intervals, though the spline interpolation handles irregular spacing.</li>
+</ul>
+
+<h2 id="parameters">Parameters</h2>
+
+<table class="param-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Scope</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>data</code></td>
+      <td><code>pd.DataFrame</code></td>
+      <td>Built-in</td>
+      <td><span class="badge common">Common</span></td>
+      <td>DataFrame with a date column and one or more numeric series.</td>
+    </tr>
+    <tr>
+      <td><code>output_path</code></td>
+      <td><code>str | None</code></td>
+      <td><code>None</code></td>
+      <td><span class="badge common">Common</span></td>
+      <td>File path to save the chart.</td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td><code>int</code></td>
+      <td><code>600</code></td>
+      <td><span class="badge common">Common</span></td>
+      <td>Image width in pixels.</td>
+    </tr>
+    <tr>
+      <td><code>height</code></td>
+      <td><code>int</code></td>
+      <td><code>600</code></td>
+      <td><span class="badge common">Common</span></td>
+      <td>Image height in pixels.</td>
+    </tr>
+    <tr>
+      <td><code>aspect_ratio</code></td>
+      <td><code>str | None</code></td>
+      <td><code>None</code></td>
+      <td><span class="badge common">Common</span></td>
+      <td><code>"square"</code>, <code>"landscape"</code>, <code>"vertical"</code>, <code>"1:1"</code>, <code>"2:1"</code>, <code>"1:2"</code>.</td>
+    </tr>
+    <tr>
+      <td><code>title</code></td>
+      <td><code>str | None</code></td>
+      <td><code>None</code></td>
+      <td><span class="badge common">Common</span></td>
+      <td>Bold header text.</td>
+    </tr>
+    <tr>
+      <td><code>subtitle</code></td>
+      <td><code>str | None</code></td>
+      <td><code>None</code></td>
+      <td><span class="badge common">Common</span></td>
+      <td>Secondary text below title.</td>
+    </tr>
+    <tr>
+      <td><code>bg_color</code></td>
+      <td><code>str | None</code></td>
+      <td><code>"#f4f3f0"</code></td>
+      <td><span class="badge common">Common</span></td>
+      <td>Background hex color.</td>
+    </tr>
+    <tr>
+      <td><code>scale_text</code></td>
+      <td><code>bool</code></td>
+      <td><code>False</code></td>
+      <td><span class="badge common">Common</span></td>
+      <td>Scale fonts proportionally.</td>
+    </tr>
+    <tr>
+      <td><code>value_suffix</code></td>
+      <td><code>str</code></td>
+      <td><code>""</code></td>
+      <td><span class="badge common">Common</span></td>
+      <td>String appended to value labels.</td>
+    </tr>
+    <tr>
+      <td><code>start_color</code></td>
+      <td><code>str</code></td>
+      <td><code>"#000000"</code></td>
+      <td><span class="badge unique">Unique</span></td>
+      <td>Hex color for the first line series.</td>
+    </tr>
+    <tr>
+      <td><code>end_color</code></td>
+      <td><code>str</code></td>
+      <td><code>"#2323FF"</code></td>
+      <td><span class="badge unique">Unique</span></td>
+      <td>Hex color for the last line series.</td>
+    </tr>
+    <tr>
+      <td><code>label_frequency</code></td>
+      <td><code>str</code></td>
+      <td><code>"year"</code></td>
+      <td><span class="badge unique">Unique</span></td>
+      <td>X-axis tick frequency: <code>"year"</code>, <code>"quarter"</code>, <code>"month"</code>, <code>"week"</code>, <code>"day"</code>.</td>
+    </tr>
+    <tr>
+      <td><code>markers</code></td>
+      <td><code>bool | str</code></td>
+      <td><code>None</code></td>
+      <td><span class="badge unique">Unique</span></td>
+      <td>Data-point markers on lines (e.g., <code>True</code>, <code>"o"</code>, <code>"s"</code>).</td>
+    </tr>
+    <tr>
+      <td><code>line_labels</code></td>
+      <td><code>str</code></td>
+      <td><code>"name"</code></td>
+      <td><span class="badge unique">Unique</span></td>
+      <td>Inline text near endpoints: <code>"name"</code>, <code>"value"</code>, <code>"both"</code>, <code>"none"</code>.</td>
+    </tr>
+    <tr>
+      <td><code>smooth</code></td>
+      <td><code>bool</code></td>
+      <td><code>True</code></td>
+      <td><span class="badge unique">Unique</span></td>
+      <td>Draw smooth PCHIP spline curves instead of straight segments.</td>
+    </tr>
+    <tr>
+      <td><code>vlines</code></td>
+      <td><code>list | dict</code></td>
+      <td><code>None</code></td>
+      <td><span class="badge unique">Unique</span></td>
+      <td>Vertical reference lines with optional labels. Accepts single dates, dicts, or lists of dicts.</td>
+    </tr>
+    <tr>
+      <td><code>highlight_ranges</code></td>
+      <td><code>list | dict</code></td>
+      <td><code>None</code></td>
+      <td><span class="badge unique">Unique</span></td>
+      <td>Shaded background regions between two dates.</td>
+    </tr>
+    <tr>
+      <td><code>callouts</code></td>
+      <td><code>list | dict</code></td>
+      <td><code>None</code></td>
+      <td><span class="badge unique">Unique</span></td>
+      <td>Text callout boxes pointing to specific (date, value) coordinates. Keys: <code>date</code>, <code>text</code>, <code>series</code>, <code>color</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="common-scenarios">Common Scenarios</h2>
+
+<h3 id="milestone-markers">Milestone Markers</h3>
+
+<p>Add vertical reference lines for key events:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Date"</span><span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s">"2024-01-01"</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s">"MS"</span><span class="p">),</span>
+    <span class="s">"Revenue"</span><span class="p">:</span> <span class="p">[</span><span class="mi">120</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">162</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">188</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">230</span><span class="p">],</span>
+    <span class="s">"Costs"</span><span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">135</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_time_series</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Quarterly Financials"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Revenue vs Costs in USD Thousands"</span><span class="p">,</span>
+    <span class="n">label_frequency</span><span class="o">=</span><span class="s">"quarter"</span><span class="p">,</span> 
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"k"</span><span class="p">,</span>
+    <span class="n">vlines</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">"date"</span><span class="p">:</span> <span class="s">"2024-07-01"</span><span class="p">,</span>
+            <span class="s">"label"</span><span class="p">:</span> <span class="s">"Product Launch"</span><span class="p">,</span> 
+            <span class="s">"color"</span><span class="p">:</span> <span class="s">"#000000"</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/time_series_markers.png" alt="Time Series" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Time Series.</em>
+</div>
+
+<h3 id="recession-bands">Recession Bands</h3>
+
+<p>Shade time ranges to highlight periods of interest:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Date"</span><span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s">"2022-01-01"</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s">"MS"</span><span class="p">),</span>
+    <span class="s">"Active Users"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> 
+        <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span>
+        <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">,</span> 
+        <span class="mf">2.9</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">3.7</span>
+    <span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_time_series</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Platform Active Users"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Monthly active users in millions"</span><span class="p">,</span>
+    <span class="n">label_frequency</span><span class="o">=</span><span class="s">"quarter"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"m"</span><span class="p">,</span>
+    <span class="n">highlight_ranges</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">"start"</span><span class="p">:</span> <span class="s">"2022-07-01"</span><span class="p">,</span> 
+            <span class="s">"end"</span><span class="p">:</span> <span class="s">"2022-12-01"</span><span class="p">,</span>
+            <span class="s">"color"</span><span class="p">:</span> <span class="s">"#e3120b"</span><span class="p">,</span>
+            <span class="s">"alpha"</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+            <span class="s">"label"</span><span class="p">:</span> <span class="s">"Service Outages"</span><span class="p">,</span>
+            <span class="s">"paragraph"</span><span class="p">:</span> <span class="s">"A series of major infrastructure</span><span class="se">\n</span><span class="s">issues caused significant</span><span class="se">\n</span><span class="s">user churn during this period."</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/ts_macro.png" alt="Time Series" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Time Series.</em>
+</div>
+
+<h3 id="data-point-callouts">Data Point Callouts</h3>
+
+<p>Annotate specific data points:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Date"</span><span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s">"2024-01-01"</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s">"MS"</span><span class="p">),</span>
+    <span class="s">"Traffic"</span><span class="p">:</span> <span class="p">[</span><span class="mi">210</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">280</span><span class="p">,</span> <span class="mi">295</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_time_series</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Website Traffic"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Daily unique visitors (thousands)"</span><span class="p">,</span>
+    <span class="n">label_frequency</span><span class="o">=</span><span class="s">"month"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"k"</span><span class="p">,</span>
+    <span class="n">callouts</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">"date"</span><span class="p">:</span> <span class="s">"2024-04-01"</span><span class="p">,</span>
+            <span class="s">"series"</span><span class="p">:</span> <span class="s">"Traffic"</span><span class="p">,</span> 
+            <span class="s">"text"</span><span class="p">:</span> <span class="s">"Featured on HackerNews</span><span class="se">\n</span><span class="s">driving a massive spike"</span><span class="p">,</span>
+            <span class="s">"text_y"</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> 
+            <span class="s">"ha"</span><span class="p">:</span> <span class="s">"center"</span><span class="p">,</span>
+            <span class="s">"color"</span><span class="p">:</span> <span class="s">"#0000CD"</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/time_series_callouts.png" alt="Time Series" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Time Series.</em>
+</div>
+
+</article>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

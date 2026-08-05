@@ -1,4 +1,21 @@
-title: Clean Charts
-description: Minimalist, publication-quality charting library for Python.
-url: "https://raghuramsirigiri.github.io"
+title: clean_charts
+description: "Production-ready, publication-quality data visualizations in Python."
 baseurl: "/clean_chart_docs"
+url: "https://raghuramsirigiri.github.io"
+
+plugins:
+  - jekyll-seo-tag
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

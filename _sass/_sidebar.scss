@@ -1,0 +1,138 @@
+// ─── Sidebar ───
+
+.docs-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: $sidebar-width;
+  background-color: $color-bg-secondary;
+  border-right: 1px solid $color-border;
+  overflow-y: auto;
+  padding: 0;
+  z-index: 100;
+
+  // Hide scrollbar but keep scrollable
+  scrollbar-width: thin;
+  scrollbar-color: $color-border transparent;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-border;
+    border-radius: 4px;
+  }
+}
+
+// Brand header
+.sidebar-header {
+  padding: 24px 20px 20px;
+  border-bottom: 1px solid $color-border;
+
+  .brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .brand-logo {
+    font-size: 1.25rem;
+  }
+
+  .brand-name {
+    font-size: 0.9375rem;
+    color: $color-text-main;
+    letter-spacing: -0.01em;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
+
+// Navigation tree
+.nav-tree {
+  padding: 16px 12px 32px;
+}
+
+.nav-group {
+  margin-bottom: 4px;
+}
+
+// Section title button (accordion toggle)
+.nav-group-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: $font-sans;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $color-text-subtle;
+
+  &:hover {
+    color: $color-text-main;
+  }
+
+  .chevron {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  &[aria-expanded="true"] .chevron {
+    transform: rotate(90deg);
+  }
+}
+
+// Navigation item list
+.nav-items {
+  list-style: none;
+  padding: 0 0 8px 0;
+  margin: 0;
+  overflow: hidden;
+
+  li {
+    margin: 0;
+  }
+}
+
+// Hide nav items when collapsed
+.nav-group-title[aria-expanded="false"] + .nav-items {
+  display: none;
+}
+
+// Individual nav links
+.nav-link {
+  display: block;
+  padding: 6px 12px 6px 24px;
+  border-radius: $radius-sm;
+  color: $color-text-muted;
+  text-decoration: none;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background-color: $color-bg-tertiary;
+    color: $color-text-main;
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $color-accent;
+    font-weight: 600;
+    background-color: $color-accent-light;
+  }
+}

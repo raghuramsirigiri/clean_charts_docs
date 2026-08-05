@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waffle Chart | clean_charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Waffle Chart | clean_charts</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Waffle Chart" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="10×10 dot grid for precise “X out of 100” proportions." />
+<meta property="og:description" content="10×10 dot grid for precise “X out of 100” proportions." />
+<link rel="canonical" href="https://raghuramsirigiri.github.io/docs/charts/waffle/" />
+<meta property="og:url" content="https://raghuramsirigiri.github.io/docs/charts/waffle/" />
+<meta property="og:site_name" content="clean_charts" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Waffle Chart" />
+<script type="application/ld+json">
+{"headline":"Waffle Chart","@type":"WebPage","url":"https://raghuramsirigiri.github.io/docs/charts/waffle/","description":"10×10 dot grid for precise “X out of 100” proportions.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="docs-shell">
+    <aside class="docs-sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="brand-link">
+      <span class="brand-logo">📊</span>
+      <span class="brand-name"><strong>clean_charts</strong> docs</span>
+    </a>
+  </div>
+
+  <nav class="nav-tree">
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Start Here</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/"
+                 class="nav-link ">
+                Overview & Install
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/quick-start/"
+                 class="nav-link ">
+                Quick Start Guide
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/global-parameters/"
+                 class="nav-link ">
+                Global Parameters
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Bar Charts</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/barh/"
+                 class="nav-link ">
+                Horizontal Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/barv/"
+                 class="nav-link ">
+                Vertical Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-barh/"
+                 class="nav-link ">
+                Grouped Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/stacked-bar/"
+                 class="nav-link ">
+                Stacked Bar
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Time Series</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/time-series/"
+                 class="nav-link ">
+                Line Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Scatter Plots</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/scatter/"
+                 class="nav-link ">
+                Basic Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-scatter/"
+                 class="nav-link ">
+                Grouped Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/bubble-scatter/"
+                 class="nav-link ">
+                Bubble Scatter
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Matrix & Grid</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/bubble-matrix/"
+                 class="nav-link ">
+                Bubble Matrix
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/geofacet/"
+                 class="nav-link ">
+                Geofacet Map
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Proportions</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/donut/"
+                 class="nav-link ">
+                Donut Chart
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/waffle/"
+                 class="nav-link active">
+                Waffle Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Comparisons</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/dumbbell/"
+                 class="nav-link ">
+                Dumbbell Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Presentation</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/insight-card/"
+                 class="nav-link ">
+                Insight Card
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/table/"
+                 class="nav-link ">
+                Data Table
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/dashboard/"
+                 class="nav-link ">
+                Dashboard
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+  </nav>
+</aside>
+
+
+    <div class="docs-main-container">
+      <main class="docs-content">
+        <article class="chart-page">
+  <h1 id="plot_waffle_chart"><code class="language-plaintext highlighter-rouge">plot_waffle_chart()</code></h1>
+
+<p>Plots a multi-category waffle chart (10×10 dot grids) in the Economist style. Best for displaying precise grid proportions — “X out of 100” — in a visually striking format.</p>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Heading"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Growth Focus"</span><span class="p">,</span> <span class="s">"Resource Allocation"</span><span class="p">,</span> <span class="s">"Customer Centricity"</span><span class="p">],</span>
+    <span class="s">"Description"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">"Organizations focusing 30% or more of their time on long-term growth initiatives"</span><span class="p">,</span>
+        <span class="s">"Companies that actively increase resourcing during periods of market volatility"</span><span class="p">,</span>
+        <span class="s">"Firms that consistently incorporate direct customer input into business decisions"</span>
+    <span class="p">],</span>
+    <span class="s">"Value"</span><span class="p">:</span> <span class="p">[</span><span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_waffle_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Key Strategic Priorities"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Percentage of surveyed organizations reporting on key focus areas"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"%"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/waffle_basic.png" alt="Waffle" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Waffle.</em>
+</div>
+
+<h2 id="data-requirements">Data Requirements</h2>
+
+<ul>
+  <li><strong>2 columns</strong> — [Category, Percentage]</li>
+  <li><strong>3 columns</strong> — [Label (optional grouping), Category, Percentage]</li>
+</ul>
+
+<h2 id="parameters">Parameters</h2>
+
+<table class="param-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Scope</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>data</code></td><td><code>pd.DataFrame</code></td><td>Built-in</td><td><span class="badge common">Common</span></td><td>2 or 3-column DataFrame.</td></tr>
+    <tr><td><code>output_path</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>File path to save.</td></tr>
+    <tr><td><code>width</code></td><td><code>int | None</code></td><td>Auto</td><td><span class="badge common">Common</span></td><td>Image width in pixels.</td></tr>
+    <tr><td><code>height</code></td><td><code>int | None</code></td><td>Auto</td><td><span class="badge common">Common</span></td><td>Image height in pixels.</td></tr>
+    <tr><td><code>aspect_ratio</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td><code>"square"</code>, <code>"landscape"</code>, etc.</td></tr>
+    <tr><td><code>title</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>Bold header text.</td></tr>
+    <tr><td><code>subtitle</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>Secondary text.</td></tr>
+    <tr><td><code>bg_color</code></td><td><code>str | None</code></td><td><code>"#f4f3f0"</code></td><td><span class="badge common">Common</span></td><td>Background hex color.</td></tr>
+    <tr><td><code>scale_text</code></td><td><code>bool</code></td><td><code>True</code></td><td><span class="badge common">Common</span></td><td>Scale fonts proportionally.</td></tr>
+    <tr><td><code>color</code></td><td><code>str</code></td><td><code>"#000000"</code></td><td><span class="badge unique">Unique</span></td><td>Hex color for filled dots.</td></tr>
+    <tr><td><code>inactive_color</code></td><td><code>str</code></td><td>Light gray</td><td><span class="badge unique">Unique</span></td><td>Hex color for unfilled dots.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="common-scenarios">Common Scenarios</h2>
+
+<h3 id="budget-allocation">Budget Allocation</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Department"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Manufacturing"</span><span class="p">,</span> <span class="s">"Engineering"</span><span class="p">,</span> <span class="s">"Operations"</span><span class="p">,</span> <span class="s">"Sales"</span><span class="p">],</span>
+    <span class="s">"Training Requirement"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">"Heavy machinery and floor safety protocols"</span><span class="p">,</span>
+        <span class="s">"Laboratory and electrical hazard compliance"</span><span class="p">,</span>
+        <span class="s">"Logistics, warehouse, and lifting safety"</span><span class="p">,</span>
+        <span class="s">"Standard office compliance and cybersecurity"</span>
+    <span class="p">],</span>
+    <span class="s">"Completion (%)"</span><span class="p">:</span> <span class="p">[</span><span class="mi">82</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">98</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_waffle_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Departmental Safety &amp; Compliance Training"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Share of employees who have completed required annual certifications"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"%"</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s">"#0066cc"</span><span class="p">,</span>          <span class="c1"># Custom filled dot color (optional)
+</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/waffle_department.png" alt="Waffle" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Waffle.</em>
+</div>
+
+</article>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

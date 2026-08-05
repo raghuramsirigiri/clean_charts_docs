@@ -3,66 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo %}
 </head>
 <body>
-  <div class="layout-wrapper">
-    <aside class="sidebar">
-      <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
-      <nav>
-        <ul class="nav-list">
-          {%- assign top_pages = site.html_pages | where_exp: "item", "item.parent == nil" | sort: "nav_order" -%}
-          {%- for p in top_pages -%}
-            {%- if p.title -%}
-              <li>
-                <a href="{{ p.url | relative_url }}" class="nav-link {% if page.url == p.url %}active{% endif %}">{{ p.title }}</a>
-                {%- if p.has_children -%}
-                  {%- assign children = site.html_pages | where: "parent", p.title | sort: "nav_order" -%}
-                  
-                  {%- assign p_active = false -%}
-                  {%- if page.url == p.url or page.parent == p.title -%}
-                    {%- assign p_active = true -%}
-                  {%- endif -%}
-                  {%- for c in children -%}
-                    {%- if page.url == c.url or page.parent == c.title -%}
-                      {%- assign p_active = true -%}
-                    {%- endif -%}
-                  {%- endfor -%}
+  <div class="docs-shell">
+    {% include sidebar.html %}
 
-                  <ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem; {% unless p_active %}display: none;{% endunless %}">
-                    {%- for child in children -%}
-                      <li>
-                        <a href="{{ child.url | relative_url }}" class="nav-link {% if page.url == child.url %}active{% endif %}">{{ child.title }}</a>
-                        {%- if child.has_children -%}
-                          {%- assign grandchildren = site.html_pages | where: "parent", child.title | sort: "nav_order" -%}
-                          
-                          {%- assign child_active = false -%}
-                          {%- if page.url == child.url or page.parent == child.title -%}
-                            {%- assign child_active = true -%}
-                          {%- endif -%}
-
-                          <ul class="nav-list" style="padding-left: 1rem; margin-top: 0.25rem; {% unless child_active %}display: none;{% endunless %}">
-                            {%- for grandchild in grandchildren -%}
-                              <li>
-                                <a href="{{ grandchild.url | relative_url }}" class="nav-link {% if page.url == grandchild.url %}active{% endif %}">{{ grandchild.title }}</a>
-                              </li>
-                            {%- endfor -%}
-                          </ul>
-                        {%- endif -%}
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                {%- endif -%}
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      </nav>
-    </aside>
-    <main class="main-content">
-      {{ content }}
-    </main>
+    <div class="docs-main-container">
+      <main class="docs-content">
+        {{ content }}
+      </main>
+    </div>
   </div>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>

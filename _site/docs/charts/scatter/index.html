@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Scatter Chart | clean_charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Basic Scatter Chart | clean_charts</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Basic Scatter Chart" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="2D scatter plot for visualizing relationships between two continuous variables." />
+<meta property="og:description" content="2D scatter plot for visualizing relationships between two continuous variables." />
+<link rel="canonical" href="https://raghuramsirigiri.github.io/docs/charts/scatter/" />
+<meta property="og:url" content="https://raghuramsirigiri.github.io/docs/charts/scatter/" />
+<meta property="og:site_name" content="clean_charts" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Basic Scatter Chart" />
+<script type="application/ld+json">
+{"headline":"Basic Scatter Chart","@type":"WebPage","url":"https://raghuramsirigiri.github.io/docs/charts/scatter/","description":"2D scatter plot for visualizing relationships between two continuous variables.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="docs-shell">
+    <aside class="docs-sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="brand-link">
+      <span class="brand-logo">📊</span>
+      <span class="brand-name"><strong>clean_charts</strong> docs</span>
+    </a>
+  </div>
+
+  <nav class="nav-tree">
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Start Here</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/"
+                 class="nav-link ">
+                Overview & Install
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/quick-start/"
+                 class="nav-link ">
+                Quick Start Guide
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/global-parameters/"
+                 class="nav-link ">
+                Global Parameters
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Bar Charts</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/barh/"
+                 class="nav-link ">
+                Horizontal Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/barv/"
+                 class="nav-link ">
+                Vertical Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-barh/"
+                 class="nav-link ">
+                Grouped Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/stacked-bar/"
+                 class="nav-link ">
+                Stacked Bar
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Time Series</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/time-series/"
+                 class="nav-link ">
+                Line Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Scatter Plots</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/scatter/"
+                 class="nav-link active">
+                Basic Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-scatter/"
+                 class="nav-link ">
+                Grouped Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/bubble-scatter/"
+                 class="nav-link ">
+                Bubble Scatter
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Matrix & Grid</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/bubble-matrix/"
+                 class="nav-link ">
+                Bubble Matrix
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/geofacet/"
+                 class="nav-link ">
+                Geofacet Map
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Proportions</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/donut/"
+                 class="nav-link ">
+                Donut Chart
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/waffle/"
+                 class="nav-link ">
+                Waffle Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Comparisons</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/dumbbell/"
+                 class="nav-link ">
+                Dumbbell Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Presentation</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/insight-card/"
+                 class="nav-link ">
+                Insight Card
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/table/"
+                 class="nav-link ">
+                Data Table
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/dashboard/"
+                 class="nav-link ">
+                Dashboard
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+  </nav>
+</aside>
+
+
+    <div class="docs-main-container">
+      <main class="docs-content">
+        <article class="chart-page">
+  <h1 id="plot_scatter_chart"><code class="language-plaintext highlighter-rouge">plot_scatter_chart()</code></h1>
+
+<p>Plots a 2D scatter plot in the Economist style. Best for visualizing relationships, correlations, and distributions between two continuous variables.</p>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Company"</span><span class="p">:</span> <span class="p">[</span><span class="s">"AAPL"</span><span class="p">,</span> <span class="s">"MSFT"</span><span class="p">,</span> <span class="s">"GOOG"</span><span class="p">,</span> <span class="s">"AMZN"</span><span class="p">,</span> <span class="s">"META"</span><span class="p">,</span> <span class="s">"TSLA"</span><span class="p">,</span> <span class="s">"NVDA"</span><span class="p">,</span> <span class="s">"JPM"</span><span class="p">],</span>
+    <span class="s">"Revenue Growth (%)"</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="s">"Profit Margin (%)"</span><span class="p">:</span> <span class="p">[</span><span class="mi">26</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">33</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_scatter_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Tech Giants Performance"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Revenue Growth vs Profit Margin"</span><span class="p">,</span>
+    <span class="n">x_label</span><span class="o">=</span><span class="s">"Revenue Growth"</span><span class="p">,</span>
+    <span class="n">y_label</span><span class="o">=</span><span class="s">"Profit Margin"</span><span class="p">,</span>
+    <span class="n">x_suffix</span><span class="o">=</span><span class="s">"%"</span><span class="p">,</span>
+    <span class="n">y_suffix</span><span class="o">=</span><span class="s">"%"</span><span class="p">,</span>
+    <span class="n">show_labels</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/scatter_basic.png" alt="Scatter" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Scatter.</em>
+</div>
+
+<h2 id="data-requirements">Data Requirements</h2>
+
+<ul>
+  <li><strong>2 columns</strong> — [X values, Y values]</li>
+  <li><strong>3 columns</strong> — [Labels, X values, Y values] (labels used when <code class="language-plaintext highlighter-rouge">show_labels=True</code>)</li>
+</ul>
+
+<h2 id="parameters">Parameters</h2>
+
+<table class="param-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Scope</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>data</code></td><td><code>pd.DataFrame</code></td><td>Built-in</td><td><span class="badge common">Common</span></td><td>2 or 3-column DataFrame.</td></tr>
+    <tr><td><code>output_path</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>File path to save the chart.</td></tr>
+    <tr><td><code>width</code></td><td><code>int | None</code></td><td><code>700</code></td><td><span class="badge common">Common</span></td><td>Image width in pixels.</td></tr>
+    <tr><td><code>height</code></td><td><code>int | None</code></td><td><code>500</code></td><td><span class="badge common">Common</span></td><td>Image height in pixels.</td></tr>
+    <tr><td><code>aspect_ratio</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td><code>"square"</code>, <code>"landscape"</code>, etc.</td></tr>
+    <tr><td><code>title</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>Bold header text.</td></tr>
+    <tr><td><code>subtitle</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>Secondary text below title.</td></tr>
+    <tr><td><code>bg_color</code></td><td><code>str | None</code></td><td><code>"#f4f3f0"</code></td><td><span class="badge common">Common</span></td><td>Background hex color.</td></tr>
+    <tr><td><code>scale_text</code></td><td><code>bool</code></td><td><code>True</code></td><td><span class="badge common">Common</span></td><td>Scale fonts proportionally.</td></tr>
+    <tr><td><code>color</code></td><td><code>str | None</code></td><td>Auto</td><td><span class="badge unique">Unique</span></td><td>Hex color for scatter dots.</td></tr>
+    <tr><td><code>dot_size</code></td><td><code>float</code></td><td><code>80</code></td><td><span class="badge unique">Unique</span></td><td>Marker size (area in points²).</td></tr>
+    <tr><td><code>alpha</code></td><td><code>float</code></td><td><code>0.75</code></td><td><span class="badge unique">Unique</span></td><td>Transparency of scatter points (0.0–1.0).</td></tr>
+    <tr><td><code>x_label</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge unique">Unique</span></td><td>X-axis label text.</td></tr>
+    <tr><td><code>y_label</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge unique">Unique</span></td><td>Y-axis label text.</td></tr>
+    <tr><td><code>x_suffix</code></td><td><code>str</code></td><td><code>""</code></td><td><span class="badge unique">Unique</span></td><td>Suffix for X-axis annotations.</td></tr>
+    <tr><td><code>y_suffix</code></td><td><code>str</code></td><td><code>""</code></td><td><span class="badge unique">Unique</span></td><td>Suffix for Y-axis annotations.</td></tr>
+    <tr><td><code>show_labels</code></td><td><code>bool</code></td><td><code>False</code></td><td><span class="badge unique">Unique</span></td><td>Annotate points with label strings.</td></tr>
+    <tr><td><code>show_trendline</code></td><td><code>bool</code></td><td><code>False</code></td><td><span class="badge unique">Unique</span></td><td>Plot a linear regression trend line.</td></tr>
+    <tr><td><code>trendline_color</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge unique">Unique</span></td><td>Hex color for the trend line.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="common-scenarios">Common Scenarios</h2>
+
+<h3 id="labeled-scatter-with-trend">Labeled Scatter with Trend</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Company"</span><span class="p">:</span> <span class="p">[</span><span class="s">"AAPL"</span><span class="p">,</span> <span class="s">"MSFT"</span><span class="p">,</span> <span class="s">"GOOG"</span><span class="p">,</span> <span class="s">"AMZN"</span><span class="p">,</span> <span class="s">"META"</span><span class="p">,</span> <span class="s">"TSLA"</span><span class="p">,</span> <span class="s">"NVDA"</span><span class="p">,</span> <span class="s">"JPM"</span><span class="p">],</span>
+    <span class="s">"Revenue Growth (%)"</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="s">"Profit Margin (%)"</span><span class="p">:</span> <span class="p">[</span><span class="mi">26</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">33</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_scatter_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Growth vs Profitability"</span><span class="p">,</span>
+    <span class="n">show_labels</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">show_trendline</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">trendline_color</span><span class="o">=</span><span class="s">"#635bff"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/scatter_trend.png" alt="Scatter" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Scatter.</em>
+</div>
+
+
+</article>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

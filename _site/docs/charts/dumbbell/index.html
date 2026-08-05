@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbbell Chart | clean_charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Dumbbell Chart | clean_charts</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Dumbbell Chart" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Connected dot chart showing before vs after deltas across categories." />
+<meta property="og:description" content="Connected dot chart showing before vs after deltas across categories." />
+<link rel="canonical" href="https://raghuramsirigiri.github.io/docs/charts/dumbbell/" />
+<meta property="og:url" content="https://raghuramsirigiri.github.io/docs/charts/dumbbell/" />
+<meta property="og:site_name" content="clean_charts" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dumbbell Chart" />
+<script type="application/ld+json">
+{"headline":"Dumbbell Chart","@type":"WebPage","url":"https://raghuramsirigiri.github.io/docs/charts/dumbbell/","description":"Connected dot chart showing before vs after deltas across categories.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="docs-shell">
+    <aside class="docs-sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="brand-link">
+      <span class="brand-logo">📊</span>
+      <span class="brand-name"><strong>clean_charts</strong> docs</span>
+    </a>
+  </div>
+
+  <nav class="nav-tree">
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Start Here</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/"
+                 class="nav-link ">
+                Overview & Install
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/quick-start/"
+                 class="nav-link ">
+                Quick Start Guide
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/global-parameters/"
+                 class="nav-link ">
+                Global Parameters
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Bar Charts</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/barh/"
+                 class="nav-link ">
+                Horizontal Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/barv/"
+                 class="nav-link ">
+                Vertical Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-barh/"
+                 class="nav-link ">
+                Grouped Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/stacked-bar/"
+                 class="nav-link ">
+                Stacked Bar
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Time Series</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/time-series/"
+                 class="nav-link ">
+                Line Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Scatter Plots</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/scatter/"
+                 class="nav-link ">
+                Basic Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-scatter/"
+                 class="nav-link ">
+                Grouped Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/bubble-scatter/"
+                 class="nav-link ">
+                Bubble Scatter
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Matrix & Grid</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/bubble-matrix/"
+                 class="nav-link ">
+                Bubble Matrix
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/geofacet/"
+                 class="nav-link ">
+                Geofacet Map
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Proportions</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/donut/"
+                 class="nav-link ">
+                Donut Chart
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/waffle/"
+                 class="nav-link ">
+                Waffle Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Comparisons</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/dumbbell/"
+                 class="nav-link active">
+                Dumbbell Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Presentation</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/insight-card/"
+                 class="nav-link ">
+                Insight Card
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/table/"
+                 class="nav-link ">
+                Data Table
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/dashboard/"
+                 class="nav-link ">
+                Dashboard
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+  </nav>
+</aside>
+
+
+    <div class="docs-main-container">
+      <main class="docs-content">
+        <article class="chart-page">
+  <h1 id="plot_dumbbell_chart"><code class="language-plaintext highlighter-rouge">plot_dumbbell_chart()</code></h1>
+
+<p>Plots a horizontal dumbbell (range dot) chart. Best for comparing the same metric across two distinct time periods or groups — “before vs after”, “target vs actual”, “2022 vs 2023”.</p>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Country"</span><span class="p">:</span> <span class="p">[</span><span class="s">"US"</span><span class="p">,</span> <span class="s">"China"</span><span class="p">,</span> <span class="s">"Germany"</span><span class="p">,</span> <span class="s">"UK"</span><span class="p">,</span> <span class="s">"India"</span><span class="p">,</span> <span class="s">"France"</span><span class="p">],</span>
+    <span class="s">"2010"</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.99</span><span class="p">,</span> <span class="mf">6.09</span><span class="p">,</span> <span class="mf">3.42</span><span class="p">,</span> <span class="mf">2.48</span><span class="p">,</span> <span class="mf">1.68</span><span class="p">,</span> <span class="mf">2.65</span><span class="p">],</span>
+    <span class="s">"2023"</span><span class="p">:</span> <span class="p">[</span><span class="mf">25.46</span><span class="p">,</span> <span class="mf">17.79</span><span class="p">,</span> <span class="mf">4.46</span><span class="p">,</span> <span class="mf">3.33</span><span class="p">,</span> <span class="mf">3.73</span><span class="p">,</span> <span class="mf">3.05</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_dumbbell_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"GDP Growth by Country"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"2010 vs 2023 (USD Trillions)"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"T"</span><span class="p">,</span>
+    <span class="n">show_values</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/dumbbell_basic.png" alt="Dumbbell" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Dumbbell.</em>
+</div>
+
+<h2 id="data-requirements">Data Requirements</h2>
+
+<p>Exactly <strong>3 columns</strong>: [Category labels, Start values, End values].</p>
+
+<h2 id="parameters">Parameters</h2>
+
+<table class="param-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Scope</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>data</code></td><td><code>pd.DataFrame</code></td><td>Built-in</td><td><span class="badge common">Common</span></td><td>3-column DataFrame: [Category, Start, End].</td></tr>
+    <tr><td><code>output_path</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>File path to save.</td></tr>
+    <tr><td><code>width</code></td><td><code>int | None</code></td><td>Auto</td><td><span class="badge common">Common</span></td><td>Image width in pixels.</td></tr>
+    <tr><td><code>height</code></td><td><code>int | None</code></td><td>Auto</td><td><span class="badge common">Common</span></td><td>Image height in pixels.</td></tr>
+    <tr><td><code>aspect_ratio</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td><code>"square"</code>, <code>"landscape"</code>, etc.</td></tr>
+    <tr><td><code>title</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>Bold header text.</td></tr>
+    <tr><td><code>subtitle</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>Secondary text.</td></tr>
+    <tr><td><code>bg_color</code></td><td><code>str | None</code></td><td><code>"#f4f3f0"</code></td><td><span class="badge common">Common</span></td><td>Background hex color.</td></tr>
+    <tr><td><code>scale_text</code></td><td><code>bool</code></td><td><code>True</code></td><td><span class="badge common">Common</span></td><td>Scale fonts proportionally.</td></tr>
+    <tr><td><code>value_suffix</code></td><td><code>str</code></td><td><code>""</code></td><td><span class="badge common">Common</span></td><td>String appended to value labels.</td></tr>
+    <tr><td><code>start_color</code></td><td><code>str</code></td><td><code>"#000000"</code></td><td><span class="badge unique">Unique</span></td><td>Hex color for the first-series dots.</td></tr>
+    <tr><td><code>end_color</code></td><td><code>str</code></td><td><code>"#2323FF"</code></td><td><span class="badge unique">Unique</span></td><td>Hex color for the second-series dots.</td></tr>
+    <tr><td><code>connector_color</code></td><td><code>str</code></td><td>Auto</td><td><span class="badge unique">Unique</span></td><td>Hex color for the connecting line.</td></tr>
+    <tr><td><code>dot_size</code></td><td><code>float</code></td><td>Auto</td><td><span class="badge unique">Unique</span></td><td>Marker size area in points².</td></tr>
+    <tr><td><code>show_values</code></td><td><code>bool</code></td><td><code>False</code></td><td><span class="badge unique">Unique</span></td><td>Display numeric value labels next to each dot.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="common-scenarios">Common Scenarios</h2>
+
+<h3 id="target-vs-actual">Target vs Actual</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Product Line"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Software Subscriptions"</span><span class="p">,</span> <span class="s">"Cloud Hosting"</span><span class="p">,</span> <span class="s">"Hardware Sales"</span><span class="p">,</span> <span class="s">"Consulting"</span><span class="p">],</span>
+    <span class="s">"Target"</span><span class="p">:</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">45</span><span class="p">],</span>
+    <span class="s">"Actual"</span><span class="p">:</span> <span class="p">[</span><span class="mi">142</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">48</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_dumbbell_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Q4 Revenue Performance"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Target vs Actual revenue by product line (in Millions)"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"M"</span><span class="p">,</span>
+    <span class="n">show_values</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">end_color</span><span class="o">=</span><span class="s">"#FD8302"</span><span class="p">,</span>
+    <span class="n">start_color</span><span class="o">=</span><span class="s">"#0241FD"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/dumbbell_dynamic.png" alt="Dumbbell" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Dumbbell.</em>
+</div>
+
+<h3 id="sentiment-shift">Sentiment Shift</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Emotion"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Joy"</span><span class="p">,</span> <span class="s">"Sadness"</span><span class="p">,</span> <span class="s">"Anger"</span><span class="p">,</span> <span class="s">"Fear"</span><span class="p">,</span> <span class="s">"Surprise"</span><span class="p">],</span>
+    <span class="s">"Previous"</span><span class="p">:</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="s">"Current"</span><span class="p">:</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_dumbbell_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Brand Sentiment Shift"</span><span class="p">,</span>
+    <span class="n">connector_color</span><span class="o">=</span><span class="s">"#36404A"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/dumbbell_no_labels.png" alt="Dumbbell" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Dumbbell.</em>
+</div>
+
+</article>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

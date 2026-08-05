@@ -1,13 +1,14 @@
 ---
 layout: default
 title: Home
-nav_order: 1
+permalink: /
 ---
-# clean-charts API Reference
+
+# clean_charts
 
 > **Version:** 0.12.1 · **License:** MIT · **Python:** ≥ 3.8
 
-`clean-charts` is a Python library for generating premium, publication-quality charts inspired by the clean aesthetics of **McKinsey**, **BCG**, and **The Economist**. Built on top of Matplotlib, it provides high-level functions that produce polished, presentation-ready visualizations with a single function call.
+`clean_charts` is a Python library for generating premium, publication-quality charts inspired by the clean aesthetics of **McKinsey**, **BCG**, and **The Economist**. Built on top of Matplotlib, it provides high-level functions that produce polished, presentation-ready visualizations with a single function call.
 
 ---
 
@@ -38,7 +39,7 @@ cc.plot_barh_chart(data=df, title="My Chart", output_path="chart.png")
 
 ---
 
-## Architecture Overview
+## Architecture
 
 ```
 clean_charts/
@@ -58,59 +59,57 @@ clean_charts/
 
 ---
 
-## Chart Functions Reference
+## Chart Gallery
 
-Explore the chart functions based on your analytical goal:
+Explore the full library of chart types:
 
-### Trends & Time
-| Function | Use Case |
-|----------|----------|
-| [`plot_time_series()`](reference/time_series.md) | Multi-series line charts with annotations and splines |
+### Bar Charts
 
-### Distributions & Rankings
-| Function | Use Case |
-|----------|----------|
-| [`plot_barh_chart()`](reference/bar_charts.md) | Horizontal bar chart for long labels and ranking |
-| [`plot_barv_chart()`](reference/bar_charts.md) | Vertical bar chart for short labels or discrete time |
-| [`plot_grouped_barh_chart()`](reference/grouped_barh.md) | Multi-series categorical comparison |
-| [`plot_stacked_bar_chart()`](reference/stacked_bar.md) | Absolute or 100% normalized stack distribution |
-| [`plot_dumbbell_chart()`](reference/dumbbell.md) | Connected dots showing 'Before vs After' deltas |
+| Function | Description |
+|----------|-------------|
+| [`plot_barh_chart()`](docs/charts/barh/) | Horizontal bars for long labels and rankings |
+| [`plot_barv_chart()`](docs/charts/barv/) | Vertical bars for short labels or time periods |
+| [`plot_grouped_barh_chart()`](docs/charts/grouped-barh/) | Multi-series categorical comparison |
+| [`plot_stacked_bar_chart()`](docs/charts/stacked-bar/) | Part-to-whole distribution across categories |
 
-### Relationships
-| Function | Use Case |
-|----------|----------|
-| [`plot_scatter_chart()`](reference/scatter_charts.md) | 2D scatter plot for two continuous variables |
-| [`plot_grouped_scatter_chart()`](reference/scatter_charts.md) | Quadrant matrix mapping or categorical clusters |
-| [`plot_bubble_scatter_chart()`](reference/scatter_charts.md) | 3-variable scatter (dot size encoding) |
-| [`plot_bubble_matrix_chart()`](reference/bubble_matrix.md) | Size/color encoded grid for cross-tabulations |
+### Time Series
 
-### Part-to-Whole
-| Function | Use Case |
-|----------|----------|
-| [`plot_donut_chart()`](reference/donut.md) | Part-of-whole ring with center label |
-| [`plot_waffle_chart()`](reference/waffle.md) | 10×10 waffle grid for 'X out of 100' data |
+| Function | Description |
+|----------|-------------|
+| [`plot_time_series()`](docs/charts/time-series/) | Multi-series line charts with annotations and splines |
 
-### Layouts & Components
-| Function | Use Case |
-|----------|----------|
-| [`plot_insight_card()`](reference/insight_card.md) | Bold text card for hero statistics |
-| [`plot_table()`](reference/table.md) | Styled data table with conditional formatting |
-| [`plot_geofacet()`](reference/geofacet.md) | Geographic small-multiples grid |
-| [`plot_dashboard()`](reference/dashboard.md) | Composite mosaic combining multiple charts |
+### Scatter Plots
 
----
+| Function | Description |
+|----------|-------------|
+| [`plot_scatter_chart()`](docs/charts/scatter/) | 2D scatter for two continuous variables |
+| [`plot_grouped_scatter_chart()`](docs/charts/grouped-scatter/) | Quadrant matrix or categorical clusters |
+| [`plot_bubble_scatter_chart()`](docs/charts/bubble-scatter/) | 3-variable scatter with dot size encoding |
 
-## Global Common Parameters
+### Matrix & Grid
 
-Most functions share these baseline arguments:
+| Function | Description |
+|----------|-------------|
+| [`plot_bubble_matrix_chart()`](docs/charts/bubble-matrix/) | Size/color encoded grid for cross-tabulations |
+| [`plot_geofacet()`](docs/charts/geofacet/) | Geographic small-multiples grid |
 
-| Parameter       | Type           | Description |
-|-----------------|----------------|-------------|
-| `data`          | `pd.DataFrame` | Input data. Fallbacks to built-in sample if None. |
-| `output_path`   | `str \| None`  | Save path. Displays inline if None. |
-| `width`, `height`| `int \| None` | Explicit dimensions in pixels. |
-| `aspect_ratio`  | `str \| None`  | `"square"`, `"landscape"`, `"vertical"`, `"1:1"`, `"2:1"`, `"1:2"`. |
-| `title`         | `str \| None`  | Bold header text (auto-wrapped). |
-| `subtitle`      | `str \| None`  | Secondary text below title. |
-| `bg_color`      | `str \| None`  | Background hex color (defaults to `#f4f3f0`). |
-| `scale_text`    | `bool`         | Scale fonts proportionally with image size. |
+### Proportions
+
+| Function | Description |
+|----------|-------------|
+| [`plot_donut_chart()`](docs/charts/donut/) | Ring chart with center label |
+| [`plot_waffle_chart()`](docs/charts/waffle/) | 10×10 waffle grid for "X out of 100" data |
+
+### Comparisons
+
+| Function | Description |
+|----------|-------------|
+| [`plot_dumbbell_chart()`](docs/charts/dumbbell/) | Connected dots showing before vs after deltas |
+
+### Presentation
+
+| Function | Description |
+|----------|-------------|
+| [`plot_insight_card()`](docs/charts/insight-card/) | Bold text card for hero statistics |
+| [`plot_table()`](docs/charts/table/) | Styled data table with conditional formatting |
+| [`plot_dashboard()`](docs/charts/dashboard/) | Composite mosaic combining multiple charts |

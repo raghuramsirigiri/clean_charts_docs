@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Start Guide | clean_charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Quick Start Guide | clean_charts</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Quick Start Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Production-ready, publication-quality data visualizations in Python." />
+<meta property="og:description" content="Production-ready, publication-quality data visualizations in Python." />
+<link rel="canonical" href="https://raghuramsirigiri.github.io/docs/quick-start/" />
+<meta property="og:url" content="https://raghuramsirigiri.github.io/docs/quick-start/" />
+<meta property="og:site_name" content="clean_charts" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Quick Start Guide" />
+<script type="application/ld+json">
+{"headline":"Quick Start Guide","@type":"WebPage","url":"https://raghuramsirigiri.github.io/docs/quick-start/","description":"Production-ready, publication-quality data visualizations in Python.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="docs-shell">
+    <aside class="docs-sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="brand-link">
+      <span class="brand-logo">📊</span>
+      <span class="brand-name"><strong>clean_charts</strong> docs</span>
+    </a>
+  </div>
+
+  <nav class="nav-tree">
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Start Here</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/"
+                 class="nav-link ">
+                Overview & Install
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/quick-start/"
+                 class="nav-link active">
+                Quick Start Guide
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/global-parameters/"
+                 class="nav-link ">
+                Global Parameters
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Bar Charts</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/barh/"
+                 class="nav-link ">
+                Horizontal Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/barv/"
+                 class="nav-link ">
+                Vertical Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-barh/"
+                 class="nav-link ">
+                Grouped Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/stacked-bar/"
+                 class="nav-link ">
+                Stacked Bar
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Time Series</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/time-series/"
+                 class="nav-link ">
+                Line Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Scatter Plots</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/scatter/"
+                 class="nav-link ">
+                Basic Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-scatter/"
+                 class="nav-link ">
+                Grouped Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/bubble-scatter/"
+                 class="nav-link ">
+                Bubble Scatter
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Matrix & Grid</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/bubble-matrix/"
+                 class="nav-link ">
+                Bubble Matrix
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/geofacet/"
+                 class="nav-link ">
+                Geofacet Map
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Proportions</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/donut/"
+                 class="nav-link ">
+                Donut Chart
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/waffle/"
+                 class="nav-link ">
+                Waffle Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Comparisons</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/dumbbell/"
+                 class="nav-link ">
+                Dumbbell Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Presentation</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/insight-card/"
+                 class="nav-link ">
+                Insight Card
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/table/"
+                 class="nav-link ">
+                Data Table
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/dashboard/"
+                 class="nav-link ">
+                Dashboard
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+  </nav>
+</aside>
+
+
+    <div class="docs-main-container">
+      <main class="docs-content">
+        <h1 id="quick-start-guide">Quick Start Guide</h1>
+
+<p>Get your first chart rendered in under a minute.</p>
+
+<hr />
+
+<h2 id="step-1-install">Step 1: Install</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>clean-charts
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="step-2-your-first-chart">Step 2: Your First Chart</h2>
+
+<p>Every chart function works the same way — pass a DataFrame and optional styling parameters:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Response"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Strongly Agree"</span><span class="p">,</span> <span class="s">"Agree"</span><span class="p">,</span> <span class="s">"Neutral"</span><span class="p">,</span> <span class="s">"Disagree"</span><span class="p">,</span> <span class="s">"Strongly Disagree"</span><span class="p">],</span>
+    <span class="s">"Count"</span><span class="p">:</span> <span class="p">[</span><span class="mi">420</span><span class="p">,</span> <span class="mi">310</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_barh_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Customer Satisfaction Survey"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Q2 2024 Results"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">" resp"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>This displays a publication-quality horizontal bar chart inline. No configuration files, no theme setup — it just works.</p>
+
+<hr />
+
+<h2 id="step-3-save-to-file">Step 3: Save to File</h2>
+
+<p>Pass <code class="language-plaintext highlighter-rouge">output_path</code> to export as PNG, JPG, PDF, or SVG:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cc</span><span class="p">.</span><span class="n">plot_barh_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Customer Satisfaction Survey"</span><span class="p">,</span>
+    <span class="n">output_path</span><span class="o">=</span><span class="s">"survey_results.png"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="step-4-use-built-in-sample-data">Step 4: Use Built-in Sample Data</h2>
+
+<p>Every function ships with sample data. Call without <code class="language-plaintext highlighter-rouge">data=</code> to see a demo:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cc</span><span class="p">.</span><span class="n">plot_time_series</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"Market Trends"</span><span class="p">)</span>
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_donut_chart</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"Revenue Breakdown"</span><span class="p">)</span>
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_dumbbell_chart</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"Year-over-Year Change"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="step-5-control-dimensions">Step 5: Control Dimensions</h2>
+
+<p>Use <code class="language-plaintext highlighter-rouge">aspect_ratio</code> for semantic sizing, or <code class="language-plaintext highlighter-rouge">width</code>/<code class="language-plaintext highlighter-rouge">height</code> for pixel-exact control:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Semantic
+</span><span class="n">cc</span><span class="p">.</span><span class="n">plot_barh_chart</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">aspect_ratio</span><span class="o">=</span><span class="s">"landscape"</span><span class="p">)</span>
+
+<span class="c1"># Pixel-exact
+</span><span class="n">cc</span><span class="p">.</span><span class="n">plot_barh_chart</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Available ratios: <code class="language-plaintext highlighter-rouge">"square"</code>, <code class="language-plaintext highlighter-rouge">"landscape"</code>, <code class="language-plaintext highlighter-rouge">"vertical"</code>, <code class="language-plaintext highlighter-rouge">"1:1"</code>, <code class="language-plaintext highlighter-rouge">"2:1"</code>, <code class="language-plaintext highlighter-rouge">"1:2"</code></p>
+
+<hr />
+
+<h2 id="whats-next">What’s Next?</h2>
+
+<ul>
+  <li><strong><a href="../global-parameters/">Global Parameters</a></strong> — shared options available on every chart</li>
+  <li><strong><a href="../charts/barh/">Horizontal Bar</a></strong> — deep dive into your first chart type</li>
+  <li><strong><a href="../charts/dashboard/">Dashboard</a></strong> — combine multiple charts into a single image</li>
+</ul>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donut Chart | clean_charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Donut Chart | clean_charts</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Donut Chart" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ring chart with center label for part-to-whole compositions." />
+<meta property="og:description" content="Ring chart with center label for part-to-whole compositions." />
+<link rel="canonical" href="https://raghuramsirigiri.github.io/docs/charts/donut/" />
+<meta property="og:url" content="https://raghuramsirigiri.github.io/docs/charts/donut/" />
+<meta property="og:site_name" content="clean_charts" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Donut Chart" />
+<script type="application/ld+json">
+{"headline":"Donut Chart","@type":"WebPage","url":"https://raghuramsirigiri.github.io/docs/charts/donut/","description":"Ring chart with center label for part-to-whole compositions.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="docs-shell">
+    <aside class="docs-sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="brand-link">
+      <span class="brand-logo">📊</span>
+      <span class="brand-name"><strong>clean_charts</strong> docs</span>
+    </a>
+  </div>
+
+  <nav class="nav-tree">
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Start Here</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/"
+                 class="nav-link ">
+                Overview & Install
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/quick-start/"
+                 class="nav-link ">
+                Quick Start Guide
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/global-parameters/"
+                 class="nav-link ">
+                Global Parameters
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Bar Charts</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/barh/"
+                 class="nav-link ">
+                Horizontal Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/barv/"
+                 class="nav-link ">
+                Vertical Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-barh/"
+                 class="nav-link ">
+                Grouped Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/stacked-bar/"
+                 class="nav-link ">
+                Stacked Bar
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Time Series</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/time-series/"
+                 class="nav-link ">
+                Line Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Scatter Plots</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/scatter/"
+                 class="nav-link ">
+                Basic Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-scatter/"
+                 class="nav-link ">
+                Grouped Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/bubble-scatter/"
+                 class="nav-link ">
+                Bubble Scatter
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Matrix & Grid</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/bubble-matrix/"
+                 class="nav-link ">
+                Bubble Matrix
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/geofacet/"
+                 class="nav-link ">
+                Geofacet Map
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Proportions</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/donut/"
+                 class="nav-link active">
+                Donut Chart
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/waffle/"
+                 class="nav-link ">
+                Waffle Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Comparisons</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/dumbbell/"
+                 class="nav-link ">
+                Dumbbell Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Presentation</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/insight-card/"
+                 class="nav-link ">
+                Insight Card
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/table/"
+                 class="nav-link ">
+                Data Table
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/dashboard/"
+                 class="nav-link ">
+                Dashboard
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+  </nav>
+</aside>
+
+
+    <div class="docs-main-container">
+      <main class="docs-content">
+        <article class="chart-page">
+  <h1 id="plot_donut_chart"><code class="language-plaintext highlighter-rouge">plot_donut_chart()</code></h1>
+
+<p>Renders a donut (ring) chart with a hollow center for displaying summary text. Designed for part-of-whole compositions with up to ~8 segments. Each segment is colored with a continuous gradient.</p>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Source"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Solar"</span><span class="p">,</span> <span class="s">"Wind"</span><span class="p">,</span> <span class="s">"Nuclear"</span><span class="p">,</span> <span class="s">"Natural Gas"</span><span class="p">,</span> <span class="s">"Coal"</span><span class="p">],</span>
+    <span class="s">"TWh"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">2500</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1800</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_donut_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Global Energy Mix"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Projected generation in 2030 (TWh)"</span><span class="p">,</span>
+    <span class="n">center_label</span><span class="o">=</span><span class="s">"10,000</span><span class="se">\n</span><span class="s">TWh"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/donut_basic.png" alt="Donut" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Donut.</em>
+</div>
+
+<h2 id="data-requirements">Data Requirements</h2>
+
+<ul>
+  <li><strong>Column 0</strong> — Segment labels (<code class="language-plaintext highlighter-rouge">str</code>)</li>
+  <li><strong>Column 1</strong> — Numeric values (auto-normalized to percentages)</li>
+</ul>
+
+<h2 id="parameters">Parameters</h2>
+
+<table class="param-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Scope</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>data</code></td><td><code>pd.DataFrame</code></td><td>Built-in</td><td><span class="badge common">Common</span></td><td>2-column DataFrame: [Labels, Values].</td></tr>
+    <tr><td><code>output_path</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>File path to save.</td></tr>
+    <tr><td><code>width</code></td><td><code>int | None</code></td><td><code>600</code></td><td><span class="badge common">Common</span></td><td>Image width in pixels.</td></tr>
+    <tr><td><code>height</code></td><td><code>int | None</code></td><td>Auto</td><td><span class="badge common">Common</span></td><td>Image height in pixels.</td></tr>
+    <tr><td><code>aspect_ratio</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td><code>"square"</code>, <code>"landscape"</code>, etc.</td></tr>
+    <tr><td><code>title</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>Bold header text.</td></tr>
+    <tr><td><code>subtitle</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>Secondary text.</td></tr>
+    <tr><td><code>bg_color</code></td><td><code>str | None</code></td><td><code>"#f4f3f0"</code></td><td><span class="badge common">Common</span></td><td>Background hex color.</td></tr>
+    <tr><td><code>scale_text</code></td><td><code>bool</code></td><td><code>True</code></td><td><span class="badge common">Common</span></td><td>Scale fonts proportionally.</td></tr>
+    <tr><td><code>value_suffix</code></td><td><code>str</code></td><td><code>""</code></td><td><span class="badge common">Common</span></td><td>String appended to legend values.</td></tr>
+    <tr><td><code>show_percentages</code></td><td><code>bool</code></td><td><code>False</code></td><td><span class="badge common">Common</span></td><td>Append percentage to legend labels.</td></tr>
+    <tr><td><code>start_color</code></td><td><code>str</code></td><td><code>"#000000"</code></td><td><span class="badge unique">Unique</span></td><td>Gradient start color for the first segment.</td></tr>
+    <tr><td><code>end_color</code></td><td><code>str</code></td><td><code>"#2323FF"</code></td><td><span class="badge unique">Unique</span></td><td>Gradient end color for the last segment.</td></tr>
+    <tr><td><code>center_label</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge unique">Unique</span></td><td>Bold text inside the ring center. Use <code>\n</code> for multiline (e.g., <code>"$42M\nTotal"</code>).</td></tr>
+    <tr><td><code>hole_radius</code></td><td><code>float</code></td><td>Auto</td><td><span class="badge unique">Unique</span></td><td>Inner hole as fraction of outer radius (0–1).</td></tr>
+    <tr><td><code>start_angle</code></td><td><code>float</code></td><td><code>90</code></td><td><span class="badge unique">Unique</span></td><td>Angle (degrees) to start drawing the first wedge.</td></tr>
+    <tr><td><code>donut_radius</code></td><td><code>float</code></td><td>Auto</td><td><span class="badge unique">Unique</span></td><td>Outer radius as fraction of available chart height.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="common-scenarios">Common Scenarios</h2>
+
+<h3 id="hero-metric-donut">Hero Metric Donut</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Source"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Solar"</span><span class="p">,</span> <span class="s">"Wind"</span><span class="p">,</span> <span class="s">"Nuclear"</span><span class="p">,</span> <span class="s">"Natural Gas"</span><span class="p">,</span> <span class="s">"Coal"</span><span class="p">],</span>
+    <span class="s">"TWh"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">2500</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1800</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_donut_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Revenue Breakdown"</span><span class="p">,</span>
+    <span class="n">center_label</span><span class="o">=</span><span class="s">"$42M</span><span class="se">\n</span><span class="s">Total Revenue"</span><span class="p">,</span>
+    <span class="n">show_percentages</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/donut_percentages.png" alt="Donut" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Donut.</em>
+</div>
+
+<h3 id="custom-gradient">Custom Gradient</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"Source"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Solar"</span><span class="p">,</span> <span class="s">"Wind"</span><span class="p">,</span> <span class="s">"Nuclear"</span><span class="p">,</span> <span class="s">"Natural Gas"</span><span class="p">,</span> <span class="s">"Coal"</span><span class="p">],</span>
+    <span class="s">"TWh"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">2500</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1800</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_donut_chart</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Revenue Breakdown"</span><span class="p">,</span>
+    <span class="n">center_label</span><span class="o">=</span><span class="s">"$42M</span><span class="se">\n</span><span class="s">Total Revenue"</span><span class="p">,</span>
+    <span class="n">show_percentages</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">start_color</span><span class="o">=</span><span class="s">"#0A1F13"</span><span class="p">,</span>
+    <span class="n">end_color</span><span class="o">=</span><span class="s">"#FFED29"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/donut_energy.png" alt="Donut" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Donut.</em>
+</div>
+
+</article>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

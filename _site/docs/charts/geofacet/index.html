@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geofacet Map | clean_charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Geofacet Map | clean_charts</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Geofacet Map" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Geographic small-multiples grid approximating a physical map layout." />
+<meta property="og:description" content="Geographic small-multiples grid approximating a physical map layout." />
+<link rel="canonical" href="https://raghuramsirigiri.github.io/docs/charts/geofacet/" />
+<meta property="og:url" content="https://raghuramsirigiri.github.io/docs/charts/geofacet/" />
+<meta property="og:site_name" content="clean_charts" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Geofacet Map" />
+<script type="application/ld+json">
+{"headline":"Geofacet Map","@type":"WebPage","url":"https://raghuramsirigiri.github.io/docs/charts/geofacet/","description":"Geographic small-multiples grid approximating a physical map layout.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="docs-shell">
+    <aside class="docs-sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="brand-link">
+      <span class="brand-logo">📊</span>
+      <span class="brand-name"><strong>clean_charts</strong> docs</span>
+    </a>
+  </div>
+
+  <nav class="nav-tree">
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Start Here</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/"
+                 class="nav-link ">
+                Overview & Install
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/quick-start/"
+                 class="nav-link ">
+                Quick Start Guide
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/global-parameters/"
+                 class="nav-link ">
+                Global Parameters
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Bar Charts</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/barh/"
+                 class="nav-link ">
+                Horizontal Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/barv/"
+                 class="nav-link ">
+                Vertical Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-barh/"
+                 class="nav-link ">
+                Grouped Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/stacked-bar/"
+                 class="nav-link ">
+                Stacked Bar
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Time Series</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/time-series/"
+                 class="nav-link ">
+                Line Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Scatter Plots</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/scatter/"
+                 class="nav-link ">
+                Basic Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-scatter/"
+                 class="nav-link ">
+                Grouped Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/bubble-scatter/"
+                 class="nav-link ">
+                Bubble Scatter
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Matrix & Grid</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/bubble-matrix/"
+                 class="nav-link ">
+                Bubble Matrix
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/geofacet/"
+                 class="nav-link active">
+                Geofacet Map
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Proportions</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/donut/"
+                 class="nav-link ">
+                Donut Chart
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/waffle/"
+                 class="nav-link ">
+                Waffle Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Comparisons</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/dumbbell/"
+                 class="nav-link ">
+                Dumbbell Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Presentation</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/insight-card/"
+                 class="nav-link ">
+                Insight Card
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/table/"
+                 class="nav-link ">
+                Data Table
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/dashboard/"
+                 class="nav-link ">
+                Dashboard
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+  </nav>
+</aside>
+
+
+    <div class="docs-main-container">
+      <main class="docs-content">
+        <article class="chart-page">
+  <h1 id="plot_geofacet"><code class="language-plaintext highlighter-rouge">plot_geofacet()</code></h1>
+
+<p>Visualize geographic data using a grid that roughly approximates the physical map. Each state or region is rendered as a cell with text, donut, or bar indicators.</p>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">clean_charts</span> <span class="k">as</span> <span class="n">cc</span>
+
+<span class="n">states</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">"AK"</span><span class="p">,</span> <span class="s">"AL"</span><span class="p">,</span> <span class="s">"AR"</span><span class="p">,</span> <span class="s">"AZ"</span><span class="p">,</span> <span class="s">"CA"</span><span class="p">,</span> <span class="s">"CO"</span><span class="p">,</span> <span class="s">"CT"</span><span class="p">,</span> <span class="s">"DC"</span><span class="p">,</span> <span class="s">"DE"</span><span class="p">,</span> <span class="s">"FL"</span><span class="p">,</span> <span class="s">"GA"</span><span class="p">,</span> <span class="s">"HI"</span><span class="p">,</span>
+    <span class="s">"IA"</span><span class="p">,</span> <span class="s">"ID"</span><span class="p">,</span> <span class="s">"IL"</span><span class="p">,</span> <span class="s">"IN"</span><span class="p">,</span> <span class="s">"KS"</span><span class="p">,</span> <span class="s">"KY"</span><span class="p">,</span> <span class="s">"LA"</span><span class="p">,</span> <span class="s">"MA"</span><span class="p">,</span> <span class="s">"MD"</span><span class="p">,</span> <span class="s">"ME"</span><span class="p">,</span> <span class="s">"MI"</span><span class="p">,</span> <span class="s">"MN"</span><span class="p">,</span>
+    <span class="s">"MO"</span><span class="p">,</span> <span class="s">"MS"</span><span class="p">,</span> <span class="s">"MT"</span><span class="p">,</span> <span class="s">"NC"</span><span class="p">,</span> <span class="s">"ND"</span><span class="p">,</span> <span class="s">"NE"</span><span class="p">,</span> <span class="s">"NH"</span><span class="p">,</span> <span class="s">"NJ"</span><span class="p">,</span> <span class="s">"NM"</span><span class="p">,</span> <span class="s">"NV"</span><span class="p">,</span> <span class="s">"NY"</span><span class="p">,</span> <span class="s">"OH"</span><span class="p">,</span>
+    <span class="s">"OK"</span><span class="p">,</span> <span class="s">"OR"</span><span class="p">,</span> <span class="s">"PA"</span><span class="p">,</span> <span class="s">"RI"</span><span class="p">,</span> <span class="s">"SC"</span><span class="p">,</span> <span class="s">"SD"</span><span class="p">,</span> <span class="s">"TN"</span><span class="p">,</span> <span class="s">"TX"</span><span class="p">,</span> <span class="s">"UT"</span><span class="p">,</span> <span class="s">"VA"</span><span class="p">,</span> <span class="s">"VT"</span><span class="p">,</span> <span class="s">"WA"</span><span class="p">,</span>
+    <span class="s">"WI"</span><span class="p">,</span> <span class="s">"WV"</span><span class="p">,</span> <span class="s">"WY"</span>
+<span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mf">42.0</span><span class="p">,</span> <span class="mf">15.5</span><span class="p">,</span> <span class="mf">22.0</span><span class="p">,</span> <span class="mf">68.2</span><span class="p">,</span> <span class="mf">98.5</span><span class="p">,</span> <span class="mf">85.0</span><span class="p">,</span> <span class="mf">88.4</span><span class="p">,</span> <span class="mf">92.1</span><span class="p">,</span> <span class="mf">74.0</span><span class="p">,</span> <span class="mf">55.5</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">,</span> <span class="mf">95.2</span><span class="p">,</span>
+    <span class="mf">32.0</span><span class="p">,</span> <span class="mf">28.5</span><span class="p">,</span> <span class="mf">70.1</span><span class="p">,</span> <span class="mf">35.4</span><span class="p">,</span> <span class="mf">40.0</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">94.6</span><span class="p">,</span> <span class="mf">82.2</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">,</span> <span class="mf">65.5</span><span class="p">,</span> <span class="mf">58.8</span><span class="p">,</span>
+    <span class="mf">38.0</span><span class="p">,</span> <span class="mf">12.5</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">50.4</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">72.0</span><span class="p">,</span> <span class="mf">86.6</span><span class="p">,</span> <span class="mf">44.4</span><span class="p">,</span> <span class="mf">62.2</span><span class="p">,</span> <span class="mf">96.0</span><span class="p">,</span> <span class="mf">48.8</span><span class="p">,</span>
+    <span class="mf">26.5</span><span class="p">,</span> <span class="mf">90.0</span><span class="p">,</span> <span class="mf">66.0</span><span class="p">,</span> <span class="mf">80.5</span><span class="p">,</span> <span class="mf">34.0</span><span class="p">,</span> <span class="mf">22.5</span><span class="p">,</span> <span class="mf">42.0</span><span class="p">,</span> <span class="mf">78.5</span><span class="p">,</span> <span class="mf">54.0</span><span class="p">,</span> <span class="mf">76.2</span><span class="p">,</span> <span class="mf">84.4</span><span class="p">,</span> <span class="mf">97.5</span><span class="p">,</span>
+    <span class="mf">52.0</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">,</span> <span class="mf">14.0</span>
+<span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"State"</span><span class="p">:</span> <span class="n">states</span><span class="p">,</span>
+    <span class="s">"EV Adoption"</span><span class="p">:</span> <span class="n">values</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_geofacet</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">layout</span><span class="o">=</span><span class="s">"us"</span><span class="p">,</span>
+    <span class="n">display_type</span><span class="o">=</span><span class="s">"bar"</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Electric Vehicle Adoption"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Percentage of total vehicle sales in %"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/geofacet_bar.png" alt="Geofacet" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Geofacet.</em>
+</div>
+
+<h2 id="data-requirements">Data Requirements</h2>
+
+<ul>
+  <li>DataFrame with a column of state/region abbreviations and a column of numeric values.</li>
+</ul>
+
+<h2 id="parameters">Parameters</h2>
+
+<table class="param-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Scope</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>data</code></td><td><code>pd.DataFrame</code></td><td>Built-in</td><td><span class="badge common">Common</span></td><td>DataFrame with state abbreviations and values.</td></tr>
+    <tr><td><code>output_path</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>File path to save.</td></tr>
+    <tr><td><code>width</code></td><td><code>int | None</code></td><td>Auto</td><td><span class="badge common">Common</span></td><td>Image width in pixels.</td></tr>
+    <tr><td><code>height</code></td><td><code>int | None</code></td><td>Auto</td><td><span class="badge common">Common</span></td><td>Image height in pixels.</td></tr>
+    <tr><td><code>aspect_ratio</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td><code>"square"</code>, <code>"landscape"</code>, etc.</td></tr>
+    <tr><td><code>title</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>Bold header text.</td></tr>
+    <tr><td><code>subtitle</code></td><td><code>str | None</code></td><td><code>None</code></td><td><span class="badge common">Common</span></td><td>Secondary text.</td></tr>
+    <tr><td><code>bg_color</code></td><td><code>str | None</code></td><td><code>"#f4f3f0"</code></td><td><span class="badge common">Common</span></td><td>Background hex color.</td></tr>
+    <tr><td><code>scale_text</code></td><td><code>bool</code></td><td><code>True</code></td><td><span class="badge common">Common</span></td><td>Scale fonts proportionally.</td></tr>
+    <tr><td><code>state_col</code></td><td><code>str</code></td><td>Auto</td><td><span class="badge unique">Unique</span></td><td>Column name containing location abbreviations.</td></tr>
+    <tr><td><code>value_col</code></td><td><code>str</code></td><td>Auto</td><td><span class="badge unique">Unique</span></td><td>Column name containing numeric values.</td></tr>
+    <tr><td><code>layout</code></td><td><code>str</code></td><td><code>"us"</code></td><td><span class="badge unique">Unique</span></td><td>Grid layout: <code>"us"</code>, <code>"uk"</code>.</td></tr>
+    <tr><td><code>display_type</code></td><td><code>str</code></td><td><code>"text"</code></td><td><span class="badge unique">Unique</span></td><td>Cell render style: <code>"text"</code>, <code>"donut"</code>, <code>"bar"</code>.</td></tr>
+    <tr><td><code>max_value</code></td><td><code>float</code></td><td>Auto</td><td><span class="badge unique">Unique</span></td><td>Maximum value for scaling progress rings and bars.</td></tr>
+    <tr><td><code>missing_color</code></td><td><code>str</code></td><td>Light gray</td><td><span class="badge unique">Unique</span></td><td>Color for states with no data.</td></tr>
+    <tr><td><code>start_color</code></td><td><code>str</code></td><td><code>"#000000"</code></td><td><span class="badge unique">Unique</span></td><td>Heatmap gradient start color.</td></tr>
+    <tr><td><code>end_color</code></td><td><code>str</code></td><td><code>"#2323FF"</code></td><td><span class="badge unique">Unique</span></td><td>Heatmap gradient end color.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="common-scenarios">Common Scenarios</h2>
+
+<h3 id="donut-style-state-cells">Donut-Style State Cells</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"State"</span><span class="p">:</span> <span class="p">[</span><span class="s">"CA"</span><span class="p">,</span> <span class="s">"TX"</span><span class="p">,</span> <span class="s">"NY"</span><span class="p">,</span> <span class="s">"FL"</span><span class="p">,</span> <span class="s">"IL"</span><span class="p">,</span> <span class="s">"PA"</span><span class="p">,</span> <span class="s">"OH"</span><span class="p">,</span> <span class="s">"GA"</span><span class="p">,</span> <span class="s">"NC"</span><span class="p">,</span> <span class="s">"MI"</span><span class="p">],</span>
+    <span class="s">"Goal Completion"</span><span class="p">:</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">48</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_geofacet</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">layout</span><span class="o">=</span><span class="s">"us"</span><span class="p">,</span>
+    <span class="n">display_type</span><span class="o">=</span><span class="s">"donut"</span><span class="p">,</span>
+    <span class="n">max_value</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Q3 Sales Goal Progress"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Percent to quota for top 10 regional markets"</span><span class="p">,</span>
+    <span class="n">value_suffix</span><span class="o">=</span><span class="s">"%"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/geofacet_donut.png" alt="Geofacet" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Geofacet.</em>
+</div>
+
+<h3 id="heatmap-bar-view">Heatmap Bar View</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">states</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">"AK"</span><span class="p">,</span> <span class="s">"AL"</span><span class="p">,</span> <span class="s">"AR"</span><span class="p">,</span> <span class="s">"AZ"</span><span class="p">,</span> <span class="s">"CA"</span><span class="p">,</span> <span class="s">"CO"</span><span class="p">,</span> <span class="s">"CT"</span><span class="p">,</span> <span class="s">"DC"</span><span class="p">,</span> <span class="s">"DE"</span><span class="p">,</span> <span class="s">"FL"</span><span class="p">,</span> <span class="s">"GA"</span><span class="p">,</span> <span class="s">"HI"</span><span class="p">,</span>
+    <span class="s">"IA"</span><span class="p">,</span> <span class="s">"ID"</span><span class="p">,</span> <span class="s">"IL"</span><span class="p">,</span> <span class="s">"IN"</span><span class="p">,</span> <span class="s">"KS"</span><span class="p">,</span> <span class="s">"KY"</span><span class="p">,</span> <span class="s">"LA"</span><span class="p">,</span> <span class="s">"MA"</span><span class="p">,</span> <span class="s">"MD"</span><span class="p">,</span> <span class="s">"ME"</span><span class="p">,</span> <span class="s">"MI"</span><span class="p">,</span> <span class="s">"MN"</span><span class="p">,</span>
+    <span class="s">"MO"</span><span class="p">,</span> <span class="s">"MS"</span><span class="p">,</span> <span class="s">"MT"</span><span class="p">,</span> <span class="s">"NC"</span><span class="p">,</span> <span class="s">"ND"</span><span class="p">,</span> <span class="s">"NE"</span><span class="p">,</span> <span class="s">"NH"</span><span class="p">,</span> <span class="s">"NJ"</span><span class="p">,</span> <span class="s">"NM"</span><span class="p">,</span> <span class="s">"NV"</span><span class="p">,</span> <span class="s">"NY"</span><span class="p">,</span> <span class="s">"OH"</span><span class="p">,</span>
+    <span class="s">"OK"</span><span class="p">,</span> <span class="s">"OR"</span><span class="p">,</span> <span class="s">"PA"</span><span class="p">,</span> <span class="s">"RI"</span><span class="p">,</span> <span class="s">"SC"</span><span class="p">,</span> <span class="s">"SD"</span><span class="p">,</span> <span class="s">"TN"</span><span class="p">,</span> <span class="s">"TX"</span><span class="p">,</span> <span class="s">"UT"</span><span class="p">,</span> <span class="s">"VA"</span><span class="p">,</span> <span class="s">"VT"</span><span class="p">,</span> <span class="s">"WA"</span><span class="p">,</span>
+    <span class="s">"WI"</span><span class="p">,</span> <span class="s">"WV"</span><span class="p">,</span> <span class="s">"WY"</span>
+<span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mf">42.0</span><span class="p">,</span> <span class="mf">15.5</span><span class="p">,</span> <span class="mf">22.0</span><span class="p">,</span> <span class="mf">68.2</span><span class="p">,</span> <span class="mf">98.5</span><span class="p">,</span> <span class="mf">85.0</span><span class="p">,</span> <span class="mf">88.4</span><span class="p">,</span> <span class="mf">92.1</span><span class="p">,</span> <span class="mf">74.0</span><span class="p">,</span> <span class="mf">55.5</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">,</span> <span class="mf">95.2</span><span class="p">,</span>
+    <span class="mf">32.0</span><span class="p">,</span> <span class="mf">28.5</span><span class="p">,</span> <span class="mf">70.1</span><span class="p">,</span> <span class="mf">35.4</span><span class="p">,</span> <span class="mf">40.0</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">94.6</span><span class="p">,</span> <span class="mf">82.2</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">,</span> <span class="mf">65.5</span><span class="p">,</span> <span class="mf">58.8</span><span class="p">,</span>
+    <span class="mf">38.0</span><span class="p">,</span> <span class="mf">12.5</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">50.4</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">72.0</span><span class="p">,</span> <span class="mf">86.6</span><span class="p">,</span> <span class="mf">44.4</span><span class="p">,</span> <span class="mf">62.2</span><span class="p">,</span> <span class="mf">96.0</span><span class="p">,</span> <span class="mf">48.8</span><span class="p">,</span>
+    <span class="mf">26.5</span><span class="p">,</span> <span class="mf">90.0</span><span class="p">,</span> <span class="mf">66.0</span><span class="p">,</span> <span class="mf">80.5</span><span class="p">,</span> <span class="mf">34.0</span><span class="p">,</span> <span class="mf">22.5</span><span class="p">,</span> <span class="mf">42.0</span><span class="p">,</span> <span class="mf">78.5</span><span class="p">,</span> <span class="mf">54.0</span><span class="p">,</span> <span class="mf">76.2</span><span class="p">,</span> <span class="mf">84.4</span><span class="p">,</span> <span class="mf">97.5</span><span class="p">,</span>
+    <span class="mf">52.0</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">,</span> <span class="mf">14.0</span>
+<span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">"State"</span><span class="p">:</span> <span class="n">states</span><span class="p">,</span>
+    <span class="s">"EV Adoption"</span><span class="p">:</span> <span class="n">values</span>
+<span class="p">})</span>
+
+<span class="n">cc</span><span class="p">.</span><span class="n">plot_geofacet</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">layout</span><span class="o">=</span><span class="s">"us"</span><span class="p">,</span>
+    <span class="n">display_type</span><span class="o">=</span><span class="s">"text"</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">"Electric Vehicle Adoption"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s">"Percentage of total vehicle sales in %"</span><span class="p">,</span>
+    <span class="n">end_color</span><span class="o">=</span><span class="s">"#2B0057"</span><span class="p">,</span>
+    <span class="n">start_color</span><span class="o">=</span><span class="s">"#d3a9fc"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/docs/geofacet_text.png" alt="Geofacet" style="max-width: 100%; height: auto;" />
+  <br />
+  <em style="color: #666; font-size: 0.9em;">Example output for Geofacet.</em>
+</div>
+
+</article>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

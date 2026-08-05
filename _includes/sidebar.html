@@ -1,0 +1,31 @@
+<aside class="docs-sidebar">
+  <div class="sidebar-header">
+    <a href="{{ '/' | relative_url }}" class="brand-link">
+      <span class="brand-logo">📊</span>
+      <span class="brand-name"><strong>clean_charts</strong> docs</span>
+    </a>
+  </div>
+
+  <nav class="nav-tree">
+    {% for group in site.data.navigation %}
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>{{ group.title }}</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          {% for item in group.items %}
+            <li>
+              <a href="{{ item.url | relative_url }}"
+                 class="nav-link {% if page.url == item.url %}active{% endif %}">
+                {{ item.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </nav>
+</aside>

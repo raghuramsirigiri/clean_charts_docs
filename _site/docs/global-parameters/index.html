@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Parameters | clean_charts</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Global Parameters | clean_charts</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Global Parameters" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Production-ready, publication-quality data visualizations in Python." />
+<meta property="og:description" content="Production-ready, publication-quality data visualizations in Python." />
+<link rel="canonical" href="https://raghuramsirigiri.github.io/docs/global-parameters/" />
+<meta property="og:url" content="https://raghuramsirigiri.github.io/docs/global-parameters/" />
+<meta property="og:site_name" content="clean_charts" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Global Parameters" />
+<script type="application/ld+json">
+{"headline":"Global Parameters","@type":"WebPage","url":"https://raghuramsirigiri.github.io/docs/global-parameters/","description":"Production-ready, publication-quality data visualizations in Python.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="docs-shell">
+    <aside class="docs-sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="brand-link">
+      <span class="brand-logo">📊</span>
+      <span class="brand-name"><strong>clean_charts</strong> docs</span>
+    </a>
+  </div>
+
+  <nav class="nav-tree">
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Start Here</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/"
+                 class="nav-link ">
+                Overview & Install
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/quick-start/"
+                 class="nav-link ">
+                Quick Start Guide
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/global-parameters/"
+                 class="nav-link active">
+                Global Parameters
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Bar Charts</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/barh/"
+                 class="nav-link ">
+                Horizontal Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/barv/"
+                 class="nav-link ">
+                Vertical Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-barh/"
+                 class="nav-link ">
+                Grouped Bar
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/stacked-bar/"
+                 class="nav-link ">
+                Stacked Bar
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Time Series</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/time-series/"
+                 class="nav-link ">
+                Line Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Scatter Plots</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/scatter/"
+                 class="nav-link ">
+                Basic Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/grouped-scatter/"
+                 class="nav-link ">
+                Grouped Scatter
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/bubble-scatter/"
+                 class="nav-link ">
+                Bubble Scatter
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Matrix & Grid</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/bubble-matrix/"
+                 class="nav-link ">
+                Bubble Matrix
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/geofacet/"
+                 class="nav-link ">
+                Geofacet Map
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Proportions</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/donut/"
+                 class="nav-link ">
+                Donut Chart
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/waffle/"
+                 class="nav-link ">
+                Waffle Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Comparisons</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/dumbbell/"
+                 class="nav-link ">
+                Dumbbell Chart
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <button class="nav-group-title" aria-expanded="true">
+          <span>Presentation</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="nav-items">
+          
+            <li>
+              <a href="/docs/charts/insight-card/"
+                 class="nav-link ">
+                Insight Card
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/table/"
+                 class="nav-link ">
+                Data Table
+              </a>
+            </li>
+          
+            <li>
+              <a href="/docs/charts/dashboard/"
+                 class="nav-link ">
+                Dashboard
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+  </nav>
+</aside>
+
+
+    <div class="docs-main-container">
+      <main class="docs-content">
+        <h1 id="global-parameters">Global Parameters</h1>
+
+<p>Almost all chart functions in <code class="language-plaintext highlighter-rouge">clean_charts</code> share a common set of parameters. These control output, dimensions, titles, and styling. Each individual chart page lists these alongside its unique parameters with a <strong>Scope</strong> badge to distinguish them.</p>
+
+<hr />
+
+<h2 id="output--dimensions">Output &amp; Dimensions</h2>
+
+<table class="param-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>data</code></td>
+      <td><code>pd.DataFrame</code></td>
+      <td>Built-in sample</td>
+      <td>Input tabular data. If <code>None</code>, uses a built-in sample dataset for demonstration.</td>
+    </tr>
+    <tr>
+      <td><code>output_path</code></td>
+      <td><code>str | None</code></td>
+      <td><code>None</code></td>
+      <td>File path to save the chart (<code>.png</code>, <code>.jpg</code>, <code>.pdf</code>, <code>.svg</code>). If <code>None</code>, displays inline.</td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td><code>int | None</code></td>
+      <td>Auto</td>
+      <td>Explicit image width in pixels.</td>
+    </tr>
+    <tr>
+      <td><code>height</code></td>
+      <td><code>int | None</code></td>
+      <td>Auto</td>
+      <td>Explicit image height in pixels.</td>
+    </tr>
+    <tr>
+      <td><code>aspect_ratio</code></td>
+      <td><code>str | None</code></td>
+      <td><code>None</code></td>
+      <td>Semantic sizing: <code>"square"</code>, <code>"landscape"</code>, <code>"vertical"</code>, <code>"1:1"</code>, <code>"2:1"</code>, <code>"1:2"</code>. Overrides <code>width</code> and <code>height</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="titles--labels">Titles &amp; Labels</h2>
+
+<table class="param-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>title</code></td>
+      <td><code>str | None</code></td>
+      <td><code>None</code></td>
+      <td>Bold header text, flush-left aligned. Auto-wrapped to fit chart width.</td>
+    </tr>
+    <tr>
+      <td><code>subtitle</code></td>
+      <td><code>str | None</code></td>
+      <td><code>None</code></td>
+      <td>Lighter secondary text displayed below the title.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="styling">Styling</h2>
+
+<table class="param-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bg_color</code></td>
+      <td><code>str | None</code></td>
+      <td><code>"#f4f3f0"</code></td>
+      <td>Background hex color. Defaults to Economist cream.</td>
+    </tr>
+    <tr>
+      <td><code>scale_text</code></td>
+      <td><code>bool</code></td>
+      <td><code>True</code></td>
+      <td>Scale fonts proportionally with image size.</td>
+    </tr>
+    <tr>
+      <td><code>value_suffix</code></td>
+      <td><code>str</code></td>
+      <td><code>""</code></td>
+      <td>String appended to data labels and axis ticks (e.g., <code>"%"</code>, <code>"M"</code>, <code>"x"</code>).</td>
+    </tr>
+    <tr>
+      <td><code>show_percentages</code></td>
+      <td><code>bool</code></td>
+      <td><code>False</code></td>
+      <td>Format numeric values as percentages (e.g., <code>0.25</code> → <code>"25.0%"</code>).</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="color-parameters">Color Parameters</h2>
+
+<p>Many chart functions accept color parameters. The naming convention is:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">color</code></strong> — single hex color for all elements (bars, dots, lines)</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">start_color</code></strong> / <strong><code class="language-plaintext highlighter-rouge">end_color</code></strong> — gradient boundary colors when multiple series or segments need differentiation</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">colors</code></strong> — explicit list of hex colors when you want full control per series</li>
+</ul>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
