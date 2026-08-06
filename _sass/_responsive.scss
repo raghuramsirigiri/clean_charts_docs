@@ -11,7 +11,7 @@
     border-bottom: 1px solid $color-border;
     z-index: 200;
     background-color: $color-bg-secondary;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .sidebar-header {
@@ -26,16 +26,17 @@
 
   // Collapse nav tree by default on mobile
   .nav-tree {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    display: none;
     border-top: 1px solid $color-border;
   }
 
   // Expand when sidebar has .open class
-  .docs-sidebar.open .nav-tree {
-    max-height: 100vh;
-    overflow-y: auto;
+  .docs-sidebar.open {
+    overflow: visible;
+
+    .nav-tree {
+      display: block;
+    }
   }
 
   .docs-main-container {
