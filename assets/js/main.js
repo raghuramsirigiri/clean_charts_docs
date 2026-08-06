@@ -25,4 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // Smooth scroll into view inside sidebar
     activeLink.scrollIntoView({ block: "nearest" });
   }
+
+  // ─── Mobile Sidebar Toggle ───
+  const sidebar = document.querySelector(".docs-sidebar");
+  const toggleBtn = document.querySelector(".sidebar-toggle");
+
+  if (toggleBtn && sidebar) {
+    toggleBtn.addEventListener("click", () => {
+      const isOpen = sidebar.classList.toggle("open");
+      toggleBtn.setAttribute("aria-expanded", isOpen);
+    });
+  }
+
+  // Auto-close sidebar when a nav link is tapped (mobile)
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 900 && sidebar && sidebar.classList.contains("open")) {
+        sidebar.classList.remove("open");
+        if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
 });

@@ -136,3 +136,70 @@
     background-color: $color-accent-light;
   }
 }
+
+// ─── Mobile Sidebar Toggle ───
+
+.sidebar-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  position: relative;
+  flex-shrink: 0;
+
+  .toggle-icon,
+  .toggle-icon::before,
+  .toggle-icon::after {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: $color-text-main;
+    border-radius: 1px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .toggle-icon {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .toggle-icon::before {
+    content: "";
+    top: -6px;
+    left: 0;
+    transform: none;
+  }
+
+  .toggle-icon::after {
+    content: "";
+    top: 6px;
+    left: 0;
+    transform: none;
+  }
+}
+
+// Animate hamburger → X when open
+.docs-sidebar.open .sidebar-toggle {
+  .toggle-icon {
+    background-color: transparent;
+  }
+
+  .toggle-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .toggle-icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}

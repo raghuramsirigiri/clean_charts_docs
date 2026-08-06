@@ -74,11 +74,39 @@ html, body {
 // Responsive
 @media (max-width: 900px) {
   .docs-sidebar {
-    position: relative;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: auto;
     border-right: none;
     border-bottom: 1px solid $color-border;
+    z-index: 200;
+    background-color: $color-bg-secondary;
+    overflow: visible;
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebar-toggle {
+    display: flex;
+  }
+
+  // Collapse nav tree by default on mobile
+  .nav-tree {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-top: 1px solid $color-border;
+  }
+
+  // Expand when sidebar has .open class
+  .docs-sidebar.open .nav-tree {
+    max-height: 100vh;
+    overflow-y: auto;
   }
 
   .docs-main-container {
