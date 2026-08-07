@@ -18,6 +18,18 @@
     </div>
   </div>
 
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script>
+    if (typeof SimpleJekyllSearch !== 'undefined') {
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+        noResultsText: '<li class="no-results">No results found</li>',
+      });
+    }
+  </script>
 </body>
 </html>

@@ -9,6 +9,11 @@
     </button>
   </div>
 
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search docs..." aria-label="Search">
+    <ul id="results-container"></ul>
+  </div>
+
   <nav class="nav-tree">
     {% for group in site.data.navigation %}
       <div class="nav-group">
